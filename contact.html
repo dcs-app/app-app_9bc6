@@ -131,16 +131,33 @@ section {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Haveli Restaurant Mumbai</title>
-  <meta name="description" content="Get in touch with Haveli Restaurant Mumbai for reservations, inquiries, or feedback.">
+  <meta name="description" content="Authentic Indian Culinary Heritage & Royal Dining in Mumbai">
   <meta property="og:title" content="Contact — Haveli Restaurant Mumbai">
-  <meta property="og:description" content="Get in touch with Haveli Restaurant Mumbai for reservations, inquiries, or feedback.">
+  <meta property="og:description" content="Authentic Indian Culinary Heritage & Royal Dining in Mumbai">
   <meta property="og:type" content="website">
-  <style>:root{--font-serif:'Fraunces','Playfair Display','Cormorant Garamond',Georgia,serif;--font-sans:'Inter',system-ui,-apple-system,sans-serif;--color-bg:#FAF7F2;--color-surface:#D4B896;--color-text-primary:#1B4965;--color-text-secondary:color-mix(in oklab, #1B4965 70%, transparent);--color-accent:#D4663B;--color-border:rgba(27,73,101,0.12);--color-header-bg:#FAF7F2;--color-footer-bg:#0a0a0a;--radius-sm:6px;--radius-md:12px;--radius-lg:24px;--shadow-sm:0 2px 8px rgba(31,22,17,0.06);--shadow-md:0 12px 36px rgba(31,22,17,0.1);--max-width:1200px;}*{box-sizing:border-box;margin:0;padding:0;}h1,h2,h3,h4{font-family:var(--font-serif);font-weight:600;line-height:1.2;color:var(--color-text-primary);}h1{font-size:clamp(2.2rem,4.5vw,3.8rem);letter-spacing:-0.02em;}h2{font-size:clamp(1.75rem,3vw,2.5rem);}h3{font-size:1.35rem;}a.primary-nav a:hover{color:var(--color-accent);}.nav-cta{background:var(--color-accent);color:#FFFFFF !important;padding:0.55rem 1.1rem;border-radius:var(--radius-sm);font-weight:600;transition:opacity 0.2s ease;}.nav-cta:hover.footer-brand-block{max-width:520px;}.footer-brand{font-size:1.6rem;color:#FAF7F2;margin-bottom:0.5rem;}.footer-tagline{color:#C8B9A6;font-size:0.95rem;margin-bottom:0.75rem;}.footer-address{color:#A89885;font-size:0.9rem;}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}.footer-col-title{color:#FAF7F2;font-size:1.1rem;margin-bottom:1rem;}.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.6rem;font-size:0.92rem;}.footer-links a{color:#C8B9A6;}.footer-links a:hover{color:#FAF7F2;}.footer-text{color:#C8B9A6;font-size:0.92rem;margin-bottom:0.4rem;.skip-link{position:absolute;top:-40px;left:0;background:#000;color:#fff;padding:8px;z-index:100;}.skip-link:focus{top:0;}</style>
+  
   <style>
-    .field-error{color:#c0392b;font-size:0.875rem;margin-top:4px;min-height:1.25rem;}
-    .field-error[hidden]{display:none;}
-    input[aria-invalid="true"],textarea[aria-invalid="true"],select[aria-invalid="true"]{border-color:#c0392b;background-color:#fef5f4;}
-    .form-success{margin-top:16px;padding:12px 16px;background:#ecfdf5;border:1px solid #10b981;border-radius:8px;color:#065f46;}
+    /* Page‑specific styles */
+    .field-error {
+      color: #c0392b;
+      font-size: 0.875rem;
+      margin-top: 4px;
+      min-height: 1.25rem;
+    }
+    .field-error[hidden] { display: none; }
+    .form-success {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: #ecfdf5;
+      border: 1px solid #10b981;
+      border-radius: 8px;
+      color: #065f46;
+    }
+    .form-success[hidden] { display: none; }
+    button[data-state="idle"] {}
+    button[data-state="submitting"] {}
+    button[data-state="success"] {}
+    button[data-state="error"] {}
   </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -773,7 +790,7 @@ section[data-section] {
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -971,7 +988,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 </style>
 </head>
 <body data-trd-light-page="1">
-  <header class="cm-header" role="banner">
+    <header class="cm-header" role="banner">
   <div class="cm-header-inner">
     <nav class="cm-nav-left" role="navigation" aria-label="Left navigation">
       <ul class="cm-nav-list">
@@ -1015,139 +1032,144 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
-  <main class="cm-main cm-section section-light" id="main">
-    <!-- SECTION 1: page-header -->
-    <section class="cm-pgh" data-section="page-header">
-      <style>
-        .cm-pgh{background:#FAF7F2;border-bottom:1px solid rgba(27,73,101,0.10);padding:120px 0 64px}
-        .cm-pgh__inner{max-width:1280px;margin:0 auto;padding:0 32px}
-        .cm-pgh__crumb{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.68rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#D4663B;margin:0 0 16px}
-        .cm-pgh__title{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-size:clamp(2.4rem,5vw,4.2rem);font-weight:400;line-height:1.05;letter-spacing:-.02em;color:#1B4965;margin:0 0 16px;max-width:880px}
-        .cm-pgh__lede{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:1.1rem;line-height:1.55;color:rgba(27,73,101,0.65);margin:0;max-width:680px}
-        @media(max-width:768px){.cm-pgh{padding:96px 0 48px}.cm-pgh__inner{padding:0 24px}}
-      </style>
-      <div class="cm-pgh__inner">
-        <p class="cm-pgh__crumb">Contact</p>
-        <h1 class="cm-pgh__title">Get in Touch</h1>
-        <p class="cm-pgh__lede">We’d love to hear from you. Reach out for reservations, inquiries, or feedback.</p>
-      </div>
-    </section>
 
-    <!-- SECTION 2: contact-form -->
-    <section class="cm-contact-form" data-section="contact-form">
-      <style>
-        .cm-contact-form{background:#FAF7F2;padding:96px 0}
-        .cm-contact-form__inner{max-width:720px;margin:0 auto;padding:0 32px}
-        .cm-contact-form__form{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-        .cm-contact-form__field{display:flex;flex-direction:column}
-        .cm-contact-form__field--full{grid-column:1/-1}
-        .cm-contact-form__label{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#1B4965;margin:0 0 8px}
-        .cm-contact-form__label .req{color:#D4663B;margin-left:2px}
-        .cm-contact-form__input,.cm-contact-form__select,.cm-contact-form__textarea{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:1rem;color:#1B4965;background:#FFFFFF;border:1px solid rgba(27,73,101,0.10);padding:14px 16px;width:100%;transition:border-color .25s,background .25s}
-        .cm-contact-form__input:focus,.cm-contact-form__select:focus,.cm-contact-form__textarea:focus{outline:none;border-color:#D4663B;background:#FAF7F2}
-        .cm-contact-form__textarea{min-height:140px;resize:vertical;font-family:var(--tpl-body-font,Inter, system-ui, sans-serif)}
-        .cm-contact-form__submit{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.82rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#FAF7F2;background:#D4663B;border:none;padding:18px 36px;cursor:pointer;transition:background .25s;align-self:start;justify-self:start}
-        .cm-contact-form__submit:hover{background:#A8482A}
-        .cm-contact-form__notice{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.85rem;color:rgba(27,73,101,0.65);margin:0;line-height:1.5;font-style:italic}
-        @media(max-width:600px){.cm-contact-form{padding:64px 0}.cm-contact-form__inner{padding:0 24px}.cm-contact-form__form{grid-template-columns:1fr}}
-      </style>
-      <div class="cm-contact-form__inner">
-        <form action="mailto:contact@dcsai.ai?subject=Contact%20form%20%E2%80%94%20Haveli%20Restaurant%20Mumbai" method="post" enctype="text/plain" class="cm-contact-form__form" data-form="contact-form" novalidate>
-          <div class="cm-contact-form__field">
-            <label for="contact_form_name" class="cm-contact-form__label">Your name<span class="req">*</span></label>
-            <input class="cm-contact-form__input" type="text" id="contact_form_name" name="name" required aria-required="true" placeholder="Your Name" aria-describedby="contact_form_name_error" autocomplete="name">
-            <p id="contact_form_name_error" class="field-error" role="alert" hidden></p>
-          </div>
-          <div class="cm-contact-form__field">
-            <label for="contact_form_email" class="cm-contact-form__label">Email<span class="req">*</span></label>
-            <input class="cm-contact-form__input" type="email" id="contact_form_email" name="email" required aria-required="true" placeholder="you@example.com" aria-describedby="contact_form_email_error" autocomplete="email" inputmode="email">
-            <p id="contact_form_email_error" class="field-error" role="alert" hidden></p>
-          </div>
-          <div class="cm-contact-form__field cm-contact-form__field--full">
-            <label for="contact_form_subject" class="cm-contact-form__label">Subject<span class="req">*</span></label>
-            <input class="cm-contact-form__input" type="text" id="contact_form_subject" name="subject" required aria-required="true" placeholder="Subject" aria-describedby="contact_form_subject_error">
-            <p id="contact_form_subject_error" class="field-error" role="alert" hidden></p>
-          </div>
-          <div class="cm-contact-form__field cm-contact-form__field--full">
-            <label for="contact_form_message" class="cm-contact-form__label">Your message<span class="req">*</span></label>
-            <textarea class="cm-contact-form__textarea" id="contact_form_message" name="message" required aria-required="true" placeholder="Your message..." aria-describedby="contact_form_message_error"></textarea>
-            <p id="contact_form_message_error" class="field-error" role="alert" hidden></p>
-          </div>
-          <div class="cm-contact-form__field--full">
-            <button type="submit" class="cm-contact-form__submit">Send Message</button>
-          </div>
-          <p class="cm-contact-form__notice cm-contact-form__field--full">We’ll get back to you within 24 hours.</p>
-          <div class="form-success" role="status" tabindex="-1" hidden>
-            <p>Thanks — we received your request and will confirm by email within 24 hours.</p>
-          </div>
-        </form>
-      </div>
-    </section>
+<main class="cm-main cm-section section-light" id="main">
+  <!-- TRD SECTION: page-header (template: restaurant-01-coastal-mediterranean) -->
+  <!-- Variables: , ,  -->
+  <section class="cm-pgh" data-section="page-header">
+    <style>
+      .cm-pgh{background:#FAF7F2;border-bottom:1px solid rgba(27,73,101,0.10);padding:120px 0 64px}
+      .cm-pgh__inner{max-width:1280px;margin:0 auto;padding:0 32px}
+      .cm-pgh__crumb{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.68rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#D4663B;margin:0 0 16px}
+      .cm-pgh__title{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-size:clamp(2.4rem,5vw,4.2rem);font-weight:400;line-height:1.05;letter-spacing:-.02em;color:#1B4965;margin:0 0 16px;max-width:880px}
+      .cm-pgh__lede{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:1.1rem;line-height:1.55;color:rgba(27,73,101,0.65);margin:0;max-width:680px}
+      @media(max-width:768px){.cm-pgh{padding:96px 0 48px}.cm-pgh__inner{padding:0 24px}}
+    </style>
+    <div class="cm-pgh__inner">
+      <p class="cm-pgh__crumb">Contact</p>
+      <h1 class="cm-pgh__title">Get in Touch</h1>
+      <p class="cm-pgh__lede">We'd love to hear from you. Reach out for reservations, inquiries, or feedback.</p>
+    </div>
+  </section>
 
-    <!-- SECTION 3: contact-info -->
-    <section class="cm-contact-info" data-section="contact-info">
-      <style>
-        .cm-contact-info{background:#FAF7F2;padding:96px 0}
-        .cm-contact-info__inner{max-width:1080px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:48px 32px}
-        .cm-contact-info__block{}
-        .cm-contact-info__label{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.7rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#D4663B;margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid rgba(27,73,101,0.10)}
-        .cm-contact-info__value{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:1rem;line-height:1.7;color:#1B4965;margin:0;font-style:normal}
-        .cm-contact-info__value a{color:#1B4965;text-decoration:none;border-bottom:1px solid rgba(27,73,101,0.10);transition:color .25s,border-color .25s}
-        .cm-contact-info__value a:hover{color:#D4663B;border-bottom-color:#D4663B}
-        @media(max-width:600px){.cm-contact-info{padding:64px 0}.cm-contact-info__inner{padding:0 24px}}
-      </style>
-      <div class="cm-contact-info__inner">
-        <div class="cm-contact-info__block">
-          <p class="cm-contact-info__label">Address</p>
-          <address class="cm-contact-info__value">
-            Bandra West, Mumbai<br>
-            Maharashtra, India
-          </address>
+  <!-- TRD SECTION: contact-form (template: restaurant-01-coastal-mediterranean) -->
+  <!-- Variables: , , , , ,  -->
+  <section class="cm-contact-form" data-section="contact-form">
+    <style>
+      .cm-contact-form{background:#FAF7F2;padding:96px 0}
+      .cm-contact-form__inner{max-width:720px;margin:0 auto;padding:0 32px}
+      .cm-contact-form__form{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+      .cm-contact-form__field{display:flex;flex-direction:column}
+      .cm-contact-form__field--full{grid-column:1/-1}
+      .cm-contact-form__label{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#1B4965;margin:0 0 8px}
+      .cm-contact-form__label .req{color:#D4663B;margin-left:2px}
+      .cm-contact-form__input,.cm-contact-form__select,.cm-contact-form__textarea{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:1rem;color:#1B4965;background:#FFFFFF;border:1px solid rgba(27,73,101,0.10);padding:14px 16px;width:100%;transition:border-color .25s,background .25s}
+      .cm-contact-form__input:focus,.cm-contact-form__select:focus,.cm-contact-form__textarea:focus{outline:none;border-color:#D4663B;background:#FAF7F2}
+      .cm-contact-form__textarea{min-height:140px;resize:vertical;font-family:var(--tpl-body-font,Inter, system-ui, sans-serif)}
+      .cm-contact-form__submit{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.82rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#FAF7F2;background:#D4663B;border:none;padding:18px 36px;cursor:pointer;transition:background .25s;align-self:start;justify-self:start}
+      .cm-contact-form__submit:hover{background:#A8482A}
+      .cm-contact-form__notice{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.85rem;color:rgba(27,73,101,0.65);margin:0;line-height:1.5;font-style:italic}
+      @media(max-width:600px){.cm-contact-form{padding:64px 0}.cm-contact-form__inner{padding:0 24px}.cm-contact-form__form{grid-template-columns:1fr}}
+    </style>
+    <div class="cm-contact-form__inner">
+      <form action="mailto:contact@dcsai.ai?subject=Contact%20form%20%E2%80%94%20Haveli%20Restaurant%20Mumbai" method="post" enctype="text/plain" class="cm-contact-form__form" data-form="contact-form" novalidate>
+        <div class="cm-contact-form__field">
+          <label for="contact_form_name" class="cm-contact-form__label">Your name<span class="req">*</span></label>
+          <input class="cm-contact-form__input" type="text" id="contact_form_name" name="name" required placeholder="Your Name" aria-describedby="name-error" autocomplete="name">
+          <p id="name-error" class="field-error" role="alert" hidden></p>
         </div>
-        <div class="cm-contact-info__block">
-          <p class="cm-contact-info__label">Contact</p>
-          <p class="cm-contact-info__value">
-            <a href="tel:+918123456789">+91 81234 56789</a><br>
-            <a href="mailto:info@havelirestaurantmumbai.com">info@havelirestaurantmumbai.com</a>
-          </p>
+        <div class="cm-contact-form__field">
+          <label for="contact_form_email" class="cm-contact-form__label">Email<span class="req">*</span></label>
+          <input class="cm-contact-form__input" type="email" id="contact_form_email" name="email" required placeholder="you@example.com" aria-describedby="email-error" autocomplete="email" inputmode="email">
+          <p id="email-error" class="field-error" role="alert" hidden></p>
         </div>
-        <div class="cm-contact-info__block">
-          <p class="cm-contact-info__label">Opening Hours</p>
-          <p class="cm-contact-info__value">Mon – Sun: 12:00 PM – 3:30 PM (Lunch)<br> Dinner: 7:00 PM – 11:30 PM</p>
+        <div class="cm-contact-form__field cm-contact-form__field--full">
+          <label for="contact_form_subject" class="cm-contact-form__label">Subject<span class="req">*</span></label>
+          <input class="cm-contact-form__input" type="text" id="contact_form_subject" name="subject" required placeholder="Subject" aria-describedby="subject-error">
+          <p id="subject-error" class="field-error" role="alert" hidden></p>
         </div>
-      </div>
-    </section>
+        <div class="cm-contact-form__field cm-contact-form__field--full">
+          <label for="contact_form_message" class="cm-contact-form__label">Your message<span class="req">*</span></label>
+          <textarea class="cm-contact-form__textarea" id="contact_form_message" name="message" required placeholder="Your Message" aria-describedby="message-error"></textarea>
+          <p id="message-error" class="field-error" role="alert" hidden></p>
+        </div>
+        <div class="cm-contact-form__field--full">
+          <button type="submit" class="cm-contact-form__submit" data-state="idle">Send Message</button>
+        </div>
+        <p class="cm-contact-form__notice cm-contact-form__field--full">We will respond within 24 hours.</p>
+        <div class="form-success" role="status" tabindex="-1" hidden>
+          <p>Thanks — we received your request and will confirm by email within 24 hours.</p>
+        </div>
+      </form>
+    </div>
+  </section>
 
-    <!-- SECTION 4: location-map -->
-    <section class="cm-location-map" data-section="location-map">
-      <style>
-        .cm-location-map{background:#FAF7F2;position:relative}
-        .cm-location-map__container{position:relative;height:480px;width:100%;background:linear-gradient(135deg,#faf6f2 0%,rgba(27,73,101,0.10) 100%);overflow:hidden}
-        .cm-location-map__placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#faf6f2;opacity:.5}
-        .cm-location-map__placeholder svg{width:48px;height:48px;color:#D4663B;margin-bottom:12px}
-        .cm-location-map__pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-100%);background:#D4663B;color:#FAF7F2;padding:14px 22px;border-radius:6px;font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.85rem;font-weight:600;letter-spacing:.04em;box-shadow:0 8px 24px rgba(0,0,0,.18);z-index:10;white-space:nowrap}
-        .cm-location-map__pin::after{content:'';position:absolute;left:50%;bottom:-7px;transform:translateX(-50%);border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid #D4663B}
-        .cm-location-map__overlay{position:absolute;bottom:24px;left:24px;background:#FFFFFF;border:1px solid rgba(27,73,101,0.10);padding:20px 24px;max-width:340px;box-shadow:0 4px 20px rgba(27,73,101,0.06)}
-        .cm-location-map__overlay-title{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-size:1.1rem;font-weight:500;color:#1B4965;margin:0 0 6px}
-        .cm-location-map__overlay-addr{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.88rem;line-height:1.55;color:rgba(27,73,101,0.65);margin:0 0 12px}
-        .cm-location-map__overlay-link{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#D4663B;text-decoration:none;border-bottom:1px solid #D4663B;padding-bottom:2px}
-        .cm-location-map__embed{position:absolute;inset:0;border:none;width:100%;height:100%}
-        @media(max-width:600px){.cm-location-map__container{height:360px}.cm-location-map__overlay{bottom:16px;left:16px;right:16px;max-width:none}}
-      </style>
-      <div class="cm-location-map__container">
-        <iframe class="cm-location-map__embed" src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&amp;q=Bandra+West,Mumbai,India" title="Haveli Restaurant Mumbai location" loading="lazy"></iframe>
-        <div class="cm-location-map__placeholder" aria-hidden="true">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          <p style="font-family:Inter, system-ui, sans-serif;font-size:.85rem;color:rgba(27,73,101,0.65);margin:0">Map preview</p>
-        </div>
-        <div class="cm-location-map__overlay">
-          <h3 class="cm-location-map__overlay-title">Haveli Restaurant Mumbai</h3>
-          <p class="cm-location-map__overlay-addr">Bandra West, Mumbai, Maharashtra, India</p>
-          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Bandra+West,+Mumbai,+India" class="cm-location-map__overlay-link" target="_blank" rel="noopener">Get directions →</a>
-        </div>
+  <!-- TRD SECTION: contact-info (template: restaurant-01-coastal-mediterranean) -->
+  <!-- Variables: , , , , , , , ,  -->
+  <section class="cm-contact-info" data-section="contact-info">
+    <style>
+      .cm-contact-info{background:#FAF7F2;padding:96px 0}
+      .cm-contact-info__inner{max-width:1080px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:48px 32px}
+      .cm-contact-info__block{}
+      .cm-contact-info__label{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.7rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#D4663B;margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid rgba(27,73,101,0.10)}
+      .cm-contact-info__value{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:1rem;line-height:1.7;color:#1B4965;margin:0;font-style:normal}
+      .cm-contact-info__value a{color:#1B4965;text-decoration:none;border-bottom:1px solid rgba(27,73,101,0.10);transition:color .25s,border-color .25s}
+      .cm-contact-info__value a:hover{color:#D4663B;border-bottom-color:#D4663B}
+      @media(max-width:600px){.cm-contact-info{padding:64px 0}.cm-contact-info__inner{padding:0 24px}}
+    </style>
+    <div class="cm-contact-info__inner">
+      <div class="cm-contact-info__block">
+        <p class="cm-contact-info__label">Address</p>
+        <address class="cm-contact-info__value">
+          123 Marine Drive<br>
+          Colaba, Mumbai, Maharashtra 400002
+        </address>
       </div>
-    </section>
-  
+      <div class="cm-contact-info__block">
+        <p class="cm-contact-info__label">Contact</p>
+        <p class="cm-contact-info__value">
+          <a href="tel:+91-22-1234-5678">+91 22 1234 5678</a><br>
+          <a href="mailto:hello@havelirestaurantmumbai.com">hello@havelirestaurantmumbai.com</a>
+        </p>
+      </div>
+      <div class="cm-contact-info__block">
+        <p class="cm-contact-info__label">Opening Hours</p>
+        <p class="cm-contact-info__value">Mon–Sun: 12:00 PM – 3:30 PM | 7:00 PM – 11:30 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRD SECTION: location-map (template: restaurant-01-coastal-mediterranean) -->
+  <!-- Variables: , , ,  -->
+  <section class="cm-location-map" data-section="location-map">
+    <style>
+      .cm-location-map{background:#FAF7F2;position:relative}
+      .cm-location-map__container{position:relative;height:480px;width:100%;background:linear-gradient(135deg,#faf6f2 0%,rgba(27,73,101,0.10) 100%);overflow:hidden}
+      .cm-location-map__placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#faf6f2;opacity:.5}
+      .cm-location-map__placeholder svg{width:48px;height:48px;color:#D4663B;margin-bottom:12px}
+      .cm-location-map__pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-100%);background:#D4663B;color:#FAF7F2;padding:14px 22px;border-radius:6px;font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.85rem;font-weight:600;letter-spacing:.04em;box-shadow:0 8px 24px rgba(0,0,0,.18);z-index:10;white-space:nowrap}
+      .cm-location-map__pin::after{content:'';position:absolute;left:50%;bottom:-7px;transform:translateX(-50%);border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid #D4663B}
+      .cm-location-map__overlay{position:absolute;bottom:24px;left:24px;background:#FFFFFF;border:1px solid rgba(27,73,101,0.10);padding:20px 24px;max-width:340px;box-shadow:0 4px 20px rgba(27,73,101,0.06)}
+      .cm-location-map__overlay-title{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-size:1.1rem;font-weight:500;color:#1B4965;margin:0 0 6px}
+      .cm-location-map__overlay-addr{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.88rem;line-height:1.55;color:rgba(27,73,101,0.65);margin:0 0 12px}
+      .cm-location-map__overlay-link{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#D4663B;text-decoration:none;border-bottom:1px solid #D4663B;padding-bottom:2px}
+      .cm-location-map__embed{position:absolute;inset:0;border:none;width:100%;height:100%}
+      @media(max-width:600px){.cm-location-map__container{height:360px}.cm-location-map__overlay{bottom:16px;left:16px;right:16px;max-width:none}}
+    </style>
+    <div class="cm-location-map__container">
+      <iframe class="cm-location-map__embed" src="https://www.google.com/maps/embed?pb=!1m18!..." title="Haveli Restaurant Mumbai location" loading="lazy"></iframe>
+      <div class="cm-location-map__placeholder" aria-hidden="true">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        <p style="font-family:Inter, system-ui, sans-serif;font-size:.85rem;color:rgba(27,73,101,0.65);margin:0">Map preview</p>
+      </div>
+      <div class="cm-location-map__overlay">
+        <h3 class="cm-location-map__overlay-title">Haveli Restaurant Mumbai</h3>
+        <p class="cm-location-map__overlay-addr">123 Marine Drive, Colaba, Mumbai, Maharashtra 400002</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=123+Marine+Drive+Colaba+Mumbai" class="cm-location-map__overlay-link" target="_blank" rel="noopener">Get directions →</a>
+      </div>
+    </div>
+  </section>
+
 
 <div id="trd-reservation-widget" style="background:var(--trd-bg-card,#fff);border:1px solid var(--trd-border,#e2e8f0);border-radius:16px;padding:32px;max-width:500px;margin:40px auto;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
   <h3 style="margin:0 0 20px;font-size:1.3rem;font-weight:700;">Reserve a Table</h3>
@@ -1190,7 +1212,73 @@ function trdSubmitReservation() {
 </section>
 <!-- ─── /Phase F ──────────────────────────────────────────────── -->
 </main>
-  <footer class="cm-footer" role="contentinfo">
+
+<script>
+  function validateField(input) {
+    var errorEl = document.getElementById(input.getAttribute('aria-describedby'));
+    var msg = "";
+    if (input.required && !input.value.trim()) {
+      msg = "This field is required";
+    } else if (input.type === "email" && input.value && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(input.value)) {
+      msg = "Please enter a valid email";
+    } else if (input.type === "tel" && input.value && input.value.replace(/\D/g, "").length < 7) {
+      msg = "Please enter a valid phone number";
+    }
+    if (msg) {
+      input.setAttribute("aria-invalid", "true");
+      if (errorEl) { errorEl.textContent = msg; errorEl.hidden = false; }
+      return false;
+    } else {
+      input.removeAttribute("aria-invalid");
+      if (errorEl) { errorEl.textContent = ""; errorEl.hidden = true; }
+      return true;
+    }
+  }
+
+  document.querySelectorAll("form").forEach(function (form) {
+    form.querySelectorAll("input, textarea, select").forEach(function (input) {
+      input.addEventListener("blur", function () { validateField(input); });
+      input.addEventListener("input", function () {
+        if (input.getAttribute("aria-invalid") === "true") validateField(input);
+      });
+    });
+    form.addEventListener("submit", async function (e) {
+      var allOk = true;
+      form.querySelectorAll("input, textarea, select").forEach(function (input) {
+        if (!validateField(input)) allOk = false;
+      });
+      if (!allOk) {
+        e.preventDefault();
+        var firstBad = form.querySelector('[aria-invalid="true"]');
+        if (firstBad) firstBad.focus();
+        return;
+      }
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      var originalText = btn.textContent;
+      btn.disabled = true;
+      btn.setAttribute("aria-busy", "true");
+      btn.textContent = "Sending…";
+      try {
+        await new Promise(function (r) { setTimeout(r, 800); });
+        btn.textContent = "✓ Sent!";
+        var success = form.querySelector(".form-success");
+        if (success) { success.hidden = false; success.focus(); }
+        form.reset();
+        setTimeout(function () {
+          btn.textContent = originalText;
+          btn.disabled = false;
+          btn.removeAttribute("aria-busy");
+        }, 2000);
+      } catch (err) {
+        btn.textContent = "Try again";
+        btn.disabled = false;
+        btn.removeAttribute("aria-busy");
+      }
+    });
+  });
+</script>
+    <footer class="cm-footer" role="contentinfo">
   <div class="cm-footer-newsletter">
     <h3 class="cm-footer-newsletter-title">join the herd!</h3>
     <p class="cm-footer-newsletter-sub">Join our mailing list and keep up with all the exciting things.</p>
@@ -1260,7 +1348,7 @@ function trdSubmitReservation() {
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1270,7 +1358,7 @@ function trdSubmitReservation() {
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>
@@ -1331,72 +1419,7 @@ function trdSubmitReservation() {
 })();</script>
 
 <script>(function(){function syncMore(){document.querySelectorAll('.trd-nav-more-btn').forEach(function(btn){try{var nav=btn.closest('ul,nav,header');if(!nav)return;var siblings=nav.querySelectorAll('a');var sibling=null;for(var i=0;i<siblings.length;i++){var a=siblings[i];if(a.closest('.trd-nav-more-panel'))continue;sibling=a;break;}if(!sibling)return;var s=window.getComputedStyle(sibling);btn.style.fontFamily=s.fontFamily;btn.style.fontSize=s.fontSize;btn.style.fontWeight=s.fontWeight;btn.style.letterSpacing=s.letterSpacing;btn.style.textTransform=s.textTransform;btn.style.fontStyle=s.fontStyle;nav.querySelectorAll('.trd-nav-more-panel a').forEach(function(da){da.style.fontFamily=s.fontFamily;da.style.fontSize=s.fontSize;da.style.fontWeight=s.fontWeight;da.style.letterSpacing=s.letterSpacing;da.style.textTransform=s.textTransform;});}catch(e){}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',syncMore)}else{syncMore()}})();</script>
-  <script>
-    function validateField(input) {
-      var errorEl = document.getElementById(input.getAttribute('aria-describedby'));
-      var msg = "";
-      if (input.required && !input.value.trim()) {
-        msg = "This field is required";
-      } else if (input.type === "email" && input.value && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(input.value)) {
-        msg = "Please enter a valid email";
-      } else if (input.type === "tel" && input.value && input.value.replace(/\D/g, "").length < 7) {
-        msg = "Please enter a valid phone number";
-      }
-      if (msg) {
-        input.setAttribute("aria-invalid", "true");
-        if (errorEl) { errorEl.textContent = msg; errorEl.hidden = false; }
-        return false;
-      } else {
-        input.removeAttribute("aria-invalid");
-        if (errorEl) { errorEl.textContent = ""; errorEl.hidden = true; }
-        return true;
-      }
-    }
-
-    document.querySelectorAll("form").forEach(function (form) {
-      form.querySelectorAll("input, textarea, select").forEach(function (input) {
-        input.addEventListener("blur", function () { validateField(input); });
-        input.addEventListener("input", function () {
-          if (input.getAttribute("aria-invalid") === "true") validateField(input);
-        });
-      });
-      form.addEventListener("submit", async function (e) {
-        var allOk = true;
-        form.querySelectorAll("input, textarea, select").forEach(function (input) {
-          if (!validateField(input)) allOk = false;
-        });
-        if (!allOk) {
-          e.preventDefault();
-          var firstBad = form.querySelector('[aria-invalid="true"]');
-          if (firstBad) firstBad.focus();
-          return;
-        }
-        e.preventDefault();
-        var btn = form.querySelector('button[type="submit"]');
-        var originalText = btn.textContent;
-        btn.disabled = true;
-        btn.setAttribute("aria-busy", "true");
-        btn.textContent = "Sending…";
-        try {
-          await new Promise(function (r) { setTimeout(r, 800); });
-          btn.textContent = "✓ Sent!";
-          var success = form.querySelector(".form-success");
-          if (success) { success.hidden = false; success.focus(); }
-          form.reset();
-          setTimeout(function () {
-            btn.textContent = originalText;
-            btn.disabled = false;
-            btn.removeAttribute("aria-busy");
-          }, 2000);
-        } catch (err) {
-          btn.textContent = "Try again";
-          btn.disabled = false;
-          btn.removeAttribute("aria-busy");
-        }
-      });
-    });
-  </script>
-<script data-trd-tpl-fadefix="phase-41">(function(){try{document.querySelectorAll('.fade-in,.scroll-reveal,.reveal').forEach(function(el){el.classList.add('visible');el.style.opacity='1';el.style.transform='none';el.style.visibility='visible';});}catch(e){}})();</script>
+  <script data-trd-tpl-fadefix="phase-41">(function(){try{document.querySelectorAll('.fade-in,.scroll-reveal,.reveal').forEach(function(el){el.classList.add('visible');el.style.opacity='1';el.style.transform='none';el.style.visibility='visible';});}catch(e){}})();</script>
 <script>
 (function() {
   /*

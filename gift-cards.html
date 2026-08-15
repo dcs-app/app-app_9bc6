@@ -128,104 +128,59 @@ section {
   .trd-container { padding: 0 var(--sp-3); }
 }
 </style>
-<meta charset="UTF-8">
-<title>Gift Cards – Haveli Restaurant Mumbai</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-/* ---------- Dark Mode (Phase D3) ---------- */
-/* ---------- Theme Toggle Button ---------- */
-
-/* ---------- Micro‑Animations (Phase D3) ---------- */
-.fade‑in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
-.fade‑in.visible { opacity: 1; transform: translateY(0); }
-.btn {
-  display: inline-block;
-  background: var(--primary);
-  color: #fff;
-  padding: .6rem 1.2rem;
-  border: none;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  font-weight: 600;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
-}
-.card {
-  background: var(--surface);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0,0,0,.12);
-}
-/* ---------- Light‑Section Fix (B12) ---------- */
-.section-light, [data-bg="light"] {
-  background: var(--tpl-light-surface, #f7f0e3);
-  color: var(--tpl-text-on-light, #1a1a1a);
-}
-.section-light h1,
-.section-light h2,
-.section-light h3,
-.section-light h4,
-.section-light p,
-.section-light li,
-.section-light label,
-.section-light span {
-  color: var(--tpl-text-on-light, #1a1a1a);
-}
-/* ---------- Layout ---------- */
-main { max-width: var(--max-width, 1200px); margin: 2rem auto; padding: 0 1rem; }
-section { margin-bottom: 2.5rem; }
-h1 { margin-bottom: 1rem; }
-h2 { margin-top: 1.5rem; margin-bottom: .75rem; }
-.grid {
-  display: grid;
-  gap: 1rem;
-}
-@media (min-width: 600px) {
-  .grid-3col { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 599px) {
-  .grid-2col { grid-template-columns: repeat(2, 1fr); }
-}
-.input-group { margin-bottom: 1rem; }
-label { display: block; margin-bottom: .4rem; font-weight: 600; }
-input, textarea, select {
-  width: 100%;
-  padding: .5rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  font: inherit;
-}
-input:focus, textarea:focus, select:focus {
-  outline: 2px solid var(--primary);
-}
-.error { border-color: var(--error); }
-.error-message { color: var(--error); font-size: .9rem; margin-top: .3rem; }
-/* ---------- FAQ ---------- */
-.faq-item { border-bottom: 1px solid var(--border); padding: .75rem 0; }
-.faq-question {
-  background: none;
-  border: none;
-  width: 100%;
-  text-align: left;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.faq-answer { display: none; padding-top: .5rem; }
-.faq-answer.visible { display: block; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Cards — Haveli Restaurant Mumbai</title>
+  <meta name="description" content="Give the gift of a memorable dining experience at Haveli Restaurant Mumbai. Choose a value, occasion, and send a gift card.">
+  <meta property="og:title" content="Gift Cards — Haveli Restaurant Mumbai">
+  <meta property="og:description" content="Give the gift of a memorable dining experience at Haveli Restaurant Mumbai. Choose a value, occasion, and send a gift card.">
+  <meta property="og:type" content="website">
+  <style>
+    /* Design tokens (orchestrator will inject actual values) */
+    :root {
+      --primary: #B8860B;
+      --bg: #FAF7F2;
+      --text: #1F1611;
+      --accent: #B8860B;
+      --surface: #FFFFFF;
+      --muted: #6B5D52;
+    }
+    /* Dark mode */
+    /* Micro‑animations */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .btn { display: inline-block; padding: .6rem 1.2rem; background: var(--primary); color: #fff; border: none; border-radius: 6px; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
+    .btn:hover, .btn:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); outline: none; }
+    .card { background: var(--surface); border: 1px solid var(--muted); border-radius: 6px; padding: 1rem; transition: transform .2s ease, box-shadow .2s ease; cursor: pointer; }
+    .card:hover, .card:focus-visible { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,.12); outline: none; }
+    .section-light, [data-bg="light"] {
+      background: var(--tpl-light-surface, #f7f0e3);
+      color: var(--tpl-text-on-light, #1a1a1a);
+    }
+    .section-light h1, .section-light h2, .section-light h3, .section-light h4,
+    .section-light p, .section-light li, .section-light label, .section-light span {
+      color: var(--tpl-text-on-light, #1a1a1a);
+    }
+    /* Layout */
+    .container { max-width: var(--max-width, 1200px); margin: 0 auto; padding: 1rem; }
+    .hero { text-align: center; padding: 3rem 1rem; }
+    .hero h1 { font-size: clamp(2rem,5vw,3rem); margin-bottom: .5rem; }
+    .hero p { font-size: 1.125rem; margin-bottom: 1.5rem; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(2,1fr); }
+    @media (min-width: 600px) { .grid { grid-template-columns: repeat(3,1fr); } }
+    .denom-card { text-align: center; padding: .75rem; background: var(--surface); border: 1px solid var(--muted); border-radius: 6px; }
+    .denom-card.selected { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .form-group { margin-bottom: 1rem; }
+    label { display: block; margin-bottom: .25rem; font-weight: 500; }
+    input, textarea { width: 100%; padding: .5rem; border: 1px solid var(--muted); border-radius: 4px; }
+    input:focus, textarea:focus { outline: 2px solid var(--primary); }
+    .error { color: #c0392b; font-size: .875rem; margin-top: .25rem; }
+    .faq-item { border-bottom: 1px solid var(--muted); padding: .75rem 0; }
+    .faq-question { font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+    .faq-answer.open { max-height: 10rem; }
+    .theme-toggle { position: fixed; top: 1rem; right: 1rem; background: var(--surface); border: 1px solid var(--muted); border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+  </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -857,7 +812,7 @@ section[data-section] {
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -981,22 +936,7 @@ header :where(a:hover, a:focus, button:hover, button:focus){
 :where(.btn, .button, [class*="btn-"], [class*="button-"], .badge, .pill, .chip, [class*="badge-"], [class*="pill-"]){
   /* explicit no-op — these elements should retain --tpl-accent as bg */
 }
-</style><style data-trd-phase="42.29">body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]),body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) *{color:var(--tpl-text-on-light,#1a1a1a)!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a{color:var(--tpl-link-on-light,#1a1a1a)!important;text-decoration:none!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a:hover{text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"],body footer[role="contentinfo"][data-trd-dark-footer="1"] *{color:var(--tpl-text-on-dark,#f4f1ea)!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a{color:var(--tpl-link-on-dark,#f4f1ea)!important;text-decoration:none!important;opacity:0.85!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a:hover{opacity:1!important;text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] h1,body footer[role="contentinfo"][data-trd-dark-footer="1"] h2,body footer[role="contentinfo"][data-trd-dark-footer="1"] h3,body footer[role="contentinfo"][data-trd-dark-footer="1"] h4,body footer[role="contentinfo"][data-trd-dark-footer="1"] h5,body footer[role="contentinfo"][data-trd-dark-footer="1"] h6{color:var(--tpl-heading-on-dark,#ffffff)!important;}body[data-trd-light-page="1"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),body[data-trd-light-page="1"] textarea,body[data-trd-light-page="1"] select{background:#fff!important;color:#1a1a1a!important;border:1px solid rgba(0,0,0,0.2)!important;}body[data-trd-light-page="1"] label{color:var(--tpl-text-on-light,#1a1a1a)!important;}[class*="card"][style*="background"][style*="rgb(2"],[class*="card"][style*="background:#1"],[class*="card"][style*="background:#2"],[class*="card"][style*="background:#3"],[class*="publication"]:not([class*="light"]),[class*="review-card"]:not([class*="light"]){color:#fff!important;}[class*="card"][style*="background"][style*="rgb(2"] *,[class*="publication"]:not([class*="light"]) *,[class*="review-card"]:not([class*="light"]) *{color:inherit!important;}</style><script data-trd-phase="42.31">(function(){function getLum(rgb){if(!rgb)return 1;var open=rgb.indexOf('(');var close=rgb.indexOf(')');if(open<0||close<0)return 1;var parts=rgb.substring(open+1,close).split(',');if(parts.length<3)return 1;var r=parseInt(parts[0],10)/255;var g=parseInt(parts[1],10)/255;var b=parseInt(parts[2],10)/255;if(isNaN(r)||isNaN(g)||isNaN(b))return 1;return 0.2126*r+0.7152*g+0.0722*b;}function stamp(){var f=document.querySelector('footer[role="contentinfo"]');if(!f)return;if(f.hasAttribute('data-trd-dark-footer'))return;var bg=getComputedStyle(f).backgroundColor;if(getLum(bg)<0.5){f.setAttribute('data-trd-dark-footer','1');}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stamp);}else{stamp();}})();</script><!-- Open Graph (Phase A5) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Haveli Restaurant Mumbai — Gift Cards">
-  <meta property="og:description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  
-  
-  <meta property="og:site_name" content="Haveli Restaurant Mumbai">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Haveli Restaurant Mumbai — Gift Cards">
-  <meta name="twitter:description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  
-  <!-- SEO -->
-  <meta name="description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  <meta name="author" content="Haveli Restaurant Mumbai">
-  <link rel="manifest" href="/manifest.json">
+</style><style data-trd-phase="42.29">body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]),body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) *{color:var(--tpl-text-on-light,#1a1a1a)!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a{color:var(--tpl-link-on-light,#1a1a1a)!important;text-decoration:none!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a:hover{text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"],body footer[role="contentinfo"][data-trd-dark-footer="1"] *{color:var(--tpl-text-on-dark,#f4f1ea)!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a{color:var(--tpl-link-on-dark,#f4f1ea)!important;text-decoration:none!important;opacity:0.85!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a:hover{opacity:1!important;text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] h1,body footer[role="contentinfo"][data-trd-dark-footer="1"] h2,body footer[role="contentinfo"][data-trd-dark-footer="1"] h3,body footer[role="contentinfo"][data-trd-dark-footer="1"] h4,body footer[role="contentinfo"][data-trd-dark-footer="1"] h5,body footer[role="contentinfo"][data-trd-dark-footer="1"] h6{color:var(--tpl-heading-on-dark,#ffffff)!important;}body[data-trd-light-page="1"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),body[data-trd-light-page="1"] textarea,body[data-trd-light-page="1"] select{background:#fff!important;color:#1a1a1a!important;border:1px solid rgba(0,0,0,0.2)!important;}body[data-trd-light-page="1"] label{color:var(--tpl-text-on-light,#1a1a1a)!important;}[class*="card"][style*="background"][style*="rgb(2"],[class*="card"][style*="background:#1"],[class*="card"][style*="background:#2"],[class*="card"][style*="background:#3"],[class*="publication"]:not([class*="light"]),[class*="review-card"]:not([class*="light"]){color:#fff!important;}[class*="card"][style*="background"][style*="rgb(2"] *,[class*="publication"]:not([class*="light"]) *,[class*="review-card"]:not([class*="light"]) *{color:inherit!important;}</style><script data-trd-phase="42.31">(function(){function getLum(rgb){if(!rgb)return 1;var open=rgb.indexOf('(');var close=rgb.indexOf(')');if(open<0||close<0)return 1;var parts=rgb.substring(open+1,close).split(',');if(parts.length<3)return 1;var r=parseInt(parts[0],10)/255;var g=parseInt(parts[1],10)/255;var b=parseInt(parts[2],10)/255;if(isNaN(r)||isNaN(g)||isNaN(b))return 1;return 0.2126*r+0.7152*g+0.0722*b;}function stamp(){var f=document.querySelector('footer[role="contentinfo"]');if(!f)return;if(f.hasAttribute('data-trd-dark-footer'))return;var bg=getComputedStyle(f).backgroundColor;if(getLum(bg)<0.5){f.setAttribute('data-trd-dark-footer','1');}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stamp);}else{stamp();}})();</script>  <link rel="manifest" href="/manifest.json">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]);t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'https://app.posthog.com',loaded:function(p){if(window.location.host.includes('localhost'))p.opt_out_capturing();}});
@@ -1116,132 +1056,123 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 </div>
 
 
+<main id="main" class="container cm-main cm-section section-light">
+  <!-- Hero -->
+  <section class="hero fade-in section-light">
+    <h1>Give the Gift of Haveli Restaurant Mumbai</h1>
+    <p>Share an unforgettable meal with your loved ones.</p>
+    <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/magnific_cinematic-photorealistic-_3001106970.jpeg" alt="Warm dining ambience at Haveli Restaurant Mumbai" loading="lazy" style="max-width:100%;height:auto;margin-top:1rem;">
+    <a href="#gift-form" class="btn fade-in">Buy Now</a>
+  </section>
 
-<main id="main-content" class="section-light cm-main cm-section section-light">
-
-<!-- Hero -->
-<section class="fade-in">
-  <h1>Give the Gift of Haveli Restaurant Mumbai</h1>
-  <p>Share an unforgettable meal with your loved ones.</p>
-  <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/magnific_cinematic-photorealistic-_3001106970.jpeg" alt="Warm, inviting ambience of Haveli Restaurant Mumbai" loading="lazy">
-  <a href="#gift-form" class="btn">Buy Now</a>
-</section>
-
-<!-- Denomination Grid -->
-<section class="fade-in">
-  <h2>Choose an Amount</h2>
-  <p>Contact us for details on available denominations.</p>
-  <div class="grid grid-3col grid-2col">
-    <div class="card"><p>Denomination 1</p></div>
-    <div class="card"><p>Denomination 2</p></div>
-    <div class="card"><p>Denomination 3</p></div>
-    <div class="card"><p>Denomination 4</p></div>
-    <div class="card"><p>Denomination 5</p></div>
-    <div class="card"><p>Custom Amount</p></div>
-  </div>
-</section>
-
-<!-- Card Type Selector -->
-<section class="fade-in">
-  <h2>Card Type</h2>
-  <div class="grid grid-2col">
-    <div class="card"><p>Digital e‑card (email delivery)</p></div>
-    <div class="card"><p>Physical card (shipped)</p></div>
-    <div class="card"><p>Printable PDF</p></div>
-  </div>
-</section>
-
-<!-- Occasion Selector -->
-<section class="fade-in">
-  <h2>Occasion</h2>
-  <div class="grid grid-2col">
-    <div class="card"><p>Birthday</p></div>
-    <div class="card"><p>Anniversary</p></div>
-    <div class="card"><p>Holiday</p></div>
-    <div class="card"><p>Thank You</p></div>
-    <div class="card"><p>Just Because</p></div>
-  </div>
-</section>
-
-<!-- Preview -->
-<section class="fade-in">
-  <h2>Here's How It Looks</h2>
-  <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(18).jpg" alt="Sample Haveli gift card design" loading="lazy">
-</section>
-
-<!-- Use Information -->
-<section class="fade-in">
-  <h2>How to Redeem</h2>
-  <ul>
-    <li>Redeemable in‑restaurant at the register.</li>
-    <li>Valid at all Haveli locations in Mumbai.</li>
-    <li>Balance can be checked online or by calling us.</li>
-    <li>Expiration policy: Contact us for details.</li>
-  </ul>
-</section>
-
-<!-- Gift Card Purchase Form -->
-<section id="gift-form" class="fade-in">
-  <h2>Send Your Gift Today</h2>
-  <form id="gift-card-form" method="POST" action="mailto:contact@dcsai.ai?subject=Website%20form%20submission%20%E2%80%94%20Haveli%20Restaurant%20Mumbai">
-    <div class="input-group">
-      <label for="recipient-name">Recipient Name <span aria-hidden="true">*</span></label>
-      <input type="text" id="recipient-name" name="recipient-name" aria-required="true" required>
-      <div class="error-message" id="error-name" hidden>Please enter the recipient's name.</div>
+  <!-- Denomination Grid -->
+  <section class="section-light fade-in" id="denominations">
+    <h2>Select a Value</h2>
+    <div class="grid">
+      <div class="denom-card" data-value="custom">Custom Amount</div>
+      <div class="denom-card" data-value="custom">Custom Amount</div>
+      <div class="denom-card" data-value="custom">Custom Amount</div>
+      <div class="denom-card" data-value="custom">Custom Amount</div>
     </div>
-    <div class="input-group">
-      <label for="recipient-email">Recipient Email</label>
-      <input type="email" id="recipient-email" name="recipient-email">
-    </div>
-    <div class="input-group">
-      <label for="message">Personal Message</label>
-      <textarea id="message" name="message" rows="4"></textarea>
-    </div>
-    <button type="submit" class="btn">Send Gift Card</button>
-  </form>
-</section>
+  </section>
 
-<!-- FAQ -->
-<section class="fade-in">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-item">
-    <button class="faq-question" aria-expanded="false">
-      <span>What is the refund policy?</span>
-      <span aria-hidden="true">▾</span>
-    </button>
-    <div class="faq-answer" hidden>
-      <p>Refunds are not available for purchased gift cards. Please contact us for assistance.</p>
+  <!-- Card Type Selector -->
+  <section class="section-light fade-in" id="card-type">
+    <h2>Choose Card Type</h2>
+    <div class="grid">
+      <div class="card" tabindex="0" role="button" aria-pressed="false" data-type="digital">
+        <h3>Digital e‑card</h3>
+        <p>Delivered via email.</p>
+      </div>
+      <div class="card" tabindex="0" role="button" aria-pressed="false" data-type="physical">
+        <h3>Physical card</h3>
+        <p>Shipped to the recipient.</p>
+      </div>
+      <div class="card" tabindex="0" role="button" aria-pressed="false" data-type="pdf">
+        <h3>Printable PDF</h3>
+        <p>Download and print yourself.</p>
+      </div>
     </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" aria-expanded="false">
-      <span>What if the card is lost?</span>
-      <span aria-hidden="true">▾</span>
-    </button>
-    <div class="faq-answer" hidden>
-      <p>Lost cards cannot be replaced. Keep the card details safe.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" aria-expanded="false">
-      <span>When does the card expire?</span>
-      <span aria-hidden="true">▾</span>
-    </button>
-    <div class="faq-answer" hidden>
-      <p>Expiration details are provided at the time of purchase. Contact us for specifics.</p>
-    </div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" aria-expanded="false">
-      <span>Can I combine multiple gift cards?</span>
-      <span aria-hidden="true">▾</span>
-    </button>
-    <div class="faq-answer" hidden>
-      <p>Yes, multiple gift cards can be used together for a single transaction.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Occasion Selector -->
+  <section class="section-light fade-in" id="occasion">
+    <h2>Occasion</h2>
+    <div class="grid">
+      <div class="card" tabindex="0" role="button" aria-pressed="false" data-occasion="birthday"><h3>Birthday</h3></div>
+      <div class="card" tabindex="0" role="button" aria-pressed="false" data-occasion="anniversary"><h3>Anniversary</h3></div>
+      <div class="card" tabindex="0" role="button" aria-pressed="false" data-occasion="holiday"><h3>Holiday</h3></div>
+      <div class="card" tabindex="0" role="button" aria-pressed="false" data-occasion="thankyou"><h3>Thank You</h3></div>
+      <div class="card" tabindex="0" role="button" aria-pressed="false" data-occasion="justbecause"><h3>Just Because</h3></div>
+    </div>
+  </section>
+
+  <!-- Preview -->
+  <section class="section-light fade-in" id="preview">
+    <h2>How It Looks</h2>
+    <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(18).jpg" alt="Sample Haveli Restaurant Mumbai gift card design" loading="lazy" style="max-width:300px;width:100%;height:auto;margin:auto;display:block;">
+  </section>
+
+  <!-- Gift Card Form -->
+  <section class="section-light fade-in" id="gift-form">
+    <h2>Send Your Gift</h2>
+    <form id="gift-card-form" action="mailto:contact@dcsai.ai?subject=Website%20form%20submission%20%E2%80%94%20Haveli%20Restaurant%20Mumbai" method="POST" novalidate>
+      <div class="form-group">
+        <label for="recipient-name">Recipient Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="recipient-name" name="recipient-name" required aria-required="true" aria-label="Recipient Name">
+        <div class="error" id="error-name" hidden></div>
+      </div>
+      <div class="form-group">
+        <label for="recipient-email">Recipient Email</label>
+        <input type="email" id="recipient-email" name="recipient-email" aria-label="Recipient Email">
+      </div>
+      <div class="form-group">
+        <label for="personal-message">Personal Message</label>
+        <textarea id="personal-message" name="personal-message" rows="4" aria-label="Personal Message"></textarea>
+      </div>
+      <button type="submit" class="btn">Send Your Gift Today</button>
+    </form>
+  </section>
+
+  <!-- Use Information -->
+  <section class="section-light fade-in" id="use-info">
+    <h2>How to Redeem</h2>
+    <ul>
+      <li>Present the gift card at the register during your visit.</li>
+      <li>Valid at any Haveli Restaurant Mumbai location.</li>
+      <li>Balance can be checked by calling us or via email.</li>
+      <li>Expiration policy: see terms and conditions or contact us for details.</li>
+    </ul>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-light fade-in" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-question" tabindex="0" aria-expanded="false">What is the refund policy?<span aria-hidden="true">▸</span></div>
+      <div class="faq-answer" hidden>
+        <p>Gift cards are non‑refundable. Please review the terms for more information.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" tabindex="0" aria-expanded="false">What if the card is lost?<span aria-hidden="true">▸</span></div>
+      <div class="faq-answer" hidden>
+        <p>Lost cards cannot be replaced. Keep the card safe.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" tabindex="0" aria-expanded="false">When does the card expire?<span aria-hidden="true">▸</span></div>
+      <div class="faq-answer" hidden>
+        <p>Expiration details are provided in the terms and conditions.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" tabindex="0" aria-expanded="false">Can I combine multiple gift cards?<span aria-hidden="true">▸</span></div>
+      <div class="faq-answer" hidden>
+        <p>Yes, multiple cards can be used together toward a single purchase.</p>
+      </div>
+    </div>
+  </section>
 <!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
 <section class="trd-section-filler" data-trd-section-filler="phase-F" style="padding:48px 24px;max-width:880px;margin:0 auto;line-height:1.7;">
   <h2 style="font-size:1.5rem;font-weight:700;margin:0 0 18px;">Gift cards</h2>
@@ -1250,45 +1181,55 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 <!-- ─── /Phase F ──────────────────────────────────────────────── -->
 </main>
 
-
 <script>
-// Theme toggle
-const themeBtn = document.getElementById('theme-toggle');
-themeBtn.onclick = () => document.documentElement.classList.toggle('dark');
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark');
-}
+/* Theme toggle */
 
-// Fade‑in on scroll
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// FAQ toggle
-document.querySelectorAll('.faq-question').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const expanded = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', !expanded);
-    const answer = btn.nextElementSibling;
-    answer.hidden = expanded;
-    answer.classList.toggle('visible', !expanded);
+/* Selection logic for cards, occasions, denominations */
+document.querySelectorAll('#card-type .card, #occasion .card, #denominations .denom-card').forEach(el => {
+  el.addEventListener('click', () => {
+    const group = el.parentElement;
+    group.querySelectorAll('.selected, .card[aria-pressed="true"]').forEach(i => {
+      i.classList.remove('selected');
+      i.setAttribute('aria-pressed', 'false');
+    });
+    el.classList.add('selected');
+    el.setAttribute('aria-pressed', 'true');
   });
 });
 
-// Form validation
+/* FAQ toggle */
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const expanded = q.getAttribute('aria-expanded') === 'true';
+    q.setAttribute('aria-expanded', !expanded);
+    const answer = q.nextElementSibling;
+    if (!expanded) {
+      answer.hidden = false;
+      answer.classList.add('open');
+    } else {
+      answer.classList.remove('open');
+      answer.hidden = true;
+    }
+  });
+});
+
+/* Form validation */
 const form = document.getElementById('gift-card-form');
 form.addEventListener('submit', e => {
   const nameInput = document.getElementById('recipient-name');
-  const errorMsg = document.getElementById('error-name');
+  const errorName = document.getElementById('error-name');
   let valid = true;
-  if (nameInput.value.trim() === '') {
+  if (!nameInput.value.trim()) {
+    errorName.textContent = 'Recipient name is required.';
+    errorName.hidden = false;
     nameInput.classList.add('error');
-    errorMsg.hidden = false;
     valid = false;
   } else {
+    errorName.hidden = true;
     nameInput.classList.remove('error');
-    errorMsg.hidden = true;
   }
   if (!valid) e.preventDefault();
 });
@@ -1363,7 +1304,7 @@ form.addEventListener('submit', e => {
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1373,7 +1314,7 @@ form.addEventListener('submit', e => {
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>

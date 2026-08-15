@@ -1,4 +1,3 @@
-
 # Project: Haveli Restaurant Mumbai
 
 ## Tech Stack
@@ -16,19 +15,19 @@ No database — static content only
 No backend
 
 ## Frontend Components / Pages
-- `index.html` — Homepage with heritage hero, signature dishes preview, ambiance showcase, and booking CTA
-- `menu.html` — Curated North Indian and regional Indian dining menu with veg/non-veg highlights and chef specialties
-- `reservation.html` — Interactive table reservation form with date/time picker, party size selection, and dietary preferences
-- `about.html` — Haveli heritage story, culinary philosophy, traditional clay-oven techniques, and chef background
-- `gallery.html` — High-resolution food presentation, royal architectural interiors, and festive dining captures
-- `private-dining.html` — Grand celebrations, family gatherings, corporate banquets, and bespoke event inquiries
-- `contact.html` — Mumbai location address, operating hours, parking/valet details, reservation phone, and inquiry form
+- `index` (Home: Hero, specialties teaser, chef showcase, ambiance preview, opening hours, reservation callout)
+- `menu` (Culinary selections: Veg/Non-Veg starters, mains, breads, thalis, regional Indian desserts, beverages with realistic pricing)
+- `reservation` (Table booking form: date, time, party size, dietary notes, instant confirmation simulated toast)
+- `about` (Heritage & story: royal haveli architecture inspiration, culinary lineage, sourcing principles)
+- `gallery` (Visual showcase: authentic North & regional Indian dishes, interior heritage decor, live kitchen moments)
+- `contact` (Location details in Mumbai, contact inquiry form, opening hours, interactive map placeholder)
 
 ## Critical Requirements
-- Authentic royal Indian dining aesthetic with warm saffron and terracotta accents
-- Persistent reservation call-to-action ("Reserve a Table") accessible from all pages
-- Structured opening hours, Mumbai location details, and dietary labeling (Veg, Non-Veg, Jain options)
-- Mobile-responsive navigation and accessible ARIA attributes across all interactive forms
+1. Warm heritage hospitality aesthetic with regal Indian culinary accents and clean typography.
+2. Complete restaurant information: detailed opening hours, Mumbai address placeholder, dietary tags (Veg, Non-Veg, Jain options).
+3. Client-side validated table booking and contact inquiry forms with seamless user feedback.
+4. Fully responsive layout with unified navigation and sticky reservation CTA across all pages.
+5. Strict adherence to canonical slugs (`index`, `menu`, `reservation`, `about`, `gallery`, `contact`) and exact brand naming ("Haveli Restaurant Mumbai").
 
 ## Complexity Rating
-Simple — Clean static multi-page restaurant site with focused client-side validation and rich visual storytelling
+Simple — Multi-page static restaurant website with interactive booking forms, menu filters, and gallery showcase.

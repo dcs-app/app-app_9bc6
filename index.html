@@ -131,11 +131,90 @@ section {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home — Haveli Restaurant Mumbai</title>
-  <meta name="description" content="Authentic Indian heritage dining and royal culinary traditions in Mumbai">
+  <meta name="description" content="Authentic Indian Culinary Heritage & Royal Dining in Mumbai">
   <meta property="og:title" content="Home — Haveli Restaurant Mumbai">
-  <meta property="og:description" content="Authentic Indian heritage dining and royal culinary traditions in Mumbai">
+  <meta property="og:description" content="Authentic Indian Culinary Heritage & Royal Dining in Mumbai">
   <meta property="og:type" content="website">
-  <style>:root{--font-serif:'Fraunces','Playfair Display','Cormorant Garamond',Georgia,serif;--font-sans:'Inter',system-ui,-apple-system,sans-serif;--color-bg:#FAF7F2;--color-surface:#D4B896;--color-text-primary:#1B4965;--color-text-secondary:color-mix(in oklab, #1B4965 70%, transparent);--color-accent:#D4663B;--color-border:rgba(27,73,101,0.12);--color-header-bg:#FAF7F2;--color-footer-bg:#0a0a0a;--radius-sm:6px;--radius-md:12px;--radius-lg:24px;--shadow-sm:0 2px 8px rgba(31,22,17,0.06);--shadow-md:0 12px 36px rgba(31,22,17,0.1);--max-width:1200px;}*{box-sizing:border-box;margin:0;padding:0;}h1,h2,h3,h4{font-family:var(--font-serif);font-weight:600;line-height:1.2;color:var(--color-text-primary);}h1{font-size:clamp(2.2rem,4.5vw,3.8rem);letter-spacing:-0.02em;}h2{font-size:clamp(1.75rem,3vw,2.5rem);}h3{font-size:1.35rem;}a.primary-nav a:hover{color:var(--color-accent);}.nav-cta{background:var(--color-accent);color:#FFFFFF !important;padding:0.55rem 1.1rem;border-radius:var(--radius-sm);font-weight:600;transition:opacity 0.2s ease;}.nav-cta:hover.footer-brand-block{max-width:520px;}.footer-brand{font-size:1.6rem;color:#FAF7F2;margin-bottom:0.5rem;}.footer-tagline{color:#C8B9A6;font-size:0.95rem;margin-bottom:0.75rem;}.footer-address{color:#A89885;font-size:0.9rem;}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}.footer-col-title{color:#FAF7F2;font-size:1.1rem;margin-bottom:1rem;}.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.6rem;font-size:0.92rem;}.footer-links a{color:#C8B9A6;}.footer-links a:hover{color:#FAF7F2;}.footer-text{color:#C8B9A6;font-size:0.92rem;margin-bottom:0.4rem;.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}.skip-link:focus-visible{left:0;top:0;width:auto;height:auto;background:#fff;color:#000;padding:0.5rem;z-index:1000;}.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease;}.fade-in.visible{opacity:1;transform:translateY(0);}.btn{transition:transform 0.2s ease,box-shadow 0.2s ease;}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.15);}.card{transition:transform 0.2s ease,box-shadow 0.2s ease;}.card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,0,0,0.12);}.stat-number{animation:countUp 0.6s ease forwards;}@keyframes countUp{from{opacity:0;}to{opacity:1;}}:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px;}.section-light, [data-bg="light"]{background:var(--tpl-light-surface,#f7f0e3);color:var(--tpl-text-on-light,#1a1a1a);} .section-light h1,.section-light h2,.section-light h3,.section-light h4,.section-light p,.section-light li,.section-light label,.section-light span{color:var(--tpl-text-on-light,#1a1a1a);}</style>
+  <style>
+    /* Shared styles from manifest */
+    :root {
+      --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --color-bg: #FAF7F2;
+      --color-surface: #D4B896;
+      --color-text-primary: #1B4965;
+      --color-text-secondary: color-mix(in oklab, #1B4965 70%, transparent);
+      --color-accent: #D4663B;
+      --color-accent-hover: #996F08;
+      --color-border: rgba(27,73,101,0.12);
+      --color-header-bg: #FAF7F2;
+      --color-footer-bg: #0a0a0a;
+      --color-footer-text: #E6DFD5;
+      --color-footer-muted: #A39688;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 2px 8px rgba(31, 22, 17, 0.06);
+      --shadow-md: 0 12px 36px rgba(31, 22, 17, 0.1);
+      --max-width: 1200px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--color-text-primary);
+    }
+    h1 { font-size: clamp(2.25rem, 4.5vw, 3.75rem); }
+    h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 1rem; }
+    h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
+    p { margin-bottom: 1rem; color: var(--color-text-secondary); }
+    a { color: inherit; text-decoration: none; transition: all 0.2s ease; }
+    a:hover 
+    .nav-btn-reserve { background: var(--color-accent); color: #FFFFFF !important; padding: 0.6rem 1.25rem; border-radius: var(--radius-sm); font-weight: 600; }
+    .nav-btn-reserve:hover 
+    .footer-brand-title { font-size: 1.75rem; color: #FFFFFF; margin-bottom: 0.5rem; }
+    .footer-brand-tagline { color: var(--color-footer-muted); font-size: 0.95rem; margin-bottom: 1.25rem; }
+    .footer-hours, .footer-location { font-size: 0.9rem; color: var(--color-footer-text); margin-bottom: 0.5rem; }
+    .footer-nav-columns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .footer-col-title { font-family: var(--font-sans); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-accent); margin-bottom: 1rem; font-weight: 700; }
+    .footer-links-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-links-list a { color: var(--color-footer-muted); font-size: 0.9rem; }
+    .footer-links-list a:hover { color: #FFFFFF; 
+    .footer-social { display: flex; gap: 1.25rem; }
+    .social-link { color: var(--color-footer-muted); 
+    }
+    /* Dark mode */
+    /* Micro animations */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .btn { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    .card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,0.12); }
+    .stat-number { animation: countUp 0.6s ease forwards; }
+    @keyframes countUp { from { opacity:0; } to { opacity:1; } }
+    :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+    .skip-link { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus-visible { left:0; top:0; width:auto; height:auto; background:#fff; color:#000; padding:0.5rem; z-index:1000; }
+    /* Section light rule (not used here) */
+    .section-light, [data-bg="light"] {
+      background: var(--tpl-light-surface, #f7f0e3);
+      color: var(--tpl-text-on-light, #1a1a1a);
+    }
+    .section-light h1, .section-light h2, .section-light h3, .section-light h4,
+    .section-light p, .section-light li, .section-light label, .section-light span {
+      color: var(--tpl-text-on-light, #1a1a1a);
+    }
+  </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -767,7 +846,7 @@ section[data-section] {
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -965,12 +1044,6 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 </style>
 </head>
 <body data-trd-light-page="1">
-  
-  <script>
-    const t=document.getElementById("theme-toggle");
-    t.onclick=()=>document.documentElement.classList.toggle("dark");
-    if(localStorage.theme==="dark"||(!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme:dark)").matches)){document.documentElement.classList.add("dark")}
-  </script>
   <header class="cm-header" role="banner">
   <div class="cm-header-inner">
     <nav class="cm-nav-left" role="navigation" aria-label="Left navigation">
@@ -1015,8 +1088,14 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
+  
+  <script>
+    const t=document.getElementById("theme-toggle");
+    t.onclick=()=>document.documentElement.classList.toggle("dark");
+    if(localStorage.theme==="dark"||(!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme:dark)").matches)){document.documentElement.classList.add("dark")}
+  </script>
   <main class="cm-main cm-section section-light" id="main">
-    <!-- SECTION 1: hero -->
+    <!-- HERO SECTION -->
     <section class="cm-hero" data-section="hero">
       <style>
         .cm-hero{position:relative;height:100vh;min-height:680px;width:100%;overflow:hidden;background:#1B4965}
@@ -1038,28 +1117,28 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
         .cm-hero__cta::after{content:'\2192';font-size:1.1rem;line-height:1}
         @media(max-width:900px){.cm-hero{min-height:560px}.cm-hero__inner{padding:0 28px}.cm-hero__top{padding-top:96px}.cm-hero__bottom{grid-template-columns:1fr;gap:32px;padding-bottom:48px}.cm-hero__coords{display:none}}
       </style>
-      <div class="cm-hero__bg" role="img" aria-label="Elegant interior of Haveli Restaurant Mumbai with heritage décor"></div>
+      <div class="cm-hero__bg" role="img" aria-label="Exterior view of Haveli Restaurant Mumbai with heritage architecture"></div>
       <div class="cm-hero__inner">
         <div class="cm-hero__top">
-          <p class="cm-hero__eyebrow fade-in">Welcome to Haveli</p>
-          <p class="cm-hero__coords fade-in">19.0760°N · 72.8777°E</p>
+          <p class="cm-hero__eyebrow fade-in">Welcome</p>
+          <p class="cm-hero__coords fade-in">19.0760° N, 72.8777° E</p>
         </div>
         <div class="cm-hero__center">
           <div class="cm-hero__rule" aria-hidden="true"></div>
           <h1 class="cm-hero__headline fade-in">
             <em>Heritage</em>
-            <strong>Dining Experience</strong>
+            <strong>Haveli Restaurant Mumbai</strong>
           </h1>
         </div>
         <div class="cm-hero__bottom">
-          <p class="cm-hero__subtext fade-in">Authentic Indian heritage dining and royal culinary traditions in Mumbai</p>
+          <p class="cm-hero__subtext fade-in">Authentic Indian Culinary Heritage & Royal Dining in Mumbai</p>
           <a href="/reservation.html" class="cm-hero__cta">Reserve a Table</a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: philosophy -->
-    <section class="cm-philosophy section-light" data-section="philosophy">
+    <!-- PHILOSOPHY SECTION -->
+    <section class="cm-philosophy" data-section="philosophy">
       <style>
         .cm-philosophy{background:#faf6f2;padding:120px 0;border-top:1px solid rgba(27,73,101,0.10);border-bottom:1px solid rgba(27,73,101,0.10)}
         .cm-philosophy__inner{max-width:880px;margin:0 auto;padding:0 32px;text-align:center}
@@ -1071,14 +1150,14 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
       </style>
       <div class="cm-philosophy__inner">
         <p class="cm-philosophy__eyebrow fade-in">Our Philosophy</p>
-        <p class="cm-philosophy__statement fade-in">Celebrating the rich flavors of Indian cuisine with a royal touch.</p>
-        <p class="cm-philosophy__byline fade-in">— Haveli Restaurant Mumbai</p>
+        <p class="cm-philosophy__statement fade-in">Celebrating the rich flavors of Indian cuisine with royal hospitality</p>
+        <p class="cm-philosophy__byline fade-in">— Chef Arjun Patel</p>
         <div class="cm-philosophy__divider" aria-hidden="true"></div>
       </div>
     </section>
 
-    <!-- SECTION 3: featured-menu -->
-    <section class="cm-featured-menu section-light" data-section="featured-menu">
+    <!-- FEATURED MENU SECTION -->
+    <section class="cm-featured-menu" data-section="featured-menu">
       <style>
         .cm-featured-menu{background:#FAF7F2;padding:120px 0}
         .cm-featured-menu__inner{max-width:1280px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
@@ -1099,20 +1178,20 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
       <div class="cm-featured-menu__inner">
         <div class="cm-featured-menu__media">
           <span class="cm-featured-menu__media-tag">Featured</span>
-          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/gallery/image(18).jpg" alt="Signature dish platter at Haveli Restaurant Mumbai" loading="lazy">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/gallery/image(18).jpg" alt="Signature dish platter at Haveli Restaurant" loading="lazy" width="600" height="500">
         </div>
         <div class="cm-featured-menu__content">
-          <p class="cm-featured-menu__eyebrow fade-in">Signature Dish</p>
-          <h2 class="cm-featured-menu__title fade-in">Maharaja's Platter</h2>
-          <p class="cm-featured-menu__desc fade-in">A curated selection of our finest dishes, blending traditional spices with contemporary flair.</p>
-          <p class="cm-featured-menu__meta fade-in">Available for lunch and dinner</p>
-          <a href="/menu.html" class="cm-featured-menu__cta">View Menu</a>
+          <p class="cm-featured-menu__eyebrow fade-in">Menu Highlight</p>
+          <h2 class="cm-featured-menu__title fade-in">Royal Thali Experience</h2>
+          <p class="cm-featured-menu__desc fade-in">A curated selection of regional specialties served in a traditional thali.</p>
+          <p class="cm-featured-menu__meta fade-in">Available all week</p>
+          <a href="/menu.html" class="cm-featured-menu__cta">Explore Menu</a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4: story-snippet -->
-    <section class="cm-story-snippet section-light" data-section="story-snippet">
+    <!-- STORY SNIPPET SECTION -->
+    <section class="cm-story-snippet" data-section="story-snippet">
       <style>
         .cm-story-snippet{background:#faf6f2;padding:120px 0;border-top:1px solid rgba(27,73,101,0.10);border-bottom:1px solid rgba(27,73,101,0.10)}
         .cm-story-snippet__inner{max-width:880px;margin:0 auto;padding:0 32px;text-align:center}
@@ -1124,14 +1203,14 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
       </style>
       <div class="cm-story-snippet__inner">
         <p class="cm-story-snippet__eyebrow fade-in">Our Story</p>
-        <p class="cm-story-snippet__statement fade-in">From a humble kitchen to a royal dining destination.</p>
-        <p class="cm-story-snippet__byline fade-in">Founded in 2010, inspired by Indian heritage.</p>
+        <p class="cm-story-snippet__statement fade-in">From a historic haveli to a modern culinary destination</p>
+        <p class="cm-story-snippet__byline fade-in">Founded 2010</p>
         <div class="cm-story-snippet__divider" aria-hidden="true"></div>
       </div>
     </section>
 
-    <!-- SECTION 5: testimonials -->
-    <section class="cm-testimonials section-light" data-section="testimonials">
+    <!-- TESTIMONIALS SECTION -->
+    <section class="cm-testimonials" data-section="testimonials">
       <style>
         .cm-testimonials{background:#faf6f2;padding:120px 0;position:relative;overflow:hidden}
         .cm-testimonials::before{content:'"';position:absolute;top:-40px;left:50%;transform:translateX(-50%);font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-size:18rem;color:#D4663B;opacity:.08;line-height:1;font-weight:400}
@@ -1142,13 +1221,13 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
         @media(max-width:768px){.cm-testimonials{padding:80px 0}.cm-testimonials__inner{padding:0 24px}}
       </style>
       <div class="cm-testimonials__inner">
-        <p class="cm-testimonials__quote fade-in">The flavors transport you to a royal palace. Exceptional service!</p>
+        <p class="cm-testimonials__quote fade-in">The flavors transport you to a royal feast!</p>
         <p class="cm-testimonials__author fade-in">Priya Sharma</p>
         <p class="cm-testimonials__source fade-in">Foodie Magazine</p>
       </div>
     </section>
 
-    <!-- SECTION 6: press-strip -->
+    <!-- PRESS STRIP SECTION -->
     <section class="cm-press-strip" data-section="press-strip">
       <style>
         .cm-press-strip{background:#FAF7F2;padding:48px 0;border-top:1px solid rgba(27,73,101,0.10);border-bottom:1px solid rgba(27,73,101,0.10)}
@@ -1159,15 +1238,15 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
       </style>
       <div class="cm-press-strip__inner">
         <a href="#!" class="cm-press-strip__pub">Times of India</a>
-        <a href="#!" class="cm-press-strip__pub">The Hindu</a>
-        <a href="#!" class="cm-press-strip__pub">India Today</a>
-        <a href="#!" class="cm-press-strip__pub">BBC India</a>
-        <a href="#!" class="cm-press-strip__pub">NDTV</a>
         <a href="#!" class="cm-press-strip__pub">Hindustan Times</a>
+        <a href="#!" class="cm-press-strip__pub">The Hindu</a>
+        <a href="#!" class="cm-press-strip__pub">NDTV</a>
+        <a href="#!" class="cm-press-strip__pub">India Today</a>
+        <a href="#!" class="cm-press-strip__pub">BBC</a>
       </div>
     </section>
 
-    <!-- SECTION 7: cta-reservation -->
+    <!-- CTA RESERVATION SECTION -->
     <section class="cm-cta-reservation" data-section="cta-reservation">
       <style>
         .cm-cta-reservation{background:#D4663B;padding:80px 0;color:#FAF7F2;position:relative;overflow:hidden}
@@ -1187,12 +1266,12 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
       </style>
       <div class="cm-cta-reservation__inner">
         <div class="cm-cta-reservation__copy">
-          <p class="cm-cta-reservation__eyebrow fade-in">Ready to Dine?</p>
-          <h2 class="cm-cta-reservation__title fade-in">Reserve Your Table Today</h2>
-          <p class="cm-cta-reservation__sub fade-in">Experience the heritage flavors of Haveli Restaurant Mumbai. Book now for an unforgettable evening.</p>
+          <p class="cm-cta-reservation__eyebrow fade-in">Reserve</p>
+          <h2 class="cm-cta-reservation__title fade-in">Book Your Table</h2>
+          <p class="cm-cta-reservation__sub fade-in">Experience authentic Indian heritage dining</p>
         </div>
         <div class="cm-cta-reservation__actions">
-          <a href="/reservation.html" class="cm-cta-reservation__btn cm-cta-reservation__btn--primary">Reserve a Table</a>
+          <a href="/reservation.html" class="cm-cta-reservation__btn cm-cta-reservation__btn--primary">Reserve Now</a>
           <a href="/contact.html" class="cm-cta-reservation__btn cm-cta-reservation__btn--secondary">Contact Us</a>
         </div>
       </div>
@@ -1276,7 +1355,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1286,7 +1365,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>
@@ -1347,8 +1426,8 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 })();</script>
 
 <script>(function(){function syncMore(){document.querySelectorAll('.trd-nav-more-btn').forEach(function(btn){try{var nav=btn.closest('ul,nav,header');if(!nav)return;var siblings=nav.querySelectorAll('a');var sibling=null;for(var i=0;i<siblings.length;i++){var a=siblings[i];if(a.closest('.trd-nav-more-panel'))continue;sibling=a;break;}if(!sibling)return;var s=window.getComputedStyle(sibling);btn.style.fontFamily=s.fontFamily;btn.style.fontSize=s.fontSize;btn.style.fontWeight=s.fontWeight;btn.style.letterSpacing=s.letterSpacing;btn.style.textTransform=s.textTransform;btn.style.fontStyle=s.fontStyle;nav.querySelectorAll('.trd-nav-more-panel a').forEach(function(da){da.style.fontFamily=s.fontFamily;da.style.fontSize=s.fontSize;da.style.fontWeight=s.fontWeight;da.style.letterSpacing=s.letterSpacing;da.style.textTransform=s.textTransform;});}catch(e){}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',syncMore)}else{syncMore()}})();</script>
-  <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
   <script>
+    // Intersection Observer for fade-in
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("visible"); });
     }, { threshold: 0.1 });

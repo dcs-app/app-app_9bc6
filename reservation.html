@@ -130,22 +130,20 @@ section {
 }
 </style>
 <meta charset="UTF-8">
-<title>Reserve Your Table – Haveli Restaurant Mumbai</title>
+<title>Reservation – Haveli Restaurant Mumbai</title>
 
 <style>
 /* Dark mode */
-/* Theme toggle button */
-
 /* Micro‑animations */
-.fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
-.btn, .trd-btn { transition: transform .2s ease, box-shadow .2s ease; }
-.btn:hover, .trd-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
-.card { transition: transform .2s ease, box-shadow .2s ease; }
-.card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,.12); }
-.stat-number { animation: countUp .6s ease forwards; }
+.btn { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+.card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,0.12); }
+.stat-number { animation: countUp 0.6s ease forwards; }
 @keyframes countUp { from { opacity:0; } to { opacity:1; } }
-/* Section Light (not used here but required by global rule) */
+/* Light‑section fix (not used here but required globally) */
 .section-light, [data-bg="light"] {
   background: var(--tpl-light-surface, #f7f0e3);
   color: var(--tpl-text-on-light, #1a1a1a);
@@ -154,13 +152,6 @@ section {
 .section-light p, .section-light li, .section-light label, .section-light span {
   color: var(--tpl-text-on-light, #1a1a1a);
 }
-/* Simple layout */
-main { max-width: var(--max-width, 1200px); margin: 2rem auto; padding: 0 1rem; }
-section { margin-bottom: 2.5rem; }
-h1 { margin-bottom: 1rem; }
-h2 { margin-top: 1.5rem; margin-bottom: .75rem; }
-ul { list-style: disc inside; margin-left: 1rem; }
-.phone-fallback { font-size: 1.8rem; font-weight: 600; text-align: center; margin: 1.5rem 0; }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -790,10 +781,13 @@ section[data-section] {
   "certificateUrl": "https://api.dcsai.ai/api/storage/cert/02f47f7c-9225-481e-9f65-03ffe9e24bc6"
 }</script>
 <!-- /TRD Content Credentials -->
+<style id="trd-section-dividers">
+.trd-section-divider{height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.08),transparent);margin:0;border:none;}
+</style>
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -1050,29 +1044,85 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
-<main class="cm-main cm-section section-light" id="main-content">
-  <!-- Booking Form Section -->
-  <section id="booking" class="fade-in">
-    <h1>Reserve Your Table</h1>
-    <p>Book a memorable dining experience</p>
-    
-  </section>
 
-  <!-- Policies & Hours Section -->
-  <section id="policies" class="fade-in">
-    <h2>Reservation Policies</h2>
-    <ul>
-      <li>Free cancellation up to 2 hours before your reservation.</li>
-      <li>We accommodate vegetarian, vegan, and Jain dietary preferences.</li>
-      <li>Smart‑casual dress code – no shorts or flip‑flops.</li>
-      <li>Groups larger than 10 should call us directly.</li>
+<main class="cm-main cm-section section-light" id="main-content">
+  <section class="hero fade-in">
+    <h1>Book a Table</h1>
+    <p>Authentic Indian Culinary Heritage</p>
+  </section><hr class="trd-section-divider"><section class="reservation fade-in">
+    <!-- Reservation Form -->
+    <form class="trd-reservation-form" action="mailto:contact@dcsai.ai?subject=Reservation%20request%20%E2%80%94%20Haveli%20Restaurant%20Mumbai">
+      <div class="field" data-field="name">
+        <label for="res-name">Your Name *</label>
+        <input type="text" id="res-name" name="name" required aria-required="true" autocomplete="name" />
+      </div>
+      <div class="field" data-field="email">
+        <label for="res-email">Email *</label>
+        <input type="email" id="res-email" name="email" required aria-required="true" autocomplete="email" inputmode="email" />
+      </div>
+      <div class="field" data-field="phone">
+        <label for="res-phone">Phone *</label>
+        <input type="tel" id="res-phone" name="phone" required aria-required="true" autocomplete="tel" inputmode="tel" />
+      </div>
+      <div class="field" data-field="date">
+        <label for="res-date">Date *</label>
+        <input type="date" id="res-date" name="date" required aria-required="true" / value="2026-08-15">
+      </div>
+      <div class="field" data-field="time">
+        <label for="res-time">Time *</label>
+        <input type="time" id="res-time" name="time" min="12:00" max="23:00" step="900" required aria-required="true" />
+      </div>
+      <div class="field" data-field="guests">
+        <label for="res-guests">Number of guests *</label>
+        <select id="res-guests" name="guests" required aria-required="true" aria-label="Number of guests">
+          <option value="">Select party size</option>
+          <option value="1">1 guest</option>
+          <option value="2" selected>2 guests</option>
+          <option value="3">3 guests</option>
+          <option value="4">4 guests</option>
+          <option value="5">5 guests</option>
+          <option value="6">6 guests</option>
+          <option value="7">7 guests</option>
+          <option value="8">8 guests</option>
+          <option value="9">9 guests</option>
+          <option value="10">10 guests</option>
+        </select>
+      </div>
+      <div class="field" data-field="notes">
+        <label for="res-notes">Special requests (optional)</label>
+        <textarea id="res-notes" name="notes" rows="3"></textarea>
+      </div>
+      <button type="submit" class="trd-btn trd-btn--primary">Confirm Booking</button>
+      <p class="form-note">For groups over 10, please call us directly.</p>
+    </form>
+    <div class="form-success" role="status" tabindex="-1" hidden>
+      <p>Thanks — we received your booking request and will confirm by email within 1 hour.</p>
+    </div>
+
+    <!-- Policies -->
+    <ul class="policies">
+      <li>Cancellation: free up to 24 hrs before.</li>
+      <li>Dietary: veg, non‑veg, Jain options available.</li>
+      <li>Dress code: smart‑casual.</li>
+      <li>Large groups: call us directly.</li>
     </ul>
 
-    <div class="phone-fallback">Call us now: </div>
+    <!-- Phone fallback -->
+    <p class="phone-fallback"><strong>Call us:</strong> </p>
 
-    <h2>Our Location & Hours</h2>
-    <p>Address: Contact us for our address</p>
-    
+    <!-- Location & Hours -->
+    <div class="location">
+      <p><strong>Address:</strong> Contact us for our address</p>
+      <div class="hours">
+        <div class="trd-location__hours-row"><span class="trd-location__hours-day">Sunday</span><span class="trd-location__hours-time">13:00 – 22:00</span></div>
+        <div class="trd-location__hours-row today"><span class="trd-location__hours-day">Monday</span><span class="trd-location__hours-time">12:00 – 23:00</span></div>
+        <div class="trd-location__hours-row"><span class="trd-location__hours-day">Tuesday</span><span class="trd-location__hours-time">12:00 – 23:00</span></div>
+        <div class="trd-location__hours-row"><span class="trd-location__hours-day">Wednesday</span><span class="trd-location__hours-time">12:00 – 23:00</span></div>
+        <div class="trd-location__hours-row"><span class="trd-location__hours-day">Thursday</span><span class="trd-location__hours-time">12:00 – 23:00</span></div>
+        <div class="trd-location__hours-row"><span class="trd-location__hours-day">Friday</span><span class="trd-location__hours-time">12:00 – 23:00</span></div>
+        <div class="trd-location__hours-row"><span class="trd-location__hours-day">Saturday</span><span class="trd-location__hours-time">12:00 – 23:00</span></div>
+      </div>
+    </div>
   </section>
 
 
@@ -1119,32 +1169,31 @@ function trdSubmitReservation() {
 <!-- ─── /Phase F ──────────────────────────────────────────────── -->
 </main>
 
+
+
 <!-- Theme toggle -->
 
-
 <script>
-/* Theme toggle */
 const t=document.getElementById("theme-toggle");
 t.onclick=()=>document.documentElement.classList.toggle("dark");
-if(localStorage.theme==="dark"||(!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme:dark)").matches)){
-  document.documentElement.classList.add("dark");
-}
+if(localStorage.theme==="dark"||(!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme:dark)").matches)){document.documentElement.classList.add("dark")}
+</script>
 
-/* Fade‑in on scroll */
+<!-- Fade‑in observer -->
+<script>
 const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add("visible"); });
-},{threshold:0.1});
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible");});
+}, {threshold:0.1});
 document.querySelectorAll(".fade-in").forEach(el=>observer.observe(el));
+</script>
 
-/* Set today’s date as minimum for the date field */
-document.addEventListener("DOMContentLoaded",()=>{
-  const today=new Date().toISOString().split("T")[0];
-  const dateInput=document.getElementById("res-date");
-  if(dateInput){ dateInput.setAttribute("min",today); }
-});
-
-/* Form validation & simulated booking */
+<!-- Form handling -->
+<script>
 (function(){
+  // Set today as min date
+  const today=new Date().toISOString().split('T')[0];
+  const dateInput=document.getElementById('res-date');
+  if(dateInput){dateInput.min=today;}
   document.querySelectorAll("form").forEach(function(form){
     form.addEventListener("submit",function(e){
       e.preventDefault();
@@ -1162,12 +1211,12 @@ document.addEventListener("DOMContentLoaded",()=>{
       const orig=btn.textContent;
       btn.disabled=true;
       btn.textContent="Booking…";
-      setTimeout(()=>{
+      setTimeout(function(){
         btn.textContent="✓ Booked!";
         const success=form.parentElement.querySelector(".form-success");
-        if(success){ success.hidden=false; success.focus(); }
+        if(success){success.hidden=false;success.focus();}
         form.reset();
-        setTimeout(()=>{ btn.textContent=orig; btn.disabled=false; },2000);
+        setTimeout(function(){btn.textContent=orig;btn.disabled=false;},2000);
       },800);
     });
   });
@@ -1243,7 +1292,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1253,7 +1302,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>

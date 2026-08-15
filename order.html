@@ -131,31 +131,34 @@ section {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Order Online — Haveli Restaurant Mumbai</title>
-  <meta name="description" content="Order Haveli Restaurant Mumbai's authentic Indian dishes for delivery or pickup.">
+  <meta name="description" content="Place your order online for delivery or pickup at Haveli Restaurant Mumbai.">
   <meta property="og:title" content="Order Online — Haveli Restaurant Mumbai">
-  <meta property="og:description" content="Order Haveli Restaurant Mumbai's authentic Indian dishes for delivery or pickup.">
+  <meta property="og:description" content="Place your order online for delivery or pickup at Haveli Restaurant Mumbai.">
   <meta property="og:type" content="website">
-  <style>:root{--font-serif:'Fraunces','Playfair Display','Cormorant Garamond',Georgia,serif;--font-sans:'Inter',system-ui,-apple-system,sans-serif;--color-bg:#FAF7F2;--color-surface:#D4B896;--color-text-primary:#1B4965;--color-text-secondary:color-mix(in oklab, #1B4965 70%, transparent);--color-accent:#D4663B;--color-border:rgba(27,73,101,0.12);--color-header-bg:#FAF7F2;--color-footer-bg:#0a0a0a;--radius-sm:6px;--radius-md:12px;--radius-lg:24px;--shadow-sm:0 2px 8px rgba(31,22,17,0.06);--shadow-md:0 12px 36px rgba(31,22,17,0.1);--max-width:1200px;}
-*{box-sizing:border-box;margin:0;padding:0;}
-h1,h2,h3,h4{font-family:var(--font-serif);font-weight:600;line-height:1.2;color:var(--color-text-primary);}
-h1{font-size:clamp(2.2rem,4.5vw,3.8rem);letter-spacing:-0.02em;}
-h2{font-size:clamp(1.75rem,3vw,2.5rem);}
-a{color:inherit;text-decoration:none;transition:color .2s ease,opacity .2s ease;}
-button{font-family:inherit;cursor:pointer;background:var(--color-accent);color:#fff;border:none;border-radius:var(--radius-sm);padding:.6rem 1rem;transition:transform .2s ease,box-shadow .2s ease;}
-button:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.15);}
-section{padding:2rem 1rem;max-width:var(--max-width);margin:auto;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;}
-.card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-sm);padding:1rem;display:flex;flex-direction:column;align-items:center;transition:transform .2s ease,box-shadow .2s ease;}
-.card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,0,0,0.12);}
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;}
-.modal-content{background:var(--color-surface);padding:2rem;border-radius:var(--radius-md);max-width:90%;width:300px;position:relative;}
-.close{position:absolute;top:.5rem;right:.5rem;font-size:1.5rem;background:none;color:#000;cursor:pointer;}
-
-.section-light,.section-light[data-bg="light"]{background:var(--tpl-light-surface,#f7f0e3);color:var(--tpl-text-on-light,#1a1a1a);}
-.section-light h1,.section-light h2,.section-light h3,.section-light h4,.section-light p,.section-light li,.section-light label,.section-light span{color:var(--tpl-text-on-light,#1a1a1a);}
-.fade-in{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease;}
-.fade-in.visible{opacity:1;transform:translateY(0);}
-</style>
+  
+  <style>
+    /* Dark mode */
+    /* Micro‑animations */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .btn { display: inline-block; padding: .5rem 1rem; background: var(--color-accent); color: #fff; border: none; border-radius: var(--radius-sm); cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
+    .card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: .75rem; text-align: center; transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,.12); }
+    .items-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); }
+    .modal { position: fixed; inset: 0; background: rgba(0,0,0,.5); display: none; align-items: center; justify-content: center; }
+    .modal[aria-hidden="false"] { display: flex; }
+    .modal-content { background: var(--color-surface); padding: 1.5rem; border-radius: var(--radius-md); max-width: 90%; text-align: center; }
+    .section-light, [data-bg="light"] { background: var(--tpl-light-surface, #f7f0e3); color: var(--tpl-text-on-light, #1a1a1a); }
+    .section-light h1,.section-light h2,.section-light h3,.section-light h4,.section-light p,.section-light li,.section-light label,.section-light span { color: var(--tpl-text-on-light, #1a1a1a); }
+    /* Layout */
+    
+    .skip-link { position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus { left:0; top:0; width:auto; height:auto; background:#fff; color:#000; padding:.5rem; z-index:1000; }
+    @media (max-width:600px){
+      .items-grid{grid-template-columns:repeat(auto-fill, minmax(120px,1fr));}
+    }
+  </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -784,13 +787,10 @@ section[data-section] {
   "certificateUrl": "https://api.dcsai.ai/api/storage/cert/02f47f7c-9225-481e-9f65-03ffe9e24bc6"
 }</script>
 <!-- /TRD Content Credentials -->
-<style id="trd-section-dividers">
-.trd-section-divider{height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.08),transparent);margin:0;border:none;}
-</style>
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -988,7 +988,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 </style>
 </head>
 <body data-trd-light-page="1">
-<header class="cm-header" role="banner">
+    <header class="cm-header" role="banner">
   <div class="cm-header-inner">
     <nav class="cm-nav-left" role="navigation" aria-label="Left navigation">
       <ul class="cm-nav-list">
@@ -1032,152 +1032,197 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
+
 <main class="cm-main cm-section section-light" id="main-content">
-<section class="section-light fade-in" aria-label="Order Online">
-  <h1>Order Online</h1>
-  <p>Enjoy Haveli's authentic dishes delivered to your door.</p>
-  <div class="toggle-buttons" style="display:flex;gap:1rem;margin:1rem 0;">
-    <button class="btn toggle-btn active" data-mode="delivery">Delivery</button>
-    <button class="btn toggle-btn" data-mode="pickup">Pickup</button>
-  </div>
-  <div class="zip-check" style="margin-top:1rem;">
-    <label for="zip">Enter ZIP / Postal Code</label>
-    <input type="text" id="zip" placeholder="e.g., 400001" style="padding:.5rem;margin-top:.5rem;width:100%;max-width:200px;">
-    <button class="btn" id="check-zip" style="margin-top:.5rem;">Check Availability</button>
-    <p id="zip-result" style="margin-top:.5rem;"></p>
-  </div>
-</section><hr class="trd-section-divider"><section class="section-light fade-in" aria-label="Popular Items">
-  <h2>Popular Items</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(2).jpg" alt="Delicious Indian dish" loading="lazy">
-      <h3 style="margin:0.5rem 0;">Dish 1</h3>
-      <p style="margin:0.5rem 0;">$12.99</p>
-      <button class="btn add-to-cart" data-name="Dish 1" data-price="12.99">+ Add to Cart</button>
+  <section class="section-light" aria-label="Order Online">
+    <h1 class="fade-in">Order Online</h1>
+    <p class="fade-in">Delivery within 5 km of Mumbai</p>
+
+    <div class="fade-in" style="margin:1rem 0;">
+      <button id="delivery-btn" class="btn" aria-pressed="true">Delivery</button>
+      <button id="pickup-btn" class="btn" aria-pressed="false">Pickup</button>
     </div>
-    <div class="card">
-      <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(3).jpg" alt="Delicious Indian dish" loading="lazy">
-      <h3 style="margin:0.5rem 0;">Dish 2</h3>
-      <p style="margin:0.5rem 0;">$10.50</p>
-      <button class="btn add-to-cart" data-name="Dish 2" data-price="10.50">+ Add to Cart</button>
+
+    <div class="fade-in" style="margin:1rem 0;">
+      <label for="zip-input">ZIP / Postal Code:</label>
+      <input type="text" id="zip-input" placeholder="e.g., 400001" aria-label="ZIP code">
+      <button id="zip-check-btn" class="btn">Check Availability</button>
+      <p id="zip-result" aria-live="polite"></p>
     </div>
-    <div class="card">
-      <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(6).jpg" alt="Delicious Indian dish" loading="lazy">
-      <h3 style="margin:0.5rem 0;">Dish 3</h3>
-      <p style="margin:0.5rem 0;">$9.75</p>
-      <button class="btn add-to-cart" data-name="Dish 3" data-price="9.75">+ Add to Cart</button>
+
+    <div class="fade-in" style="margin:1rem 0;">
+      <h2>Popular Items</h2>
+      <div class="items-grid">
+        <div class="card">
+          <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(2).jpg" alt="Delicious dish 1" loading="lazy">
+          <p class="item-name" data-name="Dish 1" data-price="12.99">Dish 1</p>
+          <button class="btn add-to-cart" data-name="Dish 1" data-price="12.99">+ Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(3).jpg" alt="Delicious dish 2" loading="lazy">
+          <p class="item-name" data-name="Dish 2" data-price="10.50">Dish 2</p>
+          <button class="btn add-to-cart" data-name="Dish 2" data-price="10.50">+ Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(6).jpg" alt="Delicious dish 3" loading="lazy">
+          <p class="item-name" data-name="Dish 3" data-price="9.75">Dish 3</p>
+          <button class="btn add-to-cart" data-name="Dish 3" data-price="9.75">+ Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(17).jpg" alt="Delicious dish 4" loading="lazy">
+          <p class="item-name" data-name="Dish 4" data-price="11.20">Dish 4</p>
+          <button class="btn add-to-cart" data-name="Dish 4" data-price="11.20">+ Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(3).jpg" alt="Delicious dish 5" loading="lazy">
+          <p class="item-name" data-name="Dish 5" data-price="13.00">Dish 5</p>
+          <button class="btn add-to-cart" data-name="Dish 5" data-price="13.00">+ Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/image(7).jpg" alt="Delicious dish 6" loading="lazy">
+          <p class="item-name" data-name="Dish 6" data-price="8.99">Dish 6</p>
+          <button class="btn add-to-cart" data-name="Dish 6" data-price="8.99">+ Add to Cart</button>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(17).jpg" alt="Delicious Indian dish" loading="lazy">
-      <h3 style="margin:0.5rem 0;">Dish 4</h3>
-      <p style="margin:0.5rem 0;">$13.20</p>
-      <button class="btn add-to-cart" data-name="Dish 4" data-price="13.20">+ Add to Cart</button>
+
+    <div class="fade-in" style="margin:1rem 0;">
+      <h2>Cart Summary</h2>
+      <div id="cart-items"></div>
+      <p id="subtotal">Subtotal: $0.00</p>
+      <p id="delivery-fee">Delivery Fee: $5.00</p>
+      <p id="total"><strong>Total: $5.00</strong></p>
+      <button id="checkout-btn" class="btn">Checkout</button>
     </div>
-    <div class="card">
-      <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(3).jpg" alt="Delicious Indian dish" loading="lazy">
-      <h3 style="margin:0.5rem 0;">Dish 5</h3>
-      <p style="margin:0.5rem 0;">$11.00</p>
-      <button class="btn add-to-cart" data-name="Dish 5" data-price="11.00">+ Add to Cart</button>
+
+    <div class="fade-in" style="margin:1rem 0;">
+      <h2>Also available on:</h2>
+      <ul style="list-style:none;display:flex;gap:0.5rem;padding:0;">
+        <li><a href="#!" class="btn">Uber Eats</a></li>
+        <li><a href="#!" class="btn">DoorDash</a></li>
+        <li><a href="#!" class="btn">Deliveroo</a></li>
+      </ul>
     </div>
-    <div class="card">
-      <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/image(7).jpg" alt="Delicious Indian dish" loading="lazy">
-      <h3 style="margin:0.5rem 0;">Dish 6</h3>
-      <p style="margin:0.5rem 0;">$14.50</p>
-      <button class="btn add-to-cart" data-name="Dish 6" data-price="14.50">+ Add to Cart</button>
-    </div>
-  </div>
-</section><hr class="trd-section-divider"><section class="section-light fade-in" aria-label="Your Cart">
-  <h2>Your Cart</h2>
-  <div id="cart-items" style="margin-bottom:1rem;"></div>
-  <p>Subtotal: $<span id="subtotal">0.00</span></p>
-  <p>Delivery Fee: $<span id="delivery-fee">5.00</span></p>
-  <p>Total: $<strong id="total">0.00</strong></p>
-  <button class="btn" id="checkout-btn" style="margin-top:1rem;">Checkout</button>
-  <h3 style="margin-top:2rem;">Also available on:</h3>
-  <ul style="list-style:none;display:flex;gap:1rem;padding:0;">
-    <li>Uber Eats</li>
-    <li>DoorDash</li>
-    <li>Deliveroo</li>
-  </ul>
+  </section>
+<!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
+<section class="trd-section-filler" data-trd-section-filler="phase-F" style="padding:48px 24px;max-width:880px;margin:0 auto;line-height:1.7;">
+  <h2 style="font-size:1.5rem;font-weight:700;margin:0 0 18px;">Order online</h2>
+  <p style="margin:0 0 14px;color:inherit;opacity:.92;">Haveli Restaurant Mumbai is a place built around the simple idea that good food brings people together. Whether you're stopping in for a midweek dinner or planning something special, the room is set up to make you feel at home.</p>
+  <p style="margin:0 0 14px;color:inherit;opacity:.92;">The kitchen draws on classic technique and seasonal produce, with a menu that changes as ingredients come into their best moment. Pair that with a thoughtful drinks list and friendly service, and you have the kind of place you'll want to return to.</p>
+  <p style="margin:0 0 14px;color:inherit;opacity:.92;">We welcome solo diners, couples, families, and groups. If you have an allergy, a craving, or a celebration in mind, just tell us — we'll do our best to make it work.</p>
 </section>
+<!-- ─── /Phase F ──────────────────────────────────────────────── -->
+</main>
 
 <div id="checkout-modal" class="modal" aria-hidden="true">
   <div class="modal-content">
-    <span class="close" aria-label="Close">&times;</span>
     <h2>Demo Cart</h2>
     <p>This is a demo. Connect Stripe in production.</p>
-    <button class="btn" id="modal-close">Close</button>
+    <button class="close btn">Close</button>
   </div>
 </div>
 
 
 
+
+
 <script>
-/* Dark mode toggle */
-const t=document.getElementById("theme-toggle");
-t.onclick=()=>document.documentElement.classList.toggle("dark");
-if(localStorage.theme==="dark"||(!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme:dark)").matches)){document.documentElement.classList.add("dark")}
+  // Theme toggle
+  const themeBtn = document.getElementById('theme-toggle');
+  themeBtn.onclick = () => document.documentElement.classList.toggle('dark');
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  }
 
-/* Fade‑in on scroll */
-const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible");});}, {threshold:0.1});
-document.querySelectorAll(".fade-in").forEach(el=>observer.observe(el));
+  // Fade‑in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-/* Delivery / Pickup toggle */
-document.querySelectorAll(".toggle-btn").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    document.querySelectorAll(".toggle-btn").forEach(b=>b.classList.remove("active"));
-    btn.classList.add("active");
-    const mode=btn.dataset.mode;
-    document.getElementById("delivery-fee").textContent=mode==="delivery"?"5.00":"0.00";
-    updateTotal();
+  // Delivery / Pickup toggle
+  const deliveryBtn = document.getElementById('delivery-btn');
+  const pickupBtn = document.getElementById('pickup-btn');
+  let mode = 'delivery';
+  deliveryBtn.onclick = () => setMode('delivery');
+  pickupBtn.onclick = () => setMode('pickup');
+  function setMode(m) {
+    mode = m;
+    deliveryBtn.classList.toggle('active', m==='delivery');
+    pickupBtn.classList.toggle('active', m==='pickup');
+    deliveryBtn.setAttribute('aria-pressed', m==='delivery');
+    pickupBtn.setAttribute('aria-pressed', m==='pickup');
+    updateFees();
+  }
+
+  // ZIP checker (mock)
+  const zipBtn = document.getElementById('zip-check-btn');
+  const zipResult = document.getElementById('zip-result');
+  zipBtn.onclick = () => {
+    const zip = document.getElementById('zip-input').value.trim();
+    if(zip) {
+      zipResult.textContent = 'Delivery available to this area.';
+    } else {
+      zipResult.textContent = 'Please enter a ZIP code.';
+    }
+  };
+
+  // Cart logic
+  const cart = {};
+  const cartItemsDiv = document.getElementById('cart-items');
+  const subtotalEl = document.getElementById('subtotal');
+  const deliveryFeeEl = document.getElementById('delivery-fee');
+  const totalEl = document.getElementById('total');
+
+  document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.onclick = () => {
+      const name = btn.dataset.name;
+      const price = parseFloat(btn.dataset.price);
+      if(cart[name]) {
+        cart[name].qty += 1;
+      } else {
+        cart[name] = {price, qty:1};
+      }
+      renderCart();
+    };
   });
-});
 
-/* ZIP checker (mock) */
-document.getElementById("check-zip").addEventListener("click",()=>{
-  const zip=document.getElementById("zip").value.trim();
-  const result=document.getElementById("zip-result");
-  if(zip){result.textContent="Delivery available to this area."; result.style.color="green";}
-  else{result.textContent="Please enter a ZIP code."; result.style.color="red";}
-});
+  function renderCart() {
+    cartItemsDiv.innerHTML = '';
+    let subtotal = 0;
+    for(const [name, data] of Object.entries(cart)) {
+      const itemDiv = document.createElement('div');
+      itemDiv.className = 'cart-item';
+      itemDiv.textContent = `${name} x${data.qty} – $${(data.price*data.qty).toFixed(2)}`;
+      cartItemsDiv.appendChild(itemDiv);
+      subtotal += data.price * data.qty;
+    }
+    subtotalEl.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+    updateFees(subtotal);
+  }
 
-/* Cart logic */
-const cart={};
-function updateCartDisplay(){
-  const container=document.getElementById("cart-items");
-  container.innerHTML="";
-  let subtotal=0;
-  Object.entries(cart).forEach(([name,info])=>{
-    const div=document.createElement("div");
-    div.textContent=`${name} x${info.qty} – $${(info.price*info.qty).toFixed(2)}`;
-    container.appendChild(div);
-    subtotal+=info.price*info.qty;
-  });
-  document.getElementById("subtotal").textContent=subtotal.toFixed(2);
-  updateTotal();
-}
-function updateTotal(){
-  const subtotal=parseFloat(document.getElementById("subtotal").textContent);
-  const fee=parseFloat(document.getElementById("delivery-fee").textContent);
-  document.getElementById("total").textContent=(subtotal+fee).toFixed(2);
-}
-document.querySelectorAll(".add-to-cart").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    const name=btn.dataset.name;
-    const price=parseFloat(btn.dataset.price);
-    if(cart[name]){cart[name].qty+=1;}
-    else{cart[name]={price,qty:1};}
-    updateCartDisplay();
-  });
-});
+  function updateFees(subtotal = 0) {
+    const fee = mode === 'delivery' ? 5.00 : 0.00;
+    deliveryFeeEl.textContent = `Delivery Fee: $${fee.toFixed(2)}`;
+    const total = subtotal + fee;
+    totalEl.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
+  }
 
-/* Checkout modal */
-const modal=document.getElementById("checkout-modal");
-document.getElementById("checkout-btn").addEventListener("click",()=>{modal.style.display="flex";modal.setAttribute("aria-hidden","false");});
-document.querySelectorAll(".close,#modal-close").forEach(el=>el.addEventListener("click",()=>{modal.style.display="none";modal.setAttribute("aria-hidden","true");}));
-window.addEventListener("click",e=>{if(e.target===modal){modal.style.display="none";modal.setAttribute("aria-hidden","true");}});
+  // Checkout modal
+  const checkoutBtn = document.getElementById('checkout-btn');
+  const modal = document.getElementById('checkout-modal');
+  const closeBtn = modal.querySelector('.close');
+  checkoutBtn.onclick = () => {
+    modal.setAttribute('aria-hidden','false');
+  };
+  closeBtn.onclick = () => {
+    modal.setAttribute('aria-hidden','true');
+  };
+  window.onclick = (e) => {
+    if(e.target === modal) modal.setAttribute('aria-hidden','true');
+  };
 </script>
-<footer class="cm-footer" role="contentinfo">
+    <footer class="cm-footer" role="contentinfo">
   <div class="cm-footer-newsletter">
     <h3 class="cm-footer-newsletter-title">join the herd!</h3>
     <p class="cm-footer-newsletter-sub">Join our mailing list and keep up with all the exciting things.</p>
@@ -1247,7 +1292,7 @@ window.addEventListener("click",e=>{if(e.target===modal){modal.style.display="no
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1257,7 +1302,7 @@ window.addEventListener("click",e=>{if(e.target===modal){modal.style.display="no
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>
@@ -1318,16 +1363,7 @@ window.addEventListener("click",e=>{if(e.target===modal){modal.style.display="no
 })();</script>
 
 <script>(function(){function syncMore(){document.querySelectorAll('.trd-nav-more-btn').forEach(function(btn){try{var nav=btn.closest('ul,nav,header');if(!nav)return;var siblings=nav.querySelectorAll('a');var sibling=null;for(var i=0;i<siblings.length;i++){var a=siblings[i];if(a.closest('.trd-nav-more-panel'))continue;sibling=a;break;}if(!sibling)return;var s=window.getComputedStyle(sibling);btn.style.fontFamily=s.fontFamily;btn.style.fontSize=s.fontSize;btn.style.fontWeight=s.fontWeight;btn.style.letterSpacing=s.letterSpacing;btn.style.textTransform=s.textTransform;btn.style.fontStyle=s.fontStyle;nav.querySelectorAll('.trd-nav-more-panel a').forEach(function(da){da.style.fontFamily=s.fontFamily;da.style.fontSize=s.fontSize;da.style.fontWeight=s.fontWeight;da.style.letterSpacing=s.letterSpacing;da.style.textTransform=s.textTransform;});}catch(e){}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',syncMore)}else{syncMore()}})();</script>
-<!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
-<section class="trd-section-filler" data-trd-section-filler="phase-F" style="padding:48px 24px;max-width:880px;margin:0 auto;line-height:1.7;">
-  <h2 style="font-size:1.5rem;font-weight:700;margin:0 0 18px;">Order online</h2>
-  <p style="margin:0 0 14px;color:inherit;opacity:.92;">Haveli Restaurant Mumbai is a place built around the simple idea that good food brings people together. Whether you're stopping in for a midweek dinner or planning something special, the room is set up to make you feel at home.</p>
-  <p style="margin:0 0 14px;color:inherit;opacity:.92;">The kitchen draws on classic technique and seasonal produce, with a menu that changes as ingredients come into their best moment. Pair that with a thoughtful drinks list and friendly service, and you have the kind of place you'll want to return to.</p>
-  <p style="margin:0 0 14px;color:inherit;opacity:.92;">We welcome solo diners, couples, families, and groups. If you have an allergy, a craving, or a celebration in mind, just tell us — we'll do our best to make it work.</p>
-</section>
-<!-- ─── /Phase F ──────────────────────────────────────────────── -->
-</main>
-<script data-trd-tpl-fadefix="phase-41">(function(){try{document.querySelectorAll('.fade-in,.scroll-reveal,.reveal').forEach(function(el){el.classList.add('visible');el.style.opacity='1';el.style.transform='none';el.style.visibility='visible';});}catch(e){}})();</script>
+  <script data-trd-tpl-fadefix="phase-41">(function(){try{document.querySelectorAll('.fade-in,.scroll-reveal,.reveal').forEach(function(el){el.classList.add('visible');el.style.opacity='1';el.style.transform='none';el.style.visibility='visible';});}catch(e){}})();</script>
 <script>
 (function() {
   /*

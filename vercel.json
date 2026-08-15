@@ -116,6 +116,14 @@
     {
       "source": "/accessibility",
       "destination": "/accessibility.html"
+    },
+    {
+      "source": "/bottom-nav",
+      "destination": "/bottom-nav.html"
+    },
+    {
+      "source": "/offline",
+      "destination": "/offline.html"
     }
   ],
   "headers": [

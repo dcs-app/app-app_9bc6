@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" data-trd-phase="42.26"><meta http-equiv="Pragma" content="no-cache" data-trd-phase="42.26"><meta http-equiv="Expires" content="0" data-trd-phase="42.26">
+<head><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" data-trd-phase="42.26"><meta http-equiv="Pragma" content="no-cache" data-trd-phase="42.26"><meta http-equiv="Expires" content="0" data-trd-phase="42.26">
 <style id="trd-tokens">
 /* ── TRD Design Token System (Phase A1) ── */
 :root {
@@ -129,78 +128,102 @@ section {
   .trd-container { padding: 0 var(--sp-3); }
 }
 </style>
-<meta charset="UTF-8">
-<title>Wine List – Haveli Restaurant Mumbai</title>
-
-<style>
-/* -------------------------------------------------
-   Dark Mode (Phase D3)
-   ------------------------------------------------- */
-/* -------------------------------------------------
-   Theme Toggle Button (Phase D3)
-   ------------------------------------------------- */
-
-/* -------------------------------------------------
-   Micro‑Animations (Phase D3)
-   ------------------------------------------------- */
-.fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
-.btn, .trd-btn { transition: transform .2s ease, box-shadow .2s ease; }
-.btn:hover, .trd-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
-.card { transition: transform .2s ease, box-shadow .2s ease; }
-.card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,.12); }
-.stat-number { animation: countUp .6s ease forwards; }
-@keyframes countUp { from { opacity:0; } to { opacity:1; } }
-/* -------------------------------------------------
-   Light‑Section Contrast Fix (B12)
-   ------------------------------------------------- */
-.section-light, [data-bg="light"] {
-  background: var(--tpl-light-surface, #f7f0e3);
-  color: var(--tpl-text-on-light, #1a1a1a);
-}
-.section-light h1,
-.section-light h2,
-.section-light h3,
-.section-light h4,
-.section-light p,
-.section-light li,
-.section-light label,
-.section-light span {
-  color: var(--tpl-text-on-light, #1a1a1a);
-}
-/* -------------------------------------------------
-   Layout
-   ------------------------------------------------- */
-body { font-family: var(--font-sans); line-height: 1.6; }
-main { max-width: var(--max-width, 1200px); margin: 2rem auto; padding: 0 1rem; }
-section { margin-bottom: 3rem; }
-h1 { margin-bottom: 1rem; }
-h2 { margin-top: 2rem; margin-bottom: .75rem; }
-ul.wine-list { list-style: none; padding: 0; display: grid; gap: 1rem; }
-@media (min-width: 640px) {
-  ul.wine-list { grid-template-columns: repeat(2, 1fr); }
-}
-/* Card styling */
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 1rem;
-}
-/* By‑the‑glass highlight */
-.featured { border-color: var(--primary); }
-/* Accessibility */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--primary);
-  color: #fff;
-  padding: .5rem 1rem;
-  z-index: 100;
-}
-.skip-link:focus { top: 0; }
-</style>
+  <meta charset="UTF-8">
+  <title>Our Wine Program – Haveli Restaurant Mumbai</title>
+  <meta name="description" content="Explore the curated wine program at Haveli Restaurant Mumbai.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    /* -------------------------------------------------
+       Page‑specific styles – Wine List
+       ------------------------------------------------- */
+    /* Dark mode – keep brand primary */
+    /* Micro‑animations */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .btn {
+      display: inline-block;
+      padding: .5rem 1rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0,0,0,.12);
+    }
+    /* Layout */
+    .wine-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 600px) {
+      .wine-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .wine-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    /* Filter controls */
+    .filter-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-bottom: 1.5rem;
+    }
+    .filter-controls label {
+      font-size: .9rem;
+      cursor: pointer;
+    }
+    .filter-controls input[type="radio"] {
+      margin-right: .25rem;
+    }
+    /* Light‑section contrast fix */
+    .section-light, [data-bg="light"] {
+      background: var(--tpl-light-surface, #f7f0e3);
+      color: var(--tpl-text-on-light, #1a1a1a);
+    }
+    .section-light h1,
+    .section-light h2,
+    .section-light h3,
+    .section-light h4,
+    .section-light p,
+    .section-light li,
+    .section-light label,
+    .section-light span {
+      color: var(--tpl-text-on-light, #1a1a1a);
+    }
+    /* Theme toggle button positioning */
+    
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: -999px;
+      background: var(--primary);
+      color: #fff;
+      padding: .5rem 1rem;
+      z-index: 1000;
+    }
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+    }
+  </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -829,13 +852,10 @@ section[data-section] {
   "certificateUrl": "https://api.dcsai.ai/api/storage/cert/02f47f7c-9225-481e-9f65-03ffe9e24bc6"
 }</script>
 <!-- /TRD Content Credentials -->
-<style id="trd-section-dividers">
-.trd-section-divider{height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.08),transparent);margin:0;border:none;}
-</style>
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -1092,175 +1112,142 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
+  <!-- Skip to main content -->
+  <main class="cm-main cm-section section-light" id="main">
+    <!-- Hero Section -->
+    <section class="hero fade-in" aria-labelledby="wine-hero-title">
+      <h1 id="wine-hero-title">Our Wine Program</h1>
+      <p>Our sommelier‑curated selections showcase the finest wines to complement your dining experience.</p>
+      <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Ambience Evening/image(11).jpg" alt="Elegant wine cellar with ambient lighting">
+    </section>
 
-<main class="cm-main cm-section section-light" id="main-content">
-  <!-- Hero Section -->
-  <section class="hero fade-in">
-    <img src="https://images.dcsai.ai/phase-v4/Restaurant/Ambience Evening/image(11).jpg" alt="Elegant wine cellar interior, dimly lit with rows of bottles" loading="lazy">
-    <h1>Our Wine Program</h1>
-    <p>Curated by our sommelier to complement the heritage flavors of Haveli Restaurant Mumbai. Explore classic Old‑World selections, vibrant New‑World expressions, and exclusive by‑the‑glass offerings.</p>
-  </section>
+    <!-- Filter Controls -->
+    
 
-  <!-- By‑the‑Glass Featured Selections -->
-  <section class="featured-wines fade-in">
-    <h2>By‑the‑Glass Highlights</h2>
-    <ul class="wine-list">
-      <li class="card featured fade-in" data-category="sparkling">
-        <article>
-          <h3>Producer Name – Vintage</h3>
-          <p><strong>Region:</strong> Region Placeholder</p>
-          <p>Brief tasting note placeholder describing aroma and palate.</p>
-          <p><strong>Glass:</strong> <data value="12">₹12</data></p>
-        </article>
-      </li>
-      <li class="card featured fade-in" data-category="white">
-        <article>
-          <h3>Producer Name – Vintage</h3>
-          <p><strong>Region:</strong> Region Placeholder</p>
-          <p>Brief tasting note placeholder describing aroma and palate.</p>
-          <p><strong>Glass:</strong> <data value="10">₹10</data></p>
-        </article>
-      </li>
-    </ul>
-  </section>
+    <!-- Wine List -->
+    <section class="wine-list fade-in">
+      <ul class="wine-grid" id="wine-grid">
+        <!-- Example Wine Card – Sparkling -->
+        <li class="card" data-category="sparkling">
+          <h3 class="wine-name" style="font-family: var(--font-serif);">Producer Name – Vintage Year</h3>
+          <p class="wine-details"><strong>Region:</strong> Region Name</p>
+          <p class="wine-tasting">Tasting note: Placeholder description of aroma and palate.</p>
+          <p class="wine-price"><strong>Glass:</strong> <data value="price">Contact us for details</data></p>
+          <p class="wine-price"><strong>Bottle:</strong> <data value="price">Contact us for details</data></p>
+        </li>
 
-  <!-- Wine Categories -->
-  <section class="wine-category fade-in">
-    <h2>Sparkling</h2>
-    <ul class="wine-list">
-      <li class="card fade-in" data-category="sparkling">
-        <article>
-          <h3>Producer Name – Vintage</h3>
-          <p><strong>Region:</strong> Region Placeholder</p>
-          <p>Tasting note placeholder.</p>
-          <p><strong>Bottle:</strong> <data value="850">₹850</data></p>
-        </article>
-      </li>
-      <!-- Additional placeholder entries can be added here -->
-    </ul>
-  </section><hr class="trd-section-divider"><section class="wine-category fade-in">
-    <h2>White</h2>
-    <ul class="wine-list">
-      <li class="card fade-in" data-category="white">
-        <article>
-          <h3>Producer Name – Vintage</h3>
-          <p><strong>Region:</strong> Region Placeholder</p>
-          <p>Tasting note placeholder.</p>
-          <p><strong>Bottle:</strong> <data value="720">₹720</data></p>
-        </article>
-      </li>
-    </ul>
-  </section><hr class="trd-section-divider"><section class="wine-category fade-in">
-    <h2>Rosé</h2>
-    <ul class="wine-list">
-      <li class="card fade-in" data-category="rose">
-        <article>
-          <h3>Producer Name – Vintage</h3>
-          <p><strong>Region:</strong> Region Placeholder</p>
-          <p>Tasting note placeholder.</p>
-          <p><strong>Bottle:</strong> <data value="650">₹650</data></p>
-        </article>
-      </li>
-    </ul>
-  </section><hr class="trd-section-divider"><section class="wine-category fade-in">
-    <h2>Red</h2>
-    <ul class="wine-list">
-      <li class="card fade-in" data-category="red">
-        <article>
-          <h3>Producer Name – Vintage</h3>
-          <p><strong>Region:</strong> Region Placeholder</p>
-          <p>Tasting note placeholder.</p>
-          <p><strong>Bottle:</strong> <data value="900">₹900</data></p>
-        </article>
-      </li>
-    </ul>
-  </section><hr class="trd-section-divider"><section class="wine-category fade-in">
-    <h2>Dessert</h2>
-    <ul class="wine-list">
-      <li class="card fade-in" data-category="dessert">
-        <article>
-          <h3>Producer Name – Vintage</h3>
-          <p><strong>Region:</strong> Region Placeholder</p>
-          <p>Tasting note placeholder.</p>
-          <p><strong>Bottle:</strong> <data value="750">₹750</data></p>
-        </article>
-      </li>
-    </ul>
-  </section>
+        <!-- Example Wine Card – White -->
+        <li class="card" data-category="white">
+          <h3 class="wine-name" style="font-family: var(--font-serif);">Producer Name – Vintage Year</h3>
+          <p class="wine-details"><strong>Region:</strong> Region Name</p>
+          <p class="wine-tasting">Tasting note: Placeholder description of aroma and palate.</p>
+          <p class="wine-price"><strong>Glass:</strong> <data value="price">Contact us for details</data></p>
+          <p class="wine-price"><strong>Bottle:</strong> <data value="price">Contact us for details</data></p>
+        </li>
 
-  <!-- Sommelier Picks -->
-  <section class="sommelier-picks fade-in">
-    <h2>Sommelier Picks</h2>
-    <ul class="wine-list">
-      <li class="card fade-in" data-category="red">
-        <article>
-          <h3>Producer Name – Vintage</h3>
-          <p><strong>Region:</strong> Region Placeholder</p>
-          <p>Extended tasting note placeholder offering deeper insight into flavor profile, aging potential, and food compatibility.</p>
-          <p><strong>Bottle:</strong> <data value="1250">₹1,250</data></p>
-        </article>
-      </li>
-      <li class="card fade-in" data-category="white">
-        <article>
-          <h3>Producer Name – Vintage</h3>
-          <p><strong>Region:</strong> Region Placeholder</p>
-          <p>Extended tasting note placeholder offering deeper insight into flavor profile, aging potential, and food compatibility.</p>
-          <p><strong>Bottle:</strong> <data value="1150">₹1,150</data></p>
-        </article>
-      </li>
-      <li class="card fade-in" data-category="sparkling">
-        <article>
-          <h3>Producer Name – Vintage</h3>
-          <p><strong>Region:</strong> Region Placeholder</p>
-          <p>Extended tasting note placeholder offering deeper insight into flavor profile, aging potential, and food compatibility.</p>
-          <p><strong>Bottle:</strong> <data value="1350">₹1,350</data></p>
-        </article>
-      </li>
-    </ul>
-  </section>
+        <!-- Example Wine Card – Red -->
+        <li class="card" data-category="red">
+          <h3 class="wine-name" style="font-family: var(--font-serif);">Producer Name – Vintage Year</h3>
+          <p class="wine-details"><strong>Region:</strong> Region Name</p>
+          <p class="wine-tasting">Tasting note: Placeholder description of aroma and palate.</p>
+          <p class="wine-price"><strong>Glass:</strong> <data value="price">Contact us for details</data></p>
+          <p class="wine-price"><strong>Bottle:</strong> <data value="price">Contact us for details</data></p>
+        </li>
 
-  <!-- Wine Pairings -->
-  <section class="wine-pairings fade-in">
-    <h2>Wine Pairings</h2>
-    <ul>
-      <li><strong>Sparkling Brut</strong> – Perfect with our Paneer Tikka starter.</li>
-      <li><strong>Chardonnay</strong> – Complements the buttery richness of Butter Chicken.</li>
-      <li><strong>Pinot Noir</strong> – Ideal alongside Lamb Rogan Josh.</li>
-      <li><strong>Late Harvest Riesling</strong> – Pairs beautifully with Gulab Jamun dessert.</li>
-    </ul>
-  </section>
+        <!-- Example Wine Card – Dessert -->
+        <li class="card" data-category="dessert">
+          <h3 class="wine-name" style="font-family: var(--font-serif);">Producer Name – Vintage Year</h3>
+          <p class="wine-details"><strong>Region:</strong> Region Name</p>
+          <p class="wine-tasting">Tasting note: Placeholder description of aroma and palate.</p>
+          <p class="wine-price"><strong>Glass:</strong> <data value="price">Contact us for details</data></p>
+          <p class="wine-price"><strong>Bottle:</strong> <data value="price">Contact us for details</data></p>
+        </li>
 
-  <!-- Wine Club / Dinner (Placeholder) -->
-  <section class="wine-club section-light fade-in" data-bg="light">
-    <h2>Wine Club & Exclusive Dinners</h2>
-    <p>Join our Wine Club for curated selections, private tastings, and seasonal dinner events. <a href="#!" class="btn">Contact us for details</a></p>
-  </section>
+        <!-- Additional placeholder cards can be added following the same structure -->
+      </ul>
+    </section>
 
-  <!-- Disclaimer -->
-  <section class="disclaimer fade-in">
-    <p><em>Vintages and availability are subject to change. Please confirm with your server.</em></p>
-  </section>
-</main>
+    <!-- By‑the‑Glass Featured Selections -->
+    <section class="by-glass fade-in">
+      <h2>By‑the‑Glass Highlights</h2>
+      <ul class="wine-grid">
+        <li class="card" data-category="sparkling">
+          <h3 class="wine-name" style="font-family: var(--font-serif);">Featured Sparkling – Vintage</h3>
+          <p class="wine-tasting">Placeholder tasting note for featured sparkling wine.</p>
+          <p class="wine-price"><strong>Glass:</strong> <data value="price">Contact us for details</data></p>
+        </li>
+        <li class="card" data-category="white">
+          <h3 class="wine-name" style="font-family: var(--font-serif);">Featured White – Vintage</h3>
+          <p class="wine-tasting">Placeholder tasting note for featured white wine.</p>
+          <p class="wine-price"><strong>Glass:</strong> <data value="price">Contact us for details</data></p>
+        </li>
+      </ul>
+    </section>
 
-<!-- Theme Toggle Button -->
+    <!-- Sommelier Picks -->
+    <section class="sommelier-picks fade-in">
+      <h2>Sommelier Picks</h2>
+      <ul class="wine-grid">
+        <li class="card" data-category="red">
+          <h3 class="wine-name" style="font-family: var(--font-serif);">Sommelier Choice – Producer – Vintage</h3>
+          <p class="wine-tasting">Extended tasting note: Placeholder description highlighting depth, structure, and pairing potential.</p>
+          <p class="wine-price"><strong>Bottle:</strong> <data value="price">Contact us for details</data></p>
+        </li>
+        <li class="card" data-category="dessert">
+          <h3 class="wine-name" style="font-family: var(--font-serif);">Sommelier Choice – Producer – Vintage</h3>
+          <p class="wine-tasting">Extended tasting note: Placeholder description highlighting sweetness, balance, and dessert compatibility.</p>
+          <p class="wine-price"><strong>Bottle:</strong> <data value="price">Contact us for details</data></p>
+        </li>
+      </ul>
+    </section>
 
+    <!-- Wine Pairings -->
+    <section class="wine-pairings fade-in">
+      <h2>Wine Pairings</h2>
+      <ul>
+        <li><strong>Dish Name 1:</strong> Suggested wine – Placeholder wine name (e.g., White, Sparkling).</li>
+        <li><strong>Dish Name 2:</strong> Suggested wine – Placeholder wine name (e.g., Red).</li>
+        <li><strong>Dish Name 3:</strong> Suggested wine – Placeholder wine name (e.g., Dessert).</li>
+      </ul>
+    </section>
 
-<script>
-/* Theme toggle logic */
-const themeBtn = document.getElementById('theme-toggle');
-themeBtn.onclick = () => document.documentElement.classList.toggle('dark');
-if (localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark');
-}
+    <!-- Wine Club / Dinners -->
+    <section class="wine-club section-light fade-in">
+      <h2>Wine Club & Exclusive Dinners</h2>
+      <p>Join our wine club for curated selections, private tastings, and special dinner events. <a href="#!" class="btn">Learn More</a></p>
+    </section>
 
-/* Intersection Observer for fade‑in */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
+    <!-- Disclaimer -->
+    <section class="disclaimer fade-in">
+      <p><em>Vintages and availability are subject to change. Please confirm with your server.</em></p>
+    </section>
+  </main>
 
+  <!-- Theme Toggle Button -->
+  
+
+  <!-- Scripts -->
+  <script>
+    // Theme toggle logic
+    
+    };
+
+    filterRadios.forEach(radio => {
+      radio.addEventListener('change', applyFilter);
+    });
+
+    // Run filter on page load
+    applyFilter();
+
+    // Fade‑in on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
     <footer class="cm-footer" role="contentinfo">
   <div class="cm-footer-newsletter">
     <h3 class="cm-footer-newsletter-title">join the herd!</h3>
@@ -1331,7 +1318,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1341,7 +1328,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>

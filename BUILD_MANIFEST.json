@@ -1,27 +1,27 @@
 {
   "brand": {
     "name": "Haveli Restaurant Mumbai",
-    "tagline": "Authentic Indian heritage dining and royal culinary traditions in Mumbai",
+    "tagline": "Authentic Indian Culinary Heritage & Royal Dining in Mumbai",
     "industry": "restaurant",
     "tone": "warm"
   },
   "archetype": "HOSPITALITY",
   "design_tokens": {
-    "font_serif": "'Fraunces', 'Playfair Display', 'Cormorant Garamond', Georgia, serif",
-    "font_sans": "'Inter', system-ui, -apple-system, sans-serif",
+    "font_serif": "'Fraunces', 'Playfair Display', Georgia, serif",
+    "font_sans": "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
     "color_bg": "#FAF7F2",
     "color_surface": "#FFFFFF",
     "color_text_primary": "#1F1611",
     "color_text_secondary": "#6B5D52",
     "color_accent": "#B8860B",
-    "color_border": "rgba(31,22,17,0.12)",
-    "color_header_bg": "rgba(250,247,242,0.95)",
+    "color_border": "rgba(31, 22, 17, 0.12)",
+    "color_header_bg": "rgba(250, 247, 242, 0.95)",
     "color_footer_bg": "#1F1611",
     "radius_sm": "6px",
     "radius_md": "12px",
     "radius_lg": "24px",
-    "shadow_sm": "0 2px 8px rgba(31,22,17,0.06)",
-    "shadow_md": "0 12px 36px rgba(31,22,17,0.1)",
+    "shadow_sm": "0 2px 8px rgba(31, 22, 17, 0.06)",
+    "shadow_md": "0 12px 36px rgba(31, 22, 17, 0.1)",
     "max_content_width": "1200px"
   },
   "pages_built": [
@@ -30,76 +30,80 @@
     "reservation",
     "about",
     "gallery",
-    "private-dining",
     "contact"
   ],
   "header_nav": [
     { "label": "Home", "href": "/index.html" },
     { "label": "Menu", "href": "/menu.html" },
-    { "label": "Reservations", "href": "/reservation.html" },
     { "label": "About", "href": "/about.html" },
-    { "label": "Private Dining", "href": "/private-dining.html" },
     { "label": "Gallery", "href": "/gallery.html" },
-    { "label": "Contact", "href": "/contact.html" }
+    { "label": "Contact", "href": "/contact.html" },
+    { "label": "Book Table", "href": "/reservation.html" }
   ],
   "footer_links": {
     "section_1_title": "Explore",
     "section_1_links": [
-      { "label": "Our Story", "href": "/about.html" },
+      { "label": "Home", "href": "/index.html" },
       { "label": "Dining Menu", "href": "/menu.html" },
-      { "label": "Photo Gallery", "href": "/gallery.html" }
+      { "label": "Our Story", "href": "/about.html" },
+      { "label": "Food Gallery", "href": "/gallery.html" }
     ],
-    "section_2_title": "Experiences",
+    "section_2_title": "Reservations",
     "section_2_links": [
-      { "label": "Table Reservations", "href": "/reservation.html" },
-      { "label": "Private Banquets", "href": "/private-dining.html" },
-      { "label": "Find Us in Mumbai", "href": "/contact.html" }
+      { "label": "Book a Table", "href": "/reservation.html" },
+      { "label": "Private Dining & Events", "href": "/contact.html" },
+      { "label": "Location & Map", "href": "/contact.html" }
     ],
-    "section_3_title": "Hours & Dining",
+    "section_3_title": "Hours & Service",
     "section_3_links": [
-      { "label": "Lunch: 12:00 PM – 3:30 PM", "href": "/reservation.html" },
-      { "label": "Dinner: 7:00 PM – 11:30 PM", "href": "/reservation.html" }
+      { "label": "Lunch: 12:00 PM – 3:30 PM", "href": "/menu.html" },
+      { "label": "Dinner: 7:00 PM – 11:30 PM", "href": "/reservation.html" },
+      { "label": "Open All 7 Days", "href": "/contact.html" }
     ],
     "section_4_title": null,
     "section_4_links": null
   },
-  "canonical_header_html": "<header class=\"site-header\"><div class=\"header-inner\"><a href=\"/index.html\" class=\"brand\">Haveli Restaurant Mumbai</a><nav class=\"primary-nav\" aria-label=\"Primary\"><a href=\"/index.html\">Home</a><a href=\"/menu.html\">Menu</a><a href=\"/about.html\">About</a><a href=\"/gallery.html\">Gallery</a><a href=\"/private-dining.html\">Private Dining</a><a href=\"/contact.html\">Contact</a><a href=\"/reservation.html\" class=\"nav-cta\">Reserve a Table</a></nav></div></header>",
-  "canonical_footer_html": "<footer class=\"site-footer\"><div class=\"footer-inner\"><div class=\"footer-brand-block\"><h3 class=\"footer-brand\">Haveli Restaurant Mumbai</h3><p class=\"footer-tagline\">Authentic Indian heritage dining and royal culinary traditions in Mumbai</p><p class=\"footer-address\">Bandra West, Mumbai, Maharashtra, India</p></div><div class=\"footer-grid\"><div class=\"footer-col\"><h4 class=\"footer-col-title\">Explore</h4><ul class=\"footer-links\"><li><a href=\"/about.html\">Our Story</a></li><li><a href=\"/menu.html\">Dining Menu</a></li><li><a href=\"/gallery.html\">Photo Gallery</a></li></ul></div><div class=\"footer-col\"><h4 class=\"footer-col-title\">Experiences</h4><ul class=\"footer-links\"><li><a href=\"/reservation.html\">Table Reservations</a></li><li><a href=\"/private-dining.html\">Private Banquets</a></li><li><a href=\"/contact.html\">Find Us</a></li></ul></div><div class=\"footer-col\"><h4 class=\"footer-col-title\">Hours</h4><p class=\"footer-text\">Mon – Sun: 12:00 PM – 3:30 PM</p><p class=\"footer-text\">Dinner: 7:00 PM – 11:30 PM</p><p class=\"footer-text\">Valet Parking Available</p></div></div><div class=\"footer-bottom\"><p class=\"footer-copy\">© 2026 Haveli Restaurant Mumbai. All rights reserved.</p></div></div></footer>",
-  "shared_styles": "<style>:root{--font-serif:'Fraunces','Playfair Display','Cormorant Garamond',Georgia,serif;--font-sans:'Inter',system-ui,-apple-system,sans-serif;--color-bg:#FAF7F2;--color-surface:#FFFFFF;--color-text-primary:#1F1611;--color-text-secondary:#6B5D52;--color-accent:#B8860B;--color-border:rgba(31,22,17,0.12);--color-header-bg:rgba(250,247,242,0.95);--color-footer-bg:#1F1611;--radius-sm:6px;--radius-md:12px;--radius-lg:24px;--shadow-sm:0 2px 8px rgba(31,22,17,0.06);--shadow-md:0 12px 36px rgba(31,22,17,0.1);--max-width:1200px;}*{box-sizing:border-box;margin:0;padding:0;}body{font-family:var(--font-sans);font-size:16px;line-height:1.6;color:var(--color-text-primary);background:var(--color-bg);-webkit-font-smoothing:antialiased;}h1,h2,h3,h4{font-family:var(--font-serif);font-weight:600;line-height:1.2;color:var(--color-text-primary);}h1{font-size:clamp(2.2rem,4.5vw,3.8rem);letter-spacing:-0.02em;}h2{font-size:clamp(1.75rem,3vw,2.5rem);}h3{font-size:1.35rem;}a{color:inherit;text-decoration:none;transition:color 0.2s ease,opacity 0.2s ease;}img{max-width:100%;height:auto;display:block;}.site-header{position:sticky;top:0;z-index:100;background:var(--color-header-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--color-border);padding:1rem 1.5rem;}.header-inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;}.brand{font-family:var(--font-serif);font-size:1.4rem;font-weight:700;color:var(--color-text-primary);letter-spacing:-0.01em;}.primary-nav{display:flex;align-items:center;gap:1.5rem;font-size:0.95rem;font-weight:500;}.primary-nav a:hover{color:var(--color-accent);}.nav-cta{background:var(--color-accent);color:#FFFFFF !important;padding:0.55rem 1.1rem;border-radius:var(--radius-sm);font-weight:600;transition:opacity 0.2s ease;}.nav-cta:hover{opacity:0.9;}.site-footer{background:var(--color-footer-bg);color:#E6DCD2;padding:4rem 1.5rem 2rem;margin-top:4rem;border-top:1px solid rgba(255,255,255,0.08);}.footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;flex-direction:column;gap:3rem;}.footer-brand-block{max-width:520px;}.footer-brand{font-size:1.6rem;color:#FAF7F2;margin-bottom:0.5rem;}.footer-tagline{color:#C8B9A6;font-size:0.95rem;margin-bottom:0.75rem;}.footer-address{color:#A89885;font-size:0.9rem;}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}.footer-col-title{color:#FAF7F2;font-size:1.1rem;margin-bottom:1rem;}.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.6rem;font-size:0.92rem;}.footer-links a{color:#C8B9A6;}.footer-links a:hover{color:#FAF7F2;}.footer-text{color:#C8B9A6;font-size:0.92rem;margin-bottom:0.4rem;}.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:1.5rem;font-size:0.85rem;color:#8E7E6E;text-align:center;}@media(max-width:860px){.primary-nav{display:none;}}</style>",
+  "canonical_header_html": "<header class=\"site-header\"><div class=\"header-inner\"><a href=\"/index.html\" class=\"brand\"><span class=\"brand-title\">Haveli Restaurant</span><span class=\"brand-sub\">Mumbai</span></a><nav class=\"primary-nav\" aria-label=\"Primary Navigation\"><a href=\"/index.html\">Home</a><a href=\"/menu.html\">Menu</a><a href=\"/about.html\">About</a><a href=\"/gallery.html\">Gallery</a><a href=\"/contact.html\">Contact</a><a href=\"/reservation.html\" class=\"nav-btn-reserve\">Reserve a Table</a></nav></div></header>",
+  "canonical_footer_html": "<footer class=\"site-footer\"><div class=\"footer-inner\"><div class=\"footer-brand-block\"><h3 class=\"footer-brand-title\">Haveli Restaurant Mumbai</h3><p class=\"footer-brand-tagline\">Authentic Indian Culinary Heritage & Royal Dining in Mumbai</p><p class=\"footer-hours\"><strong>Opening Hours:</strong> Mon–Sun: 12:00 PM – 3:30 PM | 7:00 PM – 11:30 PM</p><p class=\"footer-location\"><strong>Location:</strong> Colaba / Bandra Heritage Precinct, Mumbai, Maharashtra</p></div><div class=\"footer-nav-columns\"><div class=\"footer-col\"><h4 class=\"footer-col-title\">Explore</h4><ul class=\"footer-links-list\"><li><a href=\"/index.html\">Home</a></li><li><a href=\"/menu.html\">Dining Menu</a></li><li><a href=\"/about.html\">Our Story</a></li><li><a href=\"/gallery.html\">Food Gallery</a></li></ul></div><div class=\"footer-col\"><h4 class=\"footer-col-title\">Reservations</h4><ul class=\"footer-links-list\"><li><a href=\"/reservation.html\">Book a Table</a></li><li><a href=\"/contact.html\">Private Dining</a></li><li><a href=\"/contact.html\">Directions & Map</a></li></ul></div></div></div><div class=\"footer-bottom\"><div class=\"footer-bottom-inner\"><p class=\"footer-copy\">© 2026 Haveli Restaurant Mumbai. All rights reserved.</p><div class=\"footer-social\"><a href=\"#\" aria-label=\"Instagram\" class=\"social-link\">Instagram</a><a href=\"#\" aria-label=\"Facebook\" class=\"social-link\">Facebook</a><a href=\"#\" aria-label=\"Twitter\" class=\"social-link\">X (Twitter)</a></div></div></div></footer>",
+  "shared_styles": "<style>\n:root {\n  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;\n  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n  --color-bg: #FAF7F2;\n  --color-surface: #FFFFFF;\n  --color-text-primary: #1F1611;\n  --color-text-secondary: #6B5D52;\n  --color-accent: #B8860B;\n  --color-accent-hover: #996F08;\n  --color-border: rgba(31, 22, 17, 0.12);\n  --color-header-bg: rgba(250, 247, 242, 0.95);\n  --color-footer-bg: #1F1611;\n  --color-footer-text: #E6DFD5;\n  --color-footer-muted: #A39688;\n  --radius-sm: 6px;\n  --radius-md: 12px;\n  --radius-lg: 24px;\n  --shadow-sm: 0 2px 8px rgba(31, 22, 17, 0.06);\n  --shadow-md: 0 12px 36px rgba(31, 22, 17, 0.1);\n  --max-width: 1200px;\n}\n\n* { box-sizing: border-box; margin: 0; padding: 0; }\n\nbody {\n  font-family: var(--font-sans);\n  font-size: 16px;\n  line-height: 1.6;\n  color: var(--color-text-primary);\n  background-color: var(--color-bg);\n  -webkit-font-smoothing: antialiased;\n}\n\nh1, h2, h3, h4 {\n  font-family: var(--font-serif);\n  font-weight: 600;\n  line-height: 1.2;\n  color: var(--color-text-primary);\n}\n\nh1 { font-size: clamp(2.25rem, 4.5vw, 3.75rem); }\nh2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 1rem; }\nh3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }\np { margin-bottom: 1rem; color: var(--color-text-secondary); }\n\na { color: inherit; text-decoration: none; transition: all 0.2s ease; }\na:hover { color: var(--color-accent); }\n\nimg { max-width: 100%; height: auto; display: block; }\n\n.site-header {\n  position: sticky;\n  top: 0;\n  z-index: 100;\n  background: var(--color-header-bg);\n  backdrop-filter: blur(10px);\n  border-bottom: 1px solid var(--color-border);\n}\n\n.header-inner {\n  max-width: var(--max-width);\n  margin: 0 auto;\n  padding: 1rem 1.5rem;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.brand {\n  display: flex;\n  flex-direction: column;\n}\n\n.brand-title {\n  font-family: var(--font-serif);\n  font-size: 1.4rem;\n  font-weight: 700;\n  color: var(--color-text-primary);\n  letter-spacing: -0.01em;\n}\n\n.brand-sub {\n  font-size: 0.75rem;\n  text-transform: uppercase;\n  letter-spacing: 0.15em;\n  color: var(--color-accent);\n  font-weight: 600;\n}\n\n.primary-nav {\n  display: flex;\n  align-items: center;\n  gap: 1.5rem;\n}\n\n.primary-nav a {\n  font-weight: 500;\n  font-size: 0.95rem;\n}\n\n.nav-btn-reserve {\n  background: var(--color-accent);\n  color: #FFFFFF !important;\n  padding: 0.6rem 1.25rem;\n  border-radius: var(--radius-sm);\n  font-weight: 600;\n}\n\n.nav-btn-reserve:hover {\n  background: var(--color-accent-hover);\n  transform: translateY(-1px);\n}\n\n.site-footer {\n  background: var(--color-footer-bg);\n  color: var(--color-footer-text);\n  padding: 4rem 1.5rem 2rem;\n  margin-top: 4rem;\n  border-top: 3px solid var(--color-accent);\n}\n\n.footer-inner {\n  max-width: var(--max-width);\n  margin: 0 auto;\n  display: grid;\n  grid-template-columns: 1.5fr 1fr;\n  gap: 3rem;\n  padding-bottom: 3rem;\n  border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n}\n\n.footer-brand-title {\n  font-size: 1.75rem;\n  color: #FFFFFF;\n  margin-bottom: 0.5rem;\n}\n\n.footer-brand-tagline {\n  color: var(--color-footer-muted);\n  font-size: 0.95rem;\n  margin-bottom: 1.25rem;\n}\n\n.footer-hours, .footer-location {\n  font-size: 0.9rem;\n  color: var(--color-footer-text);\n  margin-bottom: 0.5rem;\n}\n\n.footer-nav-columns {\n  display: grid;\n  grid-template-columns: repeat(2, 1fr);\n  gap: 2rem;\n}\n\n.footer-col-title {\n  font-family: var(--font-sans);\n  font-size: 0.85rem;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  color: var(--color-accent);\n  margin-bottom: 1rem;\n  font-weight: 700;\n}\n\n.footer-links-list {\n  list-style: none;\n  display: flex;\n  flex-direction: column;\n  gap: 0.6rem;\n}\n\n.footer-links-list a {\n  color: var(--color-footer-muted);\n  font-size: 0.9rem;\n}\n\n.footer-links-list a:hover {\n  color: #FFFFFF;\n}\n\n.footer-bottom {\n  max-width: var(--max-width);\n  margin: 0 auto;\n  padding-top: 2rem;\n}\n\n.footer-bottom-inner {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  font-size: 0.85rem;\n  color: var(--color-footer-muted);\n}\n\n.footer-social {\n  display: flex;\n  gap: 1.25rem;\n}\n\n.social-link {\n  color: var(--color-footer-muted);\n}\n\n.social-link:hover {\n  color: var(--color-accent);\n}\n\n@media (max-width: 768px) {\n  .header-inner {\n    flex-direction: column;\n    gap: 1rem;\n  }\n  .primary-nav {\n    flex-wrap: wrap;\n    justify-content: center;\n    gap: 1rem;\n  }\n  .footer-inner {\n    grid-template-columns: 1fr;\n    gap: 2rem;\n  }\n  .footer-bottom-inner {\n    flex-direction: column;\n    gap: 1rem;\n    text-align: center;\n  }\n}\n</style>",
   "image_strategy": {
     "source": "unsplash",
     "keywords": [
-      "indian-food",
-      "curry-tandoor",
-      "traditional-dining",
-      "palace-restaurant",
-      "mumbai-dining"
+      "indian-curry",
+      "tandoori-platter",
+      "royal-dining",
+      "mumbai-restaurant",
+      "indian-thali"
     ],
     "fallback_color": "#FAF7F2"
   },
   "page_constraints": {
     "max_sections_default": 3,
-    "max_words_default": 450,
+    "max_words_default": 400,
     "specific_overrides": {
       "about": {
         "max_sections": 3,
         "max_words": 500,
-        "required_sections": ["heritage-hero", "culinary-traditions", "chef-values"]
+        "required_sections": [
+          "hero",
+          "bio"
+        ]
       },
       "contact": {
         "max_sections": 2,
-        "max_words": 250,
-        "required_sections": ["contact-details", "map-hours"]
+        "max_words": 200,
+        "required_sections": [
+          "form",
+          "details"
+        ]
       },
       "menu": {
         "max_sections": 4,
-        "max_words": 650,
-        "required_sections": ["appetizers", "mains", "tandoor", "desserts"]
+        "max_words": 650
       },
       "reservation": {
         "max_sections": 2,
-        "max_words": 300,
-        "required_sections": ["booking-form", "policies-hours"]
+        "max_words": 300
       }
     }
   },
