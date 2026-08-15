@@ -131,34 +131,63 @@ section {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Partners — Haveli Restaurant Mumbai</title>
-  <meta name="description" content="Our valued partners who help us deliver authentic Indian heritage dining in Mumbai.">
+  <meta name="description" content="Explore the trusted partners of Haveli Restaurant Mumbai, collaborating to deliver authentic Indian culinary heritage.">
   <meta property="og:title" content="Partners — Haveli Restaurant Mumbai">
-  <meta property="og:description" content="Our valued partners who help us deliver authentic Indian heritage dining in Mumbai.">
+  <meta property="og:description" content="Explore the trusted partners of Haveli Restaurant Mumbai, collaborating to deliver authentic Indian culinary heritage.">
   <meta property="og:type" content="website">
-  
   <style>
-    /* Dark mode (Phase D3) */
-    /* Theme toggle button (Phase D3) */
-    
-    /* Micro‑animations (Phase D3) */
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    .btn, .trd-btn { transition: transform .2s ease, box-shadow .2s ease; }
-    .btn:hover, .trd-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
-    .card { transition: transform .2s ease, box-shadow .2s ease; }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,.12); }
-    .stat-number { animation: countUp .6s ease forwards; }
-    @keyframes countUp { from { opacity:0; } to { opacity:1; } }
-    /* Light‑section contrast fix (B12) */
-    .section-light, [data-bg="light"] {
-      background: var(--tpl-light-surface, #f7f0e3);
-      color: var(--tpl-text-on-light, #1a1a1a);
-    }
-    .section-light h1, .section-light h2, .section-light h3, .section-light h4,
-    .section-light p, .section-light li, .section-light label, .section-light span {
-      color: var(--tpl-text-on-light, #1a1a1a);
-    }
-  </style>
+:root {
+  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-bg: #FAF7F2;
+  --color-surface: #D4B896;
+  --color-text-primary: #1B4965;
+  --color-text-secondary: color-mix(in oklab, #1B4965 70%, transparent);
+  --color-accent: #D4663B;
+  --color-accent-hover: #996F08;
+  --color-border: rgba(27,73,101,0.12);
+  --color-header-bg: #FAF7F2;
+  --color-footer-bg: #0a0a0a;
+  --color-footer-text: #E6DFD5;
+  --color-footer-muted: #A39688;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 8px rgba(31, 22, 17, 0.06);
+  --shadow-md: 0 12px 36px rgba(31, 22, 17, 0.1);
+  --max-width: 1200px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+h1 { font-size: clamp(2.25rem, 4.5vw, 3.75rem); }
+h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 1rem; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
+a { color: inherit; text-decoration: none; transition: all 0.2s ease; }
+a:hover { color: var(--color-accent); }
+img { max-width: 100%; height: auto; display: block; }
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+/* Dark mode */
+/* Micro‑animations */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.btn { transition: transform .2s ease, box-shadow .2s ease; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
+.card { transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,.12); }
+</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -790,7 +819,7 @@ section[data-section] {
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -988,7 +1017,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 </style>
 </head>
 <body data-trd-light-page="1">
-    <header class="cm-header" role="banner">
+<header class="cm-header" role="banner">
   <div class="cm-header-inner">
     <nav class="cm-nav-left" role="navigation" aria-label="Left navigation">
       <ul class="cm-nav-list">
@@ -1032,9 +1061,8 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
-
 <main class="cm-main cm-section section-light" id="main">
-  <!-- SECTION 1: page-header -->
+  <!-- TRD SECTION: page-header (template: restaurant-01-coastal-mediterranean) -->
   <section class="cm-pgh" data-section="page-header">
     <style>
       .cm-pgh{background:#FAF7F2;border-bottom:1px solid rgba(27,73,101,0.10);padding:120px 0 64px}
@@ -1045,13 +1073,13 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
       @media(max-width:768px){.cm-pgh{padding:96px 0 48px}.cm-pgh__inner{padding:0 24px}}
     </style>
     <div class="cm-pgh__inner">
-      <p class="cm-pgh__crumb fade-in">Our Partners</p>
-      <h1 class="cm-pgh__title fade-in">Trusted by</h1>
-      <p class="cm-pgh__lede fade-in">Celebrating collaborations with our valued partners.</p>
+      <p class="cm-pgh__crumb">Our Partners</p>
+      <h1 class="cm-pgh__title">Trusted by</h1>
+      <p class="cm-pgh__lede">We collaborate with the finest establishments to bring you an unforgettable dining experience.</p>
     </div>
   </section>
 
-  <!-- SECTION 2: partners-grid -->
+  <!-- TRD SECTION: partners-grid (template: restaurant-01-coastal-mediterranean) -->
   <section class="cm-partners-grid" data-section="partners-grid">
     <style>
       .cm-partners-grid{background:#FAF7F2;padding:96px 0}
@@ -1071,57 +1099,57 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
       <div class="cm-partners-grid__grid">
         <a href="/index.html" class="cm-partners-grid__entry">
           <div class="cm-partners-grid__media">
-            <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(1).jpg" alt="Local Farmers" loading="lazy">
+            <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(1).jpg" alt="Partner One" loading="lazy">
           </div>
-          <p class="cm-partners-grid__date fade-in">2023</p>
-          <h3 class="cm-partners-grid__title fade-in">Local Farmers</h3>
-          <p class="cm-partners-grid__excerpt fade-in">Fresh produce supplied daily.</p>
+          <p class="cm-partners-grid__date">2022</p>
+          <h3 class="cm-partners-grid__title">Partner One</h3>
+          <p class="cm-partners-grid__excerpt">Renowned local supplier of fresh spices.</p>
         </a>
         <a href="/menu.html" class="cm-partners-grid__entry">
           <div class="cm-partners-grid__media">
-            <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(4).jpg" alt="Spice Co." loading="lazy">
+            <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(4).jpg" alt="Partner Two" loading="lazy">
           </div>
-          <p class="cm-partners-grid__date fade-in">2022</p>
-          <h3 class="cm-partners-grid__title fade-in">Spice Co.</h3>
-          <p class="cm-partners-grid__excerpt fade-in">Premium spices for authentic flavor.</p>
-        </a>
-        <a href="/reservation.html" class="cm-partners-grid__entry">
-          <div class="cm-partners-grid__media">
-            <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(5).jpg" alt="Event Planners" loading="lazy">
-          </div>
-          <p class="cm-partners-grid__date fade-in">2021</p>
-          <h3 class="cm-partners-grid__title fade-in">Event Planners</h3>
-          <p class="cm-partners-grid__excerpt fade-in">Coordinating private dining experiences.</p>
+          <p class="cm-partners-grid__date">2021</p>
+          <h3 class="cm-partners-grid__title">Partner Two</h3>
+          <p class="cm-partners-grid__excerpt">Premium organic produce farm.</p>
         </a>
         <a href="/about.html" class="cm-partners-grid__entry">
           <div class="cm-partners-grid__media">
-            <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(18).jpg" alt="Heritage Crafts" loading="lazy">
+            <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(5).jpg" alt="Partner Three" loading="lazy">
           </div>
-          <p class="cm-partners-grid__date fade-in">2020</p>
-          <h3 class="cm-partners-grid__title fade-in">Heritage Crafts</h3>
-          <p class="cm-partners-grid__excerpt fade-in">Handcrafted décor elements.</p>
+          <p class="cm-partners-grid__date">2020</p>
+          <h3 class="cm-partners-grid__title">Partner Three</h3>
+          <p class="cm-partners-grid__excerpt">Heritage tea house.</p>
         </a>
         <a href="/gallery.html" class="cm-partners-grid__entry">
           <div class="cm-partners-grid__media">
-            <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(9).jpg" alt="Photography Studio" loading="lazy">
+            <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(18).jpg" alt="Partner Four" loading="lazy">
           </div>
-          <p class="cm-partners-grid__date fade-in">2023</p>
-          <h3 class="cm-partners-grid__title fade-in">Photography Studio</h3>
-          <p class="cm-partners-grid__excerpt fade-in">Capturing our culinary moments.</p>
+          <p class="cm-partners-grid__date">2023</p>
+          <h3 class="cm-partners-grid__title">Partner Four</h3>
+          <p class="cm-partners-grid__excerpt">Artisan bakery.</p>
         </a>
         <a href="/contact.html" class="cm-partners-grid__entry">
           <div class="cm-partners-grid__media">
-            <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(14).jpg" alt="Logistics Ltd." loading="lazy">
+            <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(9).jpg" alt="Partner Five" loading="lazy">
           </div>
-          <p class="cm-partners-grid__date fade-in">2022</p>
-          <h3 class="cm-partners-grid__title fade-in">Logistics Ltd.</h3>
-          <p class="cm-partners-grid__excerpt fade-in">Efficient delivery and service.</p>
+          <p class="cm-partners-grid__date">2022</p>
+          <h3 class="cm-partners-grid__title">Partner Five</h3>
+          <p class="cm-partners-grid__excerpt">Exclusive wine distributor.</p>
+        </a>
+        <a href="/reservation.html" class="cm-partners-grid__entry">
+          <div class="cm-partners-grid__media">
+            <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(14).jpg" alt="Partner Six" loading="lazy">
+          </div>
+          <p class="cm-partners-grid__date">2021</p>
+          <h3 class="cm-partners-grid__title">Partner Six</h3>
+          <p class="cm-partners-grid__excerpt">Luxury tableware provider.</p>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 3: partner-quote -->
+  <!-- TRD SECTION: partner-quote (template: restaurant-01-coastal-mediterranean) -->
   <section class="cm-partner-quote" data-section="partner-quote">
     <style>
       .cm-partner-quote{background:#FAF7F2;padding:120px 0}
@@ -1142,15 +1170,15 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
     </style>
     <div class="cm-partner-quote__inner">
       <div class="cm-partner-quote__media">
-        <span class="cm-partner-quote__media-tag fade-in">Featured</span>
-        <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(18).jpg" alt="Featured Partner" loading="lazy">
+        <span class="cm-partner-quote__media-tag">Featured Partner</span>
+        <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(18).jpg" alt="Partner One" loading="lazy">
       </div>
       <div class="cm-partner-quote__content">
-        <p class="cm-partner-quote__eyebrow fade-in">Partner Spotlight</p>
-        <h2 class="cm-partner-quote__title fade-in">Our partnership with XYZ</h2>
-        <p class="cm-partner-quote__desc fade-in">Together we bring authentic flavors to every table.</p>
-        <p class="cm-partner-quote__meta fade-in">Since 2018</p>
-        <a href="/contact.html" class="cm-partner-quote__cta fade-in">Learn More</a>
+        <p class="cm-partner-quote__eyebrow">Partner Spotlight</p>
+        <h2 class="cm-partner-quote__title">Our Valued Partner</h2>
+        <p class="cm-partner-quote__desc">Together we craft memorable experiences, blending tradition with innovation.</p>
+        <p class="cm-partner-quote__meta">Partner since 2020</p>
+        <a href="/contact.html" class="cm-partner-quote__cta">Contact Partner</a>
       </div>
     </div>
   </section>
@@ -1163,20 +1191,17 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 </main>
 
 <script>
-  const t=document.getElementById("theme-toggle");
-  t.onclick=()=>document.documentElement.classList.toggle("dark");
-  if(localStorage.theme==="dark"||(!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme:dark)").matches)){
-    document.documentElement.classList.add("dark")
-  }
+const t=document.getElementById('theme-toggle');
+t.onclick=()=>document.documentElement.classList.toggle('dark');
+if(localStorage.theme==='dark'||(!('theme' in localStorage)&&window.matchMedia('(prefers-color-scheme:dark)').matches)){
+  document.documentElement.classList.add('dark');
+}
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 </script>
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("visible"); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-</script>
-
-    <footer class="cm-footer" role="contentinfo">
+<footer class="cm-footer" role="contentinfo">
   <div class="cm-footer-newsletter">
     <h3 class="cm-footer-newsletter-title">join the herd!</h3>
     <p class="cm-footer-newsletter-sub">Join our mailing list and keep up with all the exciting things.</p>
@@ -1246,7 +1271,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1256,7 +1281,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>
@@ -1317,7 +1342,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 })();</script>
 
 <script>(function(){function syncMore(){document.querySelectorAll('.trd-nav-more-btn').forEach(function(btn){try{var nav=btn.closest('ul,nav,header');if(!nav)return;var siblings=nav.querySelectorAll('a');var sibling=null;for(var i=0;i<siblings.length;i++){var a=siblings[i];if(a.closest('.trd-nav-more-panel'))continue;sibling=a;break;}if(!sibling)return;var s=window.getComputedStyle(sibling);btn.style.fontFamily=s.fontFamily;btn.style.fontSize=s.fontSize;btn.style.fontWeight=s.fontWeight;btn.style.letterSpacing=s.letterSpacing;btn.style.textTransform=s.textTransform;btn.style.fontStyle=s.fontStyle;nav.querySelectorAll('.trd-nav-more-panel a').forEach(function(da){da.style.fontFamily=s.fontFamily;da.style.fontSize=s.fontSize;da.style.fontWeight=s.fontWeight;da.style.letterSpacing=s.letterSpacing;da.style.textTransform=s.textTransform;});}catch(e){}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',syncMore)}else{syncMore()}})();</script>
-  <script data-trd-tpl-fadefix="phase-41">(function(){try{document.querySelectorAll('.fade-in,.scroll-reveal,.reveal').forEach(function(el){el.classList.add('visible');el.style.opacity='1';el.style.transform='none';el.style.visibility='visible';});}catch(e){}})();</script>
+<script data-trd-tpl-fadefix="phase-41">(function(){try{document.querySelectorAll('.fade-in,.scroll-reveal,.reveal').forEach(function(el){el.classList.add('visible');el.style.opacity='1';el.style.transform='none';el.style.visibility='visible';});}catch(e){}})();</script>
 <script>
 (function() {
   /*

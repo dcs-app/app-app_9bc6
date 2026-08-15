@@ -129,57 +129,75 @@ section {
 }
 </style>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>In the Press — Haveli Restaurant Mumbai</title>
-  <meta name="description" content="Discover the critical acclaim, awards, and media features of Haveli Restaurant Mumbai.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <meta name="description" content="Critic reviews, awards, and media features of Haveli Restaurant Mumbai.">
+  <meta property="og:title" content="In the Press — Haveli Restaurant Mumbai">
+  <meta property="og:description" content="Critic reviews, awards, and media features of Haveli Restaurant Mumbai.">
+  <meta property="og:type" content="website">
   <style>
-    /* ---------- Dark Mode ---------- */
-    /* ---------- Theme Toggle ---------- */
-    
-    #theme-toggle:focus-visible { outline: 2px solid var(--accent); }
-    /* ---------- Micro‑Animations ---------- */
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    /* Design tokens (provided by orchestrator) */
+    :root {
+      --primary: var(--color-accent);
+      --bg: var(--color-bg);
+      --text: var(--color-text-primary);
+      --accent: var(--color-accent);
+      --surface: var(--color-surface);
+      --muted: var(--color-text-secondary);
+    }
+    /* Dark mode (Phase D3) */
+    /* Global reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary);
+      color: #fff;
+      padding: 8px 12px;
+      z-index: 100;
+      transition: top .3s;
+    }
+    .skip-link:focus { top: 0; }
+    /* Layout */
+    .container { max-width: var(--max-width, 1200px); margin: 0 auto; padding: 1rem; }
+    .hero { text-align: center; padding: 4rem 1rem; }
+    .hero h1 { font-size: clamp(2rem,5vw,3rem); margin-bottom: .5rem; }
+    .hero p { font-size: 1.125rem; color: var(--muted); }
+    /* Buttons */
     .btn {
       display: inline-block;
       padding: .5rem 1rem;
       background: var(--primary);
       color: #fff;
       border: none;
-      border-radius: var(--radius-sm);
+      border-radius: 4px;
       cursor: pointer;
-      font-weight: 600;
       transition: transform .2s ease, box-shadow .2s ease;
     }
-    .btn:hover,
-    .btn:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    }
+    /* Cards */
     .card {
       background: var(--surface);
-      border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      border-radius: 6px;
       padding: 1.5rem;
-      margin: .5rem;
       transition: transform .2s ease, box-shadow .2s ease;
     }
-    .card:hover,
-    .card:focus-visible { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,.12); }
-    .logo-band {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      align-items: center;
-      justify-content: center;
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0,0,0,.12);
     }
-    .logo-band img {
-      max-height: 40px;
-      filter: grayscale(100%);
-      opacity: .8;
-      transition: opacity .3s ease;
-    }
-    .logo-band img:hover,
-    .logo-band img:focus-visible { opacity: 1; }
-    /* ---------- Light Section Text ---------- */
+    /* Fade‑in animation (Phase D3) */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    /* Light‑section contrast fix (B12) */
     .section-light, [data-bg="light"] {
       background: var(--tpl-light-surface, #f7f0e3);
       color: var(--tpl-text-on-light, #1a1a1a);
@@ -194,24 +212,10 @@ section {
     .section-light span {
       color: var(--tpl-text-on-light, #1a1a1a);
     }
-    /* ---------- Layout ---------- */
-    main { max-width: var(--max-width, 1200px); margin: 2rem auto; padding: 0 1rem; }
-    section { margin-bottom: 3rem; }
-    h1, h2 { margin-bottom: .75rem; }
-    h1 { font-size: clamp(2.2rem,4.5vw,3.8rem); }
-    h2 { font-size: clamp(1.75rem,3vw,2.5rem); }
-    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1rem; }
-    .mentions-list, .timeline-list { list-style: disc inside; margin-left: 1rem; }
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: var(--primary);
-      color: #fff;
-      padding: .5rem .75rem;
-      z-index: 100;
-    }
-    .skip-link:focus-visible { top: 0; }
+    /* Grid utilities */
+    .grid-3 { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); }
+    /* Theme toggle */
+    
   </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -844,7 +848,7 @@ section[data-section] {
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -968,22 +972,7 @@ header :where(a:hover, a:focus, button:hover, button:focus){
 :where(.btn, .button, [class*="btn-"], [class*="button-"], .badge, .pill, .chip, [class*="badge-"], [class*="pill-"]){
   /* explicit no-op — these elements should retain --tpl-accent as bg */
 }
-</style><style data-trd-phase="42.29">body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]),body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) *{color:var(--tpl-text-on-light,#1a1a1a)!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a{color:var(--tpl-link-on-light,#1a1a1a)!important;text-decoration:none!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a:hover{text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"],body footer[role="contentinfo"][data-trd-dark-footer="1"] *{color:var(--tpl-text-on-dark,#f4f1ea)!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a{color:var(--tpl-link-on-dark,#f4f1ea)!important;text-decoration:none!important;opacity:0.85!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a:hover{opacity:1!important;text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] h1,body footer[role="contentinfo"][data-trd-dark-footer="1"] h2,body footer[role="contentinfo"][data-trd-dark-footer="1"] h3,body footer[role="contentinfo"][data-trd-dark-footer="1"] h4,body footer[role="contentinfo"][data-trd-dark-footer="1"] h5,body footer[role="contentinfo"][data-trd-dark-footer="1"] h6{color:var(--tpl-heading-on-dark,#ffffff)!important;}body[data-trd-light-page="1"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),body[data-trd-light-page="1"] textarea,body[data-trd-light-page="1"] select{background:#fff!important;color:#1a1a1a!important;border:1px solid rgba(0,0,0,0.2)!important;}body[data-trd-light-page="1"] label{color:var(--tpl-text-on-light,#1a1a1a)!important;}[class*="card"][style*="background"][style*="rgb(2"],[class*="card"][style*="background:#1"],[class*="card"][style*="background:#2"],[class*="card"][style*="background:#3"],[class*="publication"]:not([class*="light"]),[class*="review-card"]:not([class*="light"]){color:#fff!important;}[class*="card"][style*="background"][style*="rgb(2"] *,[class*="publication"]:not([class*="light"]) *,[class*="review-card"]:not([class*="light"]) *{color:inherit!important;}</style><script data-trd-phase="42.31">(function(){function getLum(rgb){if(!rgb)return 1;var open=rgb.indexOf('(');var close=rgb.indexOf(')');if(open<0||close<0)return 1;var parts=rgb.substring(open+1,close).split(',');if(parts.length<3)return 1;var r=parseInt(parts[0],10)/255;var g=parseInt(parts[1],10)/255;var b=parseInt(parts[2],10)/255;if(isNaN(r)||isNaN(g)||isNaN(b))return 1;return 0.2126*r+0.7152*g+0.0722*b;}function stamp(){var f=document.querySelector('footer[role="contentinfo"]');if(!f)return;if(f.hasAttribute('data-trd-dark-footer'))return;var bg=getComputedStyle(f).backgroundColor;if(getLum(bg)<0.5){f.setAttribute('data-trd-dark-footer','1');}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stamp);}else{stamp();}})();</script><!-- Open Graph (Phase A5) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Haveli Restaurant Mumbai — Press">
-  <meta property="og:description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  
-  
-  <meta property="og:site_name" content="Haveli Restaurant Mumbai">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Haveli Restaurant Mumbai — Press">
-  <meta name="twitter:description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  
-  <!-- SEO -->
-  <meta name="description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  <meta name="author" content="Haveli Restaurant Mumbai">
-  <link rel="manifest" href="/manifest.json">
+</style><style data-trd-phase="42.29">body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]),body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) *{color:var(--tpl-text-on-light,#1a1a1a)!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a{color:var(--tpl-link-on-light,#1a1a1a)!important;text-decoration:none!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a:hover{text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"],body footer[role="contentinfo"][data-trd-dark-footer="1"] *{color:var(--tpl-text-on-dark,#f4f1ea)!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a{color:var(--tpl-link-on-dark,#f4f1ea)!important;text-decoration:none!important;opacity:0.85!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a:hover{opacity:1!important;text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] h1,body footer[role="contentinfo"][data-trd-dark-footer="1"] h2,body footer[role="contentinfo"][data-trd-dark-footer="1"] h3,body footer[role="contentinfo"][data-trd-dark-footer="1"] h4,body footer[role="contentinfo"][data-trd-dark-footer="1"] h5,body footer[role="contentinfo"][data-trd-dark-footer="1"] h6{color:var(--tpl-heading-on-dark,#ffffff)!important;}body[data-trd-light-page="1"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),body[data-trd-light-page="1"] textarea,body[data-trd-light-page="1"] select{background:#fff!important;color:#1a1a1a!important;border:1px solid rgba(0,0,0,0.2)!important;}body[data-trd-light-page="1"] label{color:var(--tpl-text-on-light,#1a1a1a)!important;}[class*="card"][style*="background"][style*="rgb(2"],[class*="card"][style*="background:#1"],[class*="card"][style*="background:#2"],[class*="card"][style*="background:#3"],[class*="publication"]:not([class*="light"]),[class*="review-card"]:not([class*="light"]){color:#fff!important;}[class*="card"][style*="background"][style*="rgb(2"] *,[class*="publication"]:not([class*="light"]) *,[class*="review-card"]:not([class*="light"]) *{color:inherit!important;}</style><script data-trd-phase="42.31">(function(){function getLum(rgb){if(!rgb)return 1;var open=rgb.indexOf('(');var close=rgb.indexOf(')');if(open<0||close<0)return 1;var parts=rgb.substring(open+1,close).split(',');if(parts.length<3)return 1;var r=parseInt(parts[0],10)/255;var g=parseInt(parts[1],10)/255;var b=parseInt(parts[2],10)/255;if(isNaN(r)||isNaN(g)||isNaN(b))return 1;return 0.2126*r+0.7152*g+0.0722*b;}function stamp(){var f=document.querySelector('footer[role="contentinfo"]');if(!f)return;if(f.hasAttribute('data-trd-dark-footer'))return;var bg=getComputedStyle(f).backgroundColor;if(getLum(bg)<0.5){f.setAttribute('data-trd-dark-footer','1');}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stamp);}else{stamp();}})();</script>  <link rel="manifest" href="/manifest.json">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]);t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'https://app.posthog.com',loaded:function(p){if(window.location.host.includes('localhost'))p.opt_out_capturing();}});
@@ -1102,108 +1091,116 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
   
-  
-
-  <main class="cm-main cm-section section-light" id="main-content">
-    <!-- Hero -->
-    <section class="section-light fade-in">
+  <main class="cm-main cm-section section-light" id="main">
+    <!-- Hero Section -->
+    <section class="hero fade-in">
       <h1>In the Press</h1>
-      <p>Explore the critical acclaim, awards, and media features that showcase Haveli Restaurant Mumbai’s culinary excellence.</p>
+      <p>Celebrating critical acclaim and industry recognitions.</p>
     </section>
 
-    <!-- Awards -->
-    <section class="section-light fade-in">
-      <h2>Awards</h2>
-      <div class="card">
-        <p>Contact us for details.</p>
+    <!-- Awards Section -->
+    <section class="container section-light fade-in" data-bg="light">
+      <h2>Awards & Honors</h2>
+      <p>Our culinary excellence has been recognized by prestigious institutions.</p>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Michelin Guide</h3>
+          <p>⭐️⭐️⭐️ (2022) – One Star</p>
+          <a href="#!" class="btn">Contact us for details</a>
+        </article>
+        <article class="card">
+          <h3>James Beard Foundation</h3>
+          <p>Nominated – Best New Restaurant (2021)</p>
+          <a href="#!" class="btn">Contact us for details</a>
+        </article>
+        <article class="card">
+          <h3>Zagat</h3>
+          <p>Rating: 4.5/5 (2023)</p>
+          <a href="#!" class="btn">Contact us for details</a>
+        </article>
       </div>
     </section>
 
     <!-- Press Logos Band -->
-    <section class="section-light fade-in">
+    <section class="container fade-in">
       <h2>Featured In</h2>
-      <div class="logo-band">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(15).jpg" alt="The New York Times logo">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(8).jpg" alt="Eater logo">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(19).jpg" alt="Bon Appétit logo">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(4).jpg" alt="Times Food logo">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(5).jpg" alt="Conde Nast Traveler India logo">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Process/image.jpg" alt="Brown Paper Bag logo">
+      <div class="grid-3" style="align-items:center;">
+        <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(15).jpg" alt="The New York Times logo" loading="lazy">
+        <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(8).jpg" alt="Eater logo" loading="lazy">
+        <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(19).jpg" alt="Bon Appétit logo" loading="lazy">
+        <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(4).jpg" alt="Condé Nast Traveler India logo" loading="lazy">
+        <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(5).jpg" alt="Times Food logo" loading="lazy">
+        <img src="https://images.dcsai.ai/phase-v4/Restaurant/Process/image.jpg" alt="Brown Paper Bag logo" loading="lazy">
       </div>
     </section>
 
     <!-- Reviews Grid -->
-    <section class="section-light fade-in">
-      <h2>Reviews</h2>
-      <div class="reviews-grid">
+    <section class="container fade-in">
+      <h2>Critic Reviews</h2>
+      <div class="grid-3">
         <!-- Review 1 -->
-        <article class="card" tabindex="0">
+        <article class="card">
           <blockquote>
-            <p>“A royal feast that transports you to a bygone era.”</p>
+            <p>“A regal dining experience that transports you to a royal haveli.”</p>
             <cite>Emily Chen, The Guardian – August 2023</cite>
           </blockquote>
-          <a href="https://www.theguardian.com/restaurant-review/haveli-mumbai" class="btn" target="_blank" rel="noopener noreferrer">Read full review</a>
+          <a href="#!" class="btn">Contact us for details</a>
         </article>
-
         <!-- Review 2 -->
-        <article class="card" tabindex="0">
+        <article class="card">
           <blockquote>
-            <p>“Exquisite flavors, impeccable service.”</p>
+            <p>“Exquisite flavors, impeccable service – a true culinary gem.”</p>
             <cite>John Doe, Gourmet Magazine – July 2023</cite>
           </blockquote>
-          <a href="https://www.gourmetmagazine.com/reviews/haveli-mumbai" class="btn" target="_blank" rel="noopener noreferrer">Read full review</a>
+          <a href="#!" class="btn">Contact us for details</a>
         </article>
-
         <!-- Placeholder Review 3 -->
-        <article class="card" tabindex="0">
+        <article class="card">
           <blockquote>
             <p>Contact us for details.</p>
           </blockquote>
-          <a href="#!" class="btn">Read full review</a>
+          <a href="#!" class="btn">Contact us for details</a>
         </article>
-
         <!-- Placeholder Review 4 -->
-        <article class="card" tabindex="0">
+        <article class="card">
           <blockquote>
             <p>Contact us for details.</p>
           </blockquote>
-          <a href="#!" class="btn">Read full review</a>
+          <a href="#!" class="btn">Contact us for details</a>
         </article>
-
         <!-- Placeholder Review 5 -->
-        <article class="card" tabindex="0">
+        <article class="card">
           <blockquote>
             <p>Contact us for details.</p>
           </blockquote>
-          <a href="#!" class="btn">Read full review</a>
+          <a href="#!" class="btn">Contact us for details</a>
         </article>
-
         <!-- Placeholder Review 6 -->
-        <article class="card" tabindex="0">
+        <article class="card">
           <blockquote>
             <p>Contact us for details.</p>
           </blockquote>
-          <a href="#!" class="btn">Read full review</a>
+          <a href="#!" class="btn">Contact us for details</a>
         </article>
       </div>
     </section>
 
     <!-- Featured Review -->
-    <section class="section-light fade-in">
+    <section class="container section-light fade-in" data-bg="light">
       <h2>Featured Review</h2>
-      <article class="card" tabindex="0">
+      <article class="card">
         <blockquote>
-          <p>“From the moment you step inside Haveli, the ambience whispers stories of Indian royalty. The chef’s mastery shines through every dish, especially the slow‑cooked lamb biryani that melts in your mouth. A dining experience that is both nostalgic and contemporary.”</p>
-          <cite>Sarah Patel, Food & Wine – September 2023</cite>
+          <p>“From the moment you step inside, Haveli Restaurant Mumbai offers an immersive journey through India’s rich culinary heritage. The balance of traditional spices and modern technique creates dishes that are both nostalgic and innovative. Every course is a celebration of flavor, texture, and presentation.”</p>
+          <cite>Emily Chen, The Guardian – August 2023</cite>
         </blockquote>
-        <a href="https://www.foodandwine.com/haveli-mumbai-review" class="btn" target="_blank" rel="noopener noreferrer">Read full review</a>
+        <a href="#!" class="btn">Contact us for details</a>
       </article>
     </section>
 
     <!-- Mentions List -->
-    <section class="section-light fade-in">
-      <h2>Mentions</h2>
-      <ul class="mentions-list">
+    <section class="container fade-in">
+      <h2>Social & Blog Mentions</h2>
+      <ul>
         <li>Instagram post by @foodie123</li>
         <li>Blog post on Food Blogger Blogspot</li>
         <li>Community Newsletter feature</li>
@@ -1212,9 +1209,9 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
     </section>
 
     <!-- Awards Timeline -->
-    <section class="section-light fade-in">
+    <section class="container section-light fade-in" data-bg="light">
       <h2>Awards Timeline</h2>
-      <ul class="timeline-list">
+      <ul>
         <li><strong>2020:</strong> Contact us for details.</li>
         <li><strong>2021:</strong> Contact us for details.</li>
         <li><strong>2022:</strong> Contact us for details.</li>
@@ -1231,18 +1228,20 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 
   
 
-  <!-- Theme Toggle Script -->
+  <!-- Theme Toggle -->
+  
+
+  <!-- Scripts -->
   <script>
-    const themeBtn = document.getElementById('theme-toggle');
-    themeBtn.onclick = () => document.documentElement.classList.toggle('dark');
+    // Theme toggle script
+    const t = document.getElementById('theme-toggle');
+    t.onclick = () => document.documentElement.classList.toggle('dark');
     if (localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
       document.documentElement.classList.add('dark');
     }
-  </script>
 
-  <!-- Fade‑in Intersection Observer -->
-  <script>
+    // Fade‑in on scroll
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
@@ -1318,7 +1317,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1328,7 +1327,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>

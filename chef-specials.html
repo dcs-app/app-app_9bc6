@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" lang="en">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" data-trd-phase="42.26"><meta http-equiv="Pragma" content="no-cache" data-trd-phase="42.26"><meta http-equiv="Expires" content="0" data-trd-phase="42.26">
+<head><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" data-trd-phase="42.26"><meta http-equiv="Pragma" content="no-cache" data-trd-phase="42.26"><meta http-equiv="Expires" content="0" data-trd-phase="42.26">
 <style id="trd-tokens">
 /* ── TRD Design Token System (Phase A1) ── */
 :root {
@@ -129,79 +128,197 @@ section {
   .trd-container { padding: 0 var(--sp-3); }
 }
 </style>
-<meta charset="UTF-8">
-<title>Chef Specials — Haveli Restaurant Mumbai</title>
-
-<style>
-/* ---------- Dark Mode ---------- */
-/* ---------- Theme Toggle ---------- */
-
-/* ---------- Micro‑Animations ---------- */
-.fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
-.btn {
-  display: inline-block;
-  background: var(--primary);
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  font-weight: 600;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
-}
-/* Card hover */
-.card {
-  background: var(--surface);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(0,0,0,.12);
-}
-/* Grid layout */
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-@media (min-width: 640px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 1024px) {
-  .grid { grid-template-columns: repeat(3, 1fr); }
-}
-/* Archive strip */
-.archive-strip {
-  display: flex;
-  overflow-x: auto;
-  gap: 0.75rem;
-  padding-bottom: 0.5rem;
-}
-.archive-strip::-webkit-scrollbar { height: 6px; }
-.archive-strip::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 3px; }
-/* Section Light – required rule (none used here) */
-.section-light, [data-bg="light"] {
-  background: var(--tpl-light-surface, #f7f0e3);
-  color: var(--tpl-text-on-light, #1a1a1a);
-}
-.section-light h1,
-.section-light h2,
-.section-light h3,
-.section-light h4,
-.section-light p,
-.section-light li,
-.section-light label,
-.section-light span {
-  color: var(--tpl-text-on-light, #1a1a1a);
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chef’s Specials – Haveli Restaurant Mumbai</title>
+  <meta name="description" content="Weekly rotating chef specials at Haveli Restaurant Mumbai. Discover limited‑time dishes crafted by our chef.">
+  <meta property="og:title" content="Chef’s Specials – Haveli Restaurant Mumbai">
+  <meta property="og:description" content="Weekly rotating chef specials at Haveli Restaurant Mumbai. Discover limited‑time dishes crafted by our chef.">
+  <meta property="og:type" content="website">
+  <style>
+    /* -------------------------------------------------
+       Design Tokens (provided by orchestrator)
+       ------------------------------------------------- */
+    :root {
+      --primary: #B8860B;               /* brand accent */
+      --bg: #FAF7F2;                    /* light background */
+      --text: #1F1611;                  /* primary text */
+      --accent: #B8860B;                /* button accent */
+      --surface: #FFFFFF;               /* card surface */
+      --muted: #6B5D52;                 /* secondary text */
+    }
+    /* -------------------------------------------------
+       Global Styles
+       ------------------------------------------------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    h1, h2, h3, h4 { font-family: var(--font-serif, serif); }
+    h1 { font-size: clamp(2rem,5vw,3rem); margin-bottom: 0.5rem; }
+    h2 { font-size: clamp(1.5rem,4vw,2.25rem); margin-bottom: 1rem; }
+    h3 { font-size: clamp(1.25rem,3vw,1.75rem); margin-bottom: 0.75rem; }
+    p { margin-bottom: 1rem; color: var(--muted); }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--primary); }
+    /* -------------------------------------------------
+       Layout Helpers
+       ------------------------------------------------- */
+    .container { max-width: var(--max-width, 1200px); margin: 0 auto; padding: 1rem; }
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: -999px;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      z-index: 100;
+    }
+    .skip-link:focus-visible {
+      left: 1rem;
+      top: 1rem;
+    }
+    /* -------------------------------------------------
+       Hero Section
+       ------------------------------------------------- */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: var(--bg);
+    }
+    .hero h1 { color: var(--text); }
+    .hero p { color: var(--muted); }
+    /* -------------------------------------------------
+       Specials Grid
+       ------------------------------------------------- */
+    .specials-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--muted);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover,
+    .card:focus-visible { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,0.12); }
+    .card img { width: 100%; height: auto; display: block; }
+    .card-content {
+      padding: 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card h3 { margin-bottom: 0.5rem; color: var(--text); }
+    .card .price { margin-top: auto; font-weight: 600; color: var(--primary); }
+    .badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: var(--primary);
+      color: #fff;
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      border-radius: 4px;
+    }
+    /* -------------------------------------------------
+       Featured Dish Spotlight
+       ------------------------------------------------- */
+    .featured {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 3rem 0;
+    }
+    .featured .hero-card {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) {
+      .featured .hero-card { grid-template-columns: 1fr 1fr; }
+    }
+    .featured .chef-portrait {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    /* -------------------------------------------------
+       Chef’s Note
+       ------------------------------------------------- */
+    .chef-note {
+      background: var(--bg);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-left: 4px solid var(--primary);
+    }
+    /* -------------------------------------------------
+       Past Specials Archive
+       ------------------------------------------------- */
+    .archive-strip {
+      display: flex;
+      gap: 0.75rem;
+      overflow-x: auto;
+      padding: 1rem 0;
+    }
+    .archive-strip img {
+      flex: 0 0 auto;
+      width: 120px;
+      height: auto;
+      border-radius: 6px;
+    }
+    /* -------------------------------------------------
+       Reservation CTA
+       ------------------------------------------------- */
+    .reservation-cta {
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    /* -------------------------------------------------
+       Theme Toggle (positioned 80px from bottom)
+       ------------------------------------------------- */
+    
+    #theme-toggle:hover,
+    #theme-toggle:focus-visible {
+      background: var(--muted);
+    }
+    /* -------------------------------------------------
+       Dark Mode (Phase D3)
+       ------------------------------------------------- */
+    /* -------------------------------------------------
+       Micro‑Animations (Phase D3)
+       ------------------------------------------------- */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    /* -------------------------------------------------
+       Focus Visible (Accessibility)
+       ------------------------------------------------- */
+    .btn:focus-visible,
+    .card:focus-visible,
+    #theme-toggle:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+  </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -833,7 +950,7 @@ section[data-section] {
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -957,22 +1074,7 @@ header :where(a:hover, a:focus, button:hover, button:focus){
 :where(.btn, .button, [class*="btn-"], [class*="button-"], .badge, .pill, .chip, [class*="badge-"], [class*="pill-"]){
   /* explicit no-op — these elements should retain --tpl-accent as bg */
 }
-</style><style data-trd-phase="42.29">body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]),body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) *{color:var(--tpl-text-on-light,#1a1a1a)!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a{color:var(--tpl-link-on-light,#1a1a1a)!important;text-decoration:none!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a:hover{text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"],body footer[role="contentinfo"][data-trd-dark-footer="1"] *{color:var(--tpl-text-on-dark,#f4f1ea)!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a{color:var(--tpl-link-on-dark,#f4f1ea)!important;text-decoration:none!important;opacity:0.85!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a:hover{opacity:1!important;text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] h1,body footer[role="contentinfo"][data-trd-dark-footer="1"] h2,body footer[role="contentinfo"][data-trd-dark-footer="1"] h3,body footer[role="contentinfo"][data-trd-dark-footer="1"] h4,body footer[role="contentinfo"][data-trd-dark-footer="1"] h5,body footer[role="contentinfo"][data-trd-dark-footer="1"] h6{color:var(--tpl-heading-on-dark,#ffffff)!important;}body[data-trd-light-page="1"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),body[data-trd-light-page="1"] textarea,body[data-trd-light-page="1"] select{background:#fff!important;color:#1a1a1a!important;border:1px solid rgba(0,0,0,0.2)!important;}body[data-trd-light-page="1"] label{color:var(--tpl-text-on-light,#1a1a1a)!important;}[class*="card"][style*="background"][style*="rgb(2"],[class*="card"][style*="background:#1"],[class*="card"][style*="background:#2"],[class*="card"][style*="background:#3"],[class*="publication"]:not([class*="light"]),[class*="review-card"]:not([class*="light"]){color:#fff!important;}[class*="card"][style*="background"][style*="rgb(2"] *,[class*="publication"]:not([class*="light"]) *,[class*="review-card"]:not([class*="light"]) *{color:inherit!important;}</style><script data-trd-phase="42.31">(function(){function getLum(rgb){if(!rgb)return 1;var open=rgb.indexOf('(');var close=rgb.indexOf(')');if(open<0||close<0)return 1;var parts=rgb.substring(open+1,close).split(',');if(parts.length<3)return 1;var r=parseInt(parts[0],10)/255;var g=parseInt(parts[1],10)/255;var b=parseInt(parts[2],10)/255;if(isNaN(r)||isNaN(g)||isNaN(b))return 1;return 0.2126*r+0.7152*g+0.0722*b;}function stamp(){var f=document.querySelector('footer[role="contentinfo"]');if(!f)return;if(f.hasAttribute('data-trd-dark-footer'))return;var bg=getComputedStyle(f).backgroundColor;if(getLum(bg)<0.5){f.setAttribute('data-trd-dark-footer','1');}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stamp);}else{stamp();}})();</script><!-- Open Graph (Phase A5) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Haveli Restaurant Mumbai — Chef Specials">
-  <meta property="og:description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  
-  
-  <meta property="og:site_name" content="Haveli Restaurant Mumbai">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Haveli Restaurant Mumbai — Chef Specials">
-  <meta name="twitter:description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  
-  <!-- SEO -->
-  <meta name="description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  <meta name="author" content="Haveli Restaurant Mumbai">
-  <link rel="manifest" href="/manifest.json">
+</style><style data-trd-phase="42.29">body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]),body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) *{color:var(--tpl-text-on-light,#1a1a1a)!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a{color:var(--tpl-link-on-light,#1a1a1a)!important;text-decoration:none!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a:hover{text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"],body footer[role="contentinfo"][data-trd-dark-footer="1"] *{color:var(--tpl-text-on-dark,#f4f1ea)!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a{color:var(--tpl-link-on-dark,#f4f1ea)!important;text-decoration:none!important;opacity:0.85!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a:hover{opacity:1!important;text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] h1,body footer[role="contentinfo"][data-trd-dark-footer="1"] h2,body footer[role="contentinfo"][data-trd-dark-footer="1"] h3,body footer[role="contentinfo"][data-trd-dark-footer="1"] h4,body footer[role="contentinfo"][data-trd-dark-footer="1"] h5,body footer[role="contentinfo"][data-trd-dark-footer="1"] h6{color:var(--tpl-heading-on-dark,#ffffff)!important;}body[data-trd-light-page="1"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),body[data-trd-light-page="1"] textarea,body[data-trd-light-page="1"] select{background:#fff!important;color:#1a1a1a!important;border:1px solid rgba(0,0,0,0.2)!important;}body[data-trd-light-page="1"] label{color:var(--tpl-text-on-light,#1a1a1a)!important;}[class*="card"][style*="background"][style*="rgb(2"],[class*="card"][style*="background:#1"],[class*="card"][style*="background:#2"],[class*="card"][style*="background:#3"],[class*="publication"]:not([class*="light"]),[class*="review-card"]:not([class*="light"]){color:#fff!important;}[class*="card"][style*="background"][style*="rgb(2"] *,[class*="publication"]:not([class*="light"]) *,[class*="review-card"]:not([class*="light"]) *{color:inherit!important;}</style><script data-trd-phase="42.31">(function(){function getLum(rgb){if(!rgb)return 1;var open=rgb.indexOf('(');var close=rgb.indexOf(')');if(open<0||close<0)return 1;var parts=rgb.substring(open+1,close).split(',');if(parts.length<3)return 1;var r=parseInt(parts[0],10)/255;var g=parseInt(parts[1],10)/255;var b=parseInt(parts[2],10)/255;if(isNaN(r)||isNaN(g)||isNaN(b))return 1;return 0.2126*r+0.7152*g+0.0722*b;}function stamp(){var f=document.querySelector('footer[role="contentinfo"]');if(!f)return;if(f.hasAttribute('data-trd-dark-footer'))return;var bg=getComputedStyle(f).backgroundColor;if(getLum(bg)<0.5){f.setAttribute('data-trd-dark-footer','1');}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stamp);}else{stamp();}})();</script>  <link rel="manifest" href="/manifest.json">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]);t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'https://app.posthog.com',loaded:function(p){if(window.location.host.includes('localhost'))p.opt_out_capturing();}});
@@ -1090,109 +1192,99 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
-<main class="cm-main cm-section section-light" id="main-content">
+  <!-- Skip to Content -->
+  <main id="main" class="container cm-main cm-section section-light">
+    <!-- Hero -->
+    <section class="hero fade-in">
+      <h1 class="fade-in">This Week from Our Kitchen</h1>
+      <p class="fade-in">Updated weekly – discover what our chef is crafting right now.</p>
+    </section>
 
-<!-- Hero Section -->
-<section class="fade-in">
-  <h1>Chef’s Weekly Specials</h1>
-  <p>Discover what our kitchen is crafting this week. Updated weekly.</p>
-</section>
-
-<!-- Current Specials Grid -->
-<section class="fade-in">
-  <h2>Current Specials</h2>
-  <div class="grid">
-    <article class="card">
-      <img src="https://images.dcsai.ai/phase-v4/Restaurant/Award Press/image(3).jpg" alt="Dish photo – placeholder" loading="lazy">
-      <div class="card-content" style="padding:0.75rem;">
-        <h3>Special Dish 1</h3>
-        <p>A harmonious blend of seasonal ingredients.</p>
-        <p><strong>Price:</strong> Contact us for details</p>
+    <!-- Current Specials Grid -->
+    <section class="current-specials fade-in">
+      <h2 class="fade-in">Current Specials</h2>
+      <div class="specials-grid">
+        <!-- Dish 1 -->
+        <article class="card fade-in" tabindex="0">
+          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Award Press/image(3).jpg" alt="Special Dish 1">
+          <span class="badge">NEW THIS WEEK</span>
+          <div class="card-content">
+            <h3>Special Dish 1</h3>
+            <p>Brief description of the dish – ingredients and preparation.</p>
+            <p class="price">Price: Contact us for details</p>
+            <p>Available: All week</p>
+          </div>
+        </article>
+        <!-- Dish 2 -->
+        <article class="card fade-in" tabindex="0">
+          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/magnific_a-beautifully-plated-ital_3001257645.jpeg" alt="Special Dish 2">
+          <span class="badge">NEW THIS WEEK</span>
+          <div class="card-content">
+            <h3>Special Dish 2</h3>
+            <p>Brief description of the dish – ingredients and preparation.</p>
+            <p class="price">Price: Contact us for details</p>
+            <p>Available: All week</p>
+          </div>
+        </article>
+        <!-- Dish 3 -->
+        <article class="card fade-in" tabindex="0">
+          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Process/image(18).jpg" alt="Special Dish 3">
+          <span class="badge">NEW THIS WEEK</span>
+          <div class="card-content">
+            <h3>Special Dish 3</h3>
+            <p>Brief description of the dish – ingredients and preparation.</p>
+            <p class="price">Price: Contact us for details</p>
+            <p>Available: All week</p>
+          </div>
+        </article>
+        <!-- Additional placeholders can be added up to 9 dishes -->
       </div>
-    </article>
+    </section>
 
-    <article class="card">
-      <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/magnific_a-beautifully-plated-ital_3001257645.jpeg" alt="Dish photo – placeholder" loading="lazy">
-      <div class="card-content" style="padding:0.75rem;">
-        <h3>Special Dish 2</h3>
-        <p>Traditional flavors with a modern twist.</p>
-        <p><strong>Price:</strong> Contact us for details</p>
+    <!-- Featured Dish Spotlight -->
+    <section class="featured fade-in">
+      <h2 class="fade-in">Featured Dish</h2>
+      <div class="hero-card fade-in">
+        <div class="card">
+          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image.jpg" alt="Featured Dish">
+          <div class="card-content">
+            <h3>Featured Dish Name</h3>
+            <p>Chef’s inspiration, sourcing details, and preparation story.</p>
+            <p class="price">Price: Contact us for details</p>
+            <p>Available: Limited – while supplies last</p>
+          </div>
+        </div>
+        <div class="card">
+          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Process/image(23).jpg" alt="Chef Portrait" class="chef-portrait">
+          <div class="card-content">
+            <h3>Chef’s Story</h3>
+            <p>Our chef shares the inspiration behind this week’s featured dish, highlighting seasonal ingredients and culinary techniques.</p>
+          </div>
+        </div>
       </div>
-    </article>
+    </section>
 
-    <article class="card">
-      <img src="https://images.dcsai.ai/phase-v4/Restaurant/Process/image(18).jpg" alt="Dish photo – placeholder" loading="lazy">
-      <div class="card-content" style="padding:0.75rem;">
-        <h3>Special Dish 3</h3>
-        <p>Fresh herbs and aromatic spices combine.</p>
-        <p><strong>Price:</strong> Contact us for details</p>
+    <!-- Chef’s Note -->
+    <section class="chef-note fade-in">
+      <h2 class="fade-in">Chef’s Note</h2>
+      <p class="fade-in">“We are excited to bring you a fresh, vibrant selection of flavors this week. Each dish is crafted with care, using the finest ingredients available.” – Chef </p>
+    </section>
+
+    <!-- Past Specials Archive -->
+    <section class="past-archive fade-in">
+      <h2 class="fade-in">Past Specials Archive</h2>
+      <div class="archive-strip">
+        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(6).jpg" alt="Past Special 1">
+        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(3).jpg" alt="Past Special 2">
+        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(2).jpg" alt="Past Special 3">
+        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(7).jpg" alt="Past Special 4">
+        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(16).jpg" alt="Past Special 5">
       </div>
-    </article>
+    </section>
 
-    <article class="card">
-      <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image.jpg" alt="Dish photo – placeholder" loading="lazy">
-      <div class="card-content" style="padding:0.75rem;">
-        <h3>Special Dish 4</h3>
-        <p>Rich sauce with locally sourced vegetables.</p>
-        <p><strong>Price:</strong> Contact us for details</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://images.dcsai.ai/phase-v4/Restaurant/Process/image(23).jpg" alt="Dish photo – placeholder" loading="lazy">
-      <div class="card-content" style="padding:0.75rem;">
-        <h3>Special Dish 5</h3>
-        <p>Succulent pieces of meat marinated to perfection.</p>
-        <p><strong>Price:</strong> Contact us for details</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(6).jpg" alt="Dish photo – placeholder" loading="lazy">
-      <div class="card-content" style="padding:0.75rem;">
-        <h3>Special Dish 6</h3>
-        <p>Delicate dessert infused with fragrant spices.</p>
-        <p><strong>Price:</strong> Contact us for details</p>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- Featured Dish Spotlight -->
-<section class="fade-in">
-  <h2>Featured Dish of the Week</h2>
-  <article class="card" style="display:flex;flex-direction:column;">
-    <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(3).jpg" alt="Featured dish photo – placeholder" loading="lazy">
-    <div class="card-content" style="padding:0.75rem;">
-      <h3>Chef’s Signature Creation</h3>
-      <p>Inspired by the chef’s travels, this dish showcases the finest seasonal produce.</p>
-      <p><strong>Price:</strong> Contact us for details</p>
-    </div>
-  </article>
-</section>
-
-<!-- Chef's Note Section -->
-<section class="fade-in">
-  <h2>Chef’s Note</h2>
-  <p>“This week’s menu celebrates the vibrant flavors of our region, with each plate crafted to tell a story of tradition and innovation.” – Chef Rahul</p>
-</section>
-
-<!-- Past Specials Archive -->
-<section class="fade-in">
-  <h2>Past Specials Archive</h2>
-  <div class="archive-strip">
-    <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(2).jpg" alt="Past special thumbnail – placeholder" loading="lazy" width="120" height="80">
-    <img src="https://images.dcsai.ai/phase-v4/Restaurant/Testimonials/image(7).jpg" alt="Past special thumbnail – placeholder" loading="lazy" width="120" height="80">
-    <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/products/image(16).jpg" alt="Past special thumbnail – placeholder" loading="lazy" width="120" height="80">
-    <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/magnific_intimate-restaurant-inter_3001132646.jpeg" alt="Past special thumbnail – placeholder" loading="lazy" width="120" height="80">
-    <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/about-/image(8).jpg" alt="Past special thumbnail – placeholder" loading="lazy" width="120" height="80">
-  </div>
-</section>
-
-<!-- Reservation CTA -->
-
-
-<!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
+    <!-- Reservation CTA -->
+    
+  <!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
 <section class="trd-section-filler" data-trd-section-filler="phase-F" style="padding:48px 24px;max-width:880px;margin:0 auto;line-height:1.7;">
   <h2 style="font-size:1.5rem;font-weight:700;margin:0 0 18px;">Tonight&#39;s specials</h2>
   <p style="margin:0 0 14px;color:inherit;opacity:.92;">Haveli Restaurant Mumbai is a place built around the simple idea that good food brings people together. Whether you're stopping in for a midweek dinner or planning something special, the room is set up to make you feel at home.</p>
@@ -1202,24 +1294,16 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 <!-- ─── /Phase F ──────────────────────────────────────────────── -->
 </main>
 
-<!-- Theme Toggle Button -->
+  <!-- Theme Toggle Button -->
+  
 
-
-<script>
-/* Theme toggle logic */
-const themeBtn = document.getElementById('theme-toggle');
-themeBtn.onclick = () => document.documentElement.classList.toggle('dark');
-if (localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark');
-}
-
-/* Fade‑in on scroll */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
+  <!-- Scripts -->
+  <script>
+    // Theme toggle logic
+    
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
     <footer class="cm-footer" role="contentinfo">
   <div class="cm-footer-newsletter">
     <h3 class="cm-footer-newsletter-title">join the herd!</h3>
@@ -1290,7 +1374,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1300,7 +1384,7 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>

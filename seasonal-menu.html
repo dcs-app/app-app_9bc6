@@ -129,101 +129,55 @@ section {
 }
 </style>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spring Menu – Haveli Restaurant Mumbai</title>
-  <meta name="description" content="Seasonal spring menu at Haveli Restaurant Mumbai – fresh Indian dishes available March 1 – May 31 2024.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Seasonal Spring Menu featuring fresh Indian dishes at Haveli Restaurant Mumbai. Available March 1 – May 31, 2024.">
   
   <style>
-    /* ---------- Dark mode (Phase D3) ---------- */
-    /* ---------- Theme toggle positioning (override) ---------- */
-    
-    /* ---------- Micro‑animations (Phase D3) ---------- */
+    /* Dark mode */
+    /* Micro‑animations */
     .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
-    .btn, .trd-btn {
+    .btn {
       display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background: var(--primary);
+      padding: .6rem 1.2rem;
+      background: var(--color-accent);
       color: #fff;
       border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .btn:hover, .trd-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,.15);
-    }
-    .card {
-      background: var(--surface);
       border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-sm);
-      overflow: hidden;
+      cursor: pointer;
       transition: transform .2s ease, box-shadow .2s ease;
     }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 32px rgba(0,0,0,.12);
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
+    .card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      transition: transform .2s ease, box-shadow .2s ease;
     }
-    /* ---------- Section‑light rule (B12) ---------- */
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,.12); }
+    /* Light‑section contrast fix */
     .section-light, [data-bg="light"] {
       background: var(--tpl-light-surface, #f7f0e3);
       color: var(--tpl-text-on-light, #1a1a1a);
     }
-    .section-light h1,
-    .section-light h2,
-    .section-light h3,
-    .section-light h4,
-    .section-light p,
-    .section-light li,
-    .section-light label,
-    .section-light span {
+    .section-light h1, .section-light h2, .section-light h3, .section-light h4,
+    .section-light p, .section-light li, .section-light label, .section-light span {
       color: var(--tpl-text-on-light, #1a1a1a);
     }
-    /* ---------- Layout ---------- */
-    main { max-width: var(--max-width, 1200px); margin: 2rem auto; padding: 0 1rem; }
-    section { margin-bottom: 3rem; }
-    h1, h2 { margin-bottom: .75rem; }
-    .hero {
-      position: relative;
-      text-align: center;
-      color: var(--text);
-    }
-    .hero img { width: 100%; height: auto; object-fit: cover; }
-    .hero .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.4);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-    .hero h1 { font-size: clamp(2.5rem,6vw,4rem); color: #fff; }
-    .hero p { font-size: 1.1rem; color: #fff; }
-    .menu-section { display: grid; gap: 1.5rem; }
-    @media (min-width: 600px) {
-      .menu-section { grid-template-columns: repeat(2, 1fr); }
-    }
-    .dish {
-      border-left: 4px solid var(--primary);
-      padding-left: .75rem;
-    }
-    .dish h3 { margin: .5rem 0 .25rem; font-size: 1.2rem; }
-    .dish p { margin: .25rem 0; font-size: .95rem; }
-    .price { font-weight: 600; margin-top: .25rem; }
-    .spotlight-grid {
-      display: grid;
-      gap: 1rem;
-    }
-    @media (min-width: 600px) {
-      .spotlight-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    .spotlight-card img { width: 100%; height: 180px; object-fit: cover; }
-    .spotlight-card h3 { margin-top: .5rem; font-size: 1.1rem; }
-    .cta-section { text-align: center; padding: 2rem 0; background: var(--surface); }
+    /* Layout */
+    .hero { padding: 4rem 1rem; text-align: center; }
+    .hero-sub { margin-top: .5rem; font-size: 1.125rem; color: var(--color-text-secondary); }
+    .menu-section { padding: 2rem 1rem; max-width: var(--max-width); margin: 0 auto; }
+    .dish-grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+    .dish-card { display: flex; flex-direction: column; gap: .5rem; }
+    .dish-img { width: 100%; height: auto; border-radius: var(--radius-sm); }
+    .dish-name { font-size: 1.25rem; font-weight: 600; }
+    .dish-desc { font-size: .95rem; color: var(--color-text-secondary); }
+    .dish-price { font-weight: 500; margin-top: .5rem; }
+    .pairing, .availability, .cta { text-align: center; margin: 2rem 0; }
+    
   </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -853,13 +807,10 @@ section[data-section] {
   "certificateUrl": "https://api.dcsai.ai/api/storage/cert/02f47f7c-9225-481e-9f65-03ffe9e24bc6"
 }</script>
 <!-- /TRD Content Credentials -->
-<style id="trd-section-dividers">
-.trd-section-divider{height:1px;background:linear-gradient(to right,transparent,rgba(0,0,0,0.08),transparent);margin:0;border:none;}
-</style>
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -1116,129 +1067,118 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
-<main class="cm-main cm-section section-light" id="main-content">
-  <!-- Hero -->
-  <section class="hero fade-in">
-    <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/about-/image(17).jpg" alt="Fresh spring ingredients arranged on a traditional Indian platter">
-    <div class="overlay">
+  <main class="cm-main cm-section section-light" id="main">
+    <!-- Hero -->
+    <section class="hero section-light fade-in">
       <h1>Spring Menu</h1>
-      <p>Available March 1 – May 31 2024</p>
-      <a href="/reservation.html" class="btn">Reserve a Table</a>
-    </div>
-  </section>
+      <p class="hero-sub">Fresh seasonal flavors from March 1 – May 31, 2024</p>
+      <button class="btn" onclick="location.href='/reservation.html'">Reserve a Table</button>
+      <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/about-/image(17).jpg" alt="Spring ingredients and restaurant ambience">
+    </section>
 
-  <!-- Seasonal Philosophy -->
-  <section class="fade-in">
-    <h2>Chef’s Spring Philosophy</h2>
-    <p>Our chef celebrates the arrival of spring by highlighting the season’s brightest vegetables and fragrant herbs. Sourced from local farms around Mumbai, each dish embraces the natural sweetness of fresh produce while honoring classic Indian techniques.</p>
-  </section>
+    <!-- Seasonal Philosophy -->
+    <section class="intro section-light fade-in">
+      <h2>Seasonal Philosophy</h2>
+      <p>Our chef celebrates the vibrant bounty of spring with hand‑picked produce and aromatic spices. Sourced locally from farms around Mumbai, each dish reflects the freshness of the season and the rich culinary heritage of India.</p>
+    </section>
 
-  <!-- Menu Sections -->
-  <section class="fade-in">
-    <h2>Starters</h2>
-    <div class="menu-section">
-      <article class="dish card">
-        <h3>Paneer Tikka</h3>
-        <p>Marinated cottage cheese cubes grilled with spring peas and a hint of mint.</p>
-        <p class="price">₹250</p>
-        <p>Allergen: Dairy</p>
-      </article>
+    <!-- Starters -->
+    <section class="menu-section section-light fade-in" id="starters">
+      <h2>Starters</h2>
+      <div class="dish-grid">
+        <article class="card dish-card">
+          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/magnific_moody-candlelit-dining-ro_3001107077.jpeg" alt="Paneer Tikka – grilled cottage cheese marinated in spices" class="dish-img">
+          <div class="dish-info">
+            <p class="dish-name">Paneer Tikka</p>
+            <p class="dish-desc">Marinated paneer cubes grilled to perfection, served with mint chutney.</p>
+            <p class="dish-price">Price: Contact us for details</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="dish card">
-        <h3>Butter Chicken</h3>
-        <p>Succulent chicken simmered in a creamy tomato sauce enriched with fresh coriander.</p>
-        <p class="price">₹350</p>
-        <p>Allergen: Dairy</p>
-      </article>
-    </div>
-  </section><hr class="trd-section-divider"><section class="fade-in">
-    <h2>Mains</h2>
-    <div class="menu-section">
-      <article class="dish card">
-        <h3>Butter Chicken</h3>
-        <p>Classic Mughlai delight with tender chicken, butter, and aromatic spices.</p>
-        <p class="price">₹450</p>
-        <p>Allergen: Dairy</p>
-      </article>
+    <!-- Mains -->
+    <section class="menu-section section-light fade-in" id="mains">
+      <h2>Mains</h2>
+      <div class="dish-grid">
+        <article class="card dish-card">
+          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/about-/image(3).jpg" alt="Butter Chicken – tender chicken in creamy tomato sauce" class="dish-img">
+          <div class="dish-info">
+            <p class="dish-name">Butter Chicken</p>
+            <p class="dish-desc">Succulent chicken simmered in a buttery tomato gravy, garnished with fenugreek.</p>
+            <p class="dish-price">Price: Contact us for details</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="dish card">
-        <h3>Paneer Tikka (Grilled)</h3>
-        <p>Char‑grilled paneer with spring vegetables, served with a tangy chutney.</p>
-        <p class="price">₹300</p>
-        <p>Allergen: Dairy</p>
-      </article>
-    </div>
-  </section><hr class="trd-section-divider"><section class="fade-in">
-    <h2>Desserts</h2>
-    <div class="menu-section">
-      <article class="dish card">
-        <h3>Gajar Halwa</h3>
-        <p>Slow‑cooked carrot pudding with cardamom, garnished with toasted nuts.</p>
-        <p class="price">₹200</p>
-        <p>Allergen: Nuts</p>
-      </article>
-    </div>
-  </section>
+    <!-- Desserts -->
+    <section class="menu-section section-light fade-in" id="desserts">
+      <h2>Desserts</h2>
+      <div class="dish-grid">
+        <article class="card dish-card">
+          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/magnific_intimate-restaurant-inter_3001150463.jpeg" alt="Gajar Halwa – carrot dessert with nuts and cardamom" class="dish-img">
+          <div class="dish-info">
+            <p class="dish-name">Gajar Halwa</p>
+            <p class="dish-desc">Slow‑cooked grated carrots with milk, sugar, and toasted nuts.</p>
+            <p class="dish-price">Price: Contact us for details</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-  <!-- Featured Ingredient Spotlight -->
-  <section class="fade-in">
-    <h2>Featured Spring Ingredients</h2>
-    <div class="spotlight-grid">
-      <article class="spotlight-card card">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/magnific_moody-candlelit-dining-ro_3001107077.jpeg" alt="Fresh green peas harvested in Maharashtra">
-        <h3>Green Peas</h3>
-        <p>Picked at peak sweetness from local farms – perfect for brightening curries.</p>
-      </article>
+    <!-- Featured Ingredient Spotlight -->
+    <section class="ingredient-spotlight section-light fade-in">
+      <h2>Featured Ingredient Spotlight</h2>
+      <div class="dish-grid">
+        <article class="card">
+          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/chef team/image(6).jpg" alt="Fresh spring vegetables sourced from local farms" class="dish-img">
+          <div class="dish-info">
+            <p class="dish-name">Spring Vegetables</p>
+            <p class="dish-desc">Our spring menu highlights locally grown vegetables such as peas, asparagus, and baby carrots, harvested from nearby farms in the Maharashtra region.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="spotlight-card card">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/about-/image(3).jpg" alt="Tender asparagus spears">
-        <h3>Asparagus</h3>
-        <p>Delicate spears lightly blanched and tossed with mustard seeds.</p>
-      </article>
+    <!-- Pairing Suggestions -->
+    <section class="pairing section-light fade-in">
+      <h2>Wine &amp; Cocktail Pairings</h2>
+      <p>Complement your meal with curated wine and cocktail selections. Please contact our sommelier for personalized pairing recommendations.</p>
+    </section>
 
-      <article class="spotlight-card card">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/magnific_intimate-restaurant-inter_3001150463.jpeg" alt="Mango slices, ripe and juicy">
-        <h3>Mango</h3>
-        <p>Early‑season mangoes add a fragrant sweetness to desserts and sauces.</p>
-      </article>
-    </div>
-  </section>
+    <!-- Availability -->
+    <section class="availability fade-in">
+      <h2>Availability</h2>
+      <p>Enjoy the Spring Menu from <time datetime="2024-03-01">March 1, 2024</time> through <time datetime="2024-05-31">May 31, 2024</time>.</p>
+    </section>
 
-  <!-- Pairing Suggestions -->
-  <section class="fade-in">
-    <h2>Wine & Cocktail Pairings</h2>
-    <p>Our sommelier recommends a crisp Sauvignon Blanc to complement the Paneer Tikka, and a chilled Rosé for the Butter Chicken. For a non‑alcoholic option, try our house‑made Ginger‑Lime mocktail.</p>
-    <p><em>Contact us for detailed pairing notes.</em></p>
-  </section>
-
-  <!-- Availability Note -->
-  <section class="section-light fade-in" data-bg="light">
-    <h2>Availability</h2>
-    <p>All spring dishes are available from <time datetime="2024-03-01">March 1</time> through <time datetime="2024-05-31">May 31 2024</time>.</p>
-  </section>
-
-  <!-- Reservation CTA -->
-  
+    <!-- Reservation CTA -->
+    
+  <!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
+<section class="trd-section-filler" data-trd-section-filler="phase-F" style="padding:48px 24px;max-width:880px;margin:0 auto;line-height:1.7;">
+  <h2 style="font-size:1.5rem;font-weight:700;margin:0 0 18px;">Seasonal highlights</h2>
+  <p style="margin:0 0 14px;color:inherit;opacity:.92;">What's on the seasonal list reflects what's actually arriving at the back door this week. Some dishes will be on for a few days, others will run longer. If you spot something on Instagram and want it next time you visit, mention it when you book.</p>
+</section>
+<!-- ─── /Phase F ──────────────────────────────────────────────── -->
 </main>
 
-<!-- Theme Toggle -->
+  <!-- Theme Toggle -->
+  
 
-
-<script>
-  // Theme toggle logic (Phase D3)
-  const t = document.getElementById('theme-toggle');
-  t.onclick = () => document.documentElement.classList.toggle('dark');
-  if (localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
-    document.documentElement.classList.add('dark');
-  }
-
-  // IntersectionObserver for fade‑in animations
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script>
+  <script>
+    const t = document.getElementById('theme-toggle');
+    t.onclick = () => document.documentElement.classList.toggle('dark');
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
     <footer class="cm-footer" role="contentinfo">
   <div class="cm-footer-newsletter">
     <h3 class="cm-footer-newsletter-title">join the herd!</h3>
@@ -1309,7 +1249,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1319,7 +1259,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>

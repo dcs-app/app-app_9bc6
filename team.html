@@ -131,11 +131,110 @@ section {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team — Haveli Restaurant Mumbai</title>
-  <meta name="description" content="Authentic Indian heritage dining and royal culinary traditions in Mumbai">
+  <meta name="description" content="Authentic Indian Culinary Heritage & Royal Dining in Mumbai">
   <meta property="og:title" content="Team — Haveli Restaurant Mumbai">
-  <meta property="og:description" content="Authentic Indian heritage dining and royal culinary traditions in Mumbai">
+  <meta property="og:description" content="Authentic Indian Culinary Heritage & Royal Dining in Mumbai">
   <meta property="og:type" content="website">
-  <style>:root{--font-serif:'Fraunces','Playfair Display','Cormorant Garamond',Georgia,serif;--font-sans:'Inter',system-ui,-apple-system,sans-serif;--color-bg:#FAF7F2;--color-surface:#D4B896;--color-text-primary:#1B4965;--color-text-secondary:color-mix(in oklab, #1B4965 70%, transparent);--color-accent:#D4663B;--color-border:rgba(27,73,101,0.12);--color-header-bg:#FAF7F2;--color-footer-bg:#0a0a0a;--radius-sm:6px;--radius-md:12px;--radius-lg:24px;--shadow-sm:0 2px 8px rgba(31,22,17,0.06);--shadow-md:0 12px 36px rgba(31,22,17,0.1);--max-width:1200px;}*{box-sizing:border-box;margin:0;padding:0;}h1,h2,h3,h4{font-family:var(--font-serif);font-weight:600;line-height:1.2;color:var(--color-text-primary);}h1{font-size:clamp(2.2rem,4.5vw,3.8rem);letter-spacing:-0.02em;}h2{font-size:clamp(1.75rem,3vw,2.5rem);}h3{font-size:1.35rem;}a.primary-nav a:hover{color:var(--color-accent);}.nav-cta{background:var(--color-accent);color:#FFFFFF !important;padding:0.55rem 1.1rem;border-radius:var(--radius-sm);font-weight:600;transition:opacity 0.2s ease;}.nav-cta:hover.footer-brand-block{max-width:520px;}.footer-brand{font-size:1.6rem;color:#FAF7F2;margin-bottom:0.5rem;}.footer-tagline{color:#C8B9A6;font-size:0.95rem;margin-bottom:0.75rem;}.footer-address{color:#A89885;font-size:0.9rem;}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}.footer-col-title{color:#FAF7F2;font-size:1.1rem;margin-bottom:1rem;}.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.6rem;font-size:0.92rem;}.footer-links a{color:#C8B9A6;}.footer-links a:hover{color:#FAF7F2;}.footer-text{color:#C8B9A6;font-size:0.92rem;margin-bottom:0.4rem;</style>
+  <style>
+:root {
+  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-bg: #FAF7F2;
+  --color-surface: #D4B896;
+  --color-text-primary: #1B4965;
+  --color-text-secondary: color-mix(in oklab, #1B4965 70%, transparent);
+  --color-accent: #D4663B;
+  --color-accent-hover: #996F08;
+  --color-border: rgba(27,73,101,0.12);
+  --color-header-bg: #FAF7F2;
+  --color-footer-bg: #0a0a0a;
+  --color-footer-text: #E6DFD5;
+  --color-footer-muted: #A39688;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 8px rgba(31, 22, 17, 0.06);
+  --shadow-md: 0 12px 36px rgba(31, 22, 17, 0.1);
+  --max-width: 1200px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+h1 { font-size: clamp(2.25rem, 4.5vw, 3.75rem); }
+h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 1rem; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
+p { margin-bottom: 1rem; color: var(--color-text-secondary); }
+a { color: inherit; text-decoration: none; transition: all 0.2s ease; }
+a:hover 
+.nav-btn-reserve {
+  background: var(--color-accent);
+  color: #FFFFFF !important;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+.nav-btn-reserve:hover 
+.footer-brand-title {
+  font-size: 1.75rem;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+.footer-brand-tagline {
+  color: var(--color-footer-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+.footer-hours, .footer-location {
+  font-size: 0.9rem;
+  color: var(--color-footer-text);
+  margin-bottom: 0.5rem;
+}
+.footer-nav-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.footer-col-title {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.footer-links-list a {
+  color: var(--color-footer-muted);
+  font-size: 0.9rem;
+}
+.footer-links-list a:hover {
+  color: #FFFFFF;
+.footer-social {
+  display: flex;
+  gap: 1.25rem;
+}
+.social-link {
+  color: var(--color-footer-muted);
+}
+  </style>
   <style>/* Page-specific styles ONLY — no header/footer overrides */</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -768,7 +867,7 @@ section[data-section] {
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -1011,93 +1110,93 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
 <main class="cm-main cm-section section-light" id="main">
-<!-- TRD SECTION: page-header (template: restaurant-01-coastal-mediterranean) -->
-<!-- Variables: , ,  -->
-<section class="cm-pgh" data-section="page-header">
-  <style>
-    .cm-pgh{background:#FAF7F2;border-bottom:1px solid rgba(27,73,101,0.10);padding:120px 0 64px}
-    .cm-pgh__inner{max-width:1280px;margin:0 auto;padding:0 32px}
-    .cm-pgh__crumb{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.68rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#D4663B;margin:0 0 16px}
-    .cm-pgh__title{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-size:clamp(2.4rem,5vw,4.2rem);font-weight:400;line-height:1.05;letter-spacing:-.02em;color:#1B4965;margin:0 0 16px;max-width:880px}
-    .cm-pgh__lede{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:1.1rem;line-height:1.55;color:rgba(27,73,101,0.65);margin:0;max-width:680px}
-    @media(max-width:768px){.cm-pgh{padding:96px 0 48px}.cm-pgh__inner{padding:0 24px}}
-  </style>
-  <div class="cm-pgh__inner">
-    <p class="cm-pgh__crumb">Our Team</p>
-    <h1 class="cm-pgh__title">Meet the Team</h1>
-    <p class="cm-pgh__lede">The passionate people behind Haveli Restaurant Mumbai's authentic Indian heritage dining.</p>
-  </div>
-</section>
-
-<!-- TRD SECTION: team-grid (template: restaurant-01-coastal-mediterranean) -->
-<!-- Variables: , , , , , , , , , , , , , , , , , , , , , , ,  -->
-<section class="cm-team-grid" data-section="team-grid">
-  <style>
-    .cm-team-grid{background:#FAF7F2;padding:96px 0}
-    .cm-team-grid__inner{max-width:1280px;margin:0 auto;padding:0 32px}
-    .cm-team-grid__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:48px 32px}
-    .cm-team-grid__person{display:flex;flex-direction:column;text-align:left}
-    .cm-team-grid__portrait{width:100%;aspect-ratio:1;background:#faf6f2;margin-bottom:20px;overflow:hidden;border-radius:50%}
-    .cm-team-grid__portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15);transition:filter .4s}
-    .cm-team-grid__person:hover .cm-team-grid__portrait img{filter:grayscale(0)}
-    .cm-team-grid__name{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-size:1.4rem;font-weight:400;color:#1B4965;margin:0 0 4px;letter-spacing:-.01em}
-    .cm-team-grid__role{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.7rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#D4663B;margin:0 0 14px}
-    .cm-team-grid__bio{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.95rem;line-height:1.65;color:rgba(27,73,101,0.65);margin:0}
-    @media(max-width:600px){.cm-team-grid{padding:64px 0}.cm-team-grid__inner{padding:0 24px}}
-  </style>
-  <div class="cm-team-grid__inner">
-    <div class="cm-team-grid__grid">
-    <article class="cm-team-grid__person">
-      <div class="cm-team-grid__portrait">
-        <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/magnific_moody-candlelit-dining-ro_3001107077.jpeg" alt="Arjun Patel" loading="lazy">
-      </div>
-      <h3 class="cm-team-grid__name">Arjun Patel</h3>
-      <p class="cm-team-grid__role">Executive Chef</p>
-      <p class="cm-team-grid__bio">Arjun brings over 20 years of culinary expertise, mastering traditional North Indian flavors.</p>
-    </article>
-    <article class="cm-team-grid__person">
-      <div class="cm-team-grid__portrait">
-        <img src="https://images.dcsai.ai/phase-v4/Restaurant/chef team/image(10).jpg" alt="Leela Sharma" loading="lazy">
-      </div>
-      <h3 class="cm-team-grid__name">Leela Sharma</h3>
-      <p class="cm-team-grid__role">Restaurant Manager</p>
-      <p class="cm-team-grid__bio">Leela ensures every guest experiences warm hospitality and flawless service.</p>
-    </article>
-    <article class="cm-team-grid__person">
-      <div class="cm-team-grid__portrait">
-        <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/menu/image(17).jpg" alt="Rohan Singh" loading="lazy">
-      </div>
-      <h3 class="cm-team-grid__name">Rohan Singh</h3>
-      <p class="cm-team-grid__role">Sous Chef</p>
-      <p class="cm-team-grid__bio">Rohan assists in crafting signature dishes with precision and creativity.</p>
-    </article>
-    <article class="cm-team-grid__person">
-      <div class="cm-team-grid__portrait">
-        <img src="https://images.dcsai.ai/phase-v4/Restaurant/chef team/image(6).jpg" alt="Priya Desai" loading="lazy">
-      </div>
-      <h3 class="cm-team-grid__name">Priya Desai</h3>
-      <p class="cm-team-grid__role">Head of Reservations</p>
-      <p class="cm-team-grid__bio">Priya coordinates bookings, making sure each table is ready for a memorable dining experience.</p>
-    </article>
-    <article class="cm-team-grid__person">
-      <div class="cm-team-grid__portrait">
-        <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/menu/image(3).jpg" alt="Kavita Rao" loading="lazy">
-      </div>
-      <h3 class="cm-team-grid__name">Kavita Rao</h3>
-      <p class="cm-team-grid__role">Pastry Chef</p>
-      <p class="cm-team-grid__bio">Kavita creates delightful desserts that blend classic recipes with modern twists.</p>
-    </article>
-    <article class="cm-team-grid__person">
-      <div class="cm-team-grid__portrait">
-        <img src="https://images.dcsai.ai/phase-v4/Restaurant/chef team/image(2).jpg" alt="Vikram Mehta" loading="lazy">
-      </div>
-      <h3 class="cm-team-grid__name">Vikram Mehta</h3>
-      <p class="cm-team-grid__role">Sommelier</p>
-      <p class="cm-team-grid__bio">Vikram curates a selection of wines and beverages to complement our flavorful menu.</p>
-    </article>
+  <!-- TRD SECTION: page-header (template: restaurant-01-coastal-mediterranean) -->
+  <!-- Variables: , ,  -->
+  <section class="cm-pgh" data-section="page-header">
+    <style>
+      .cm-pgh{background:#FAF7F2;border-bottom:1px solid rgba(27,73,101,0.10);padding:120px 0 64px}
+      .cm-pgh__inner{max-width:1280px;margin:0 auto;padding:0 32px}
+      .cm-pgh__crumb{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.68rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#D4663B;margin:0 0 16px}
+      .cm-pgh__title{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-size:clamp(2.4rem,5vw,4.2rem);font-weight:400;line-height:1.05;letter-spacing:-.02em;color:#1B4965;margin:0 0 16px;max-width:880px}
+      .cm-pgh__lede{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:1.1rem;line-height:1.55;color:rgba(27,73,101,0.65);margin:0;max-width:680px}
+      @media(max-width:768px){.cm-pgh{padding:96px 0 48px}.cm-pgh__inner{padding:0 24px}}
+    </style>
+    <div class="cm-pgh__inner">
+      <p class="cm-pgh__crumb">Our Team</p>
+      <h1 class="cm-pgh__title">Meet the Team</h1>
+      <p class="cm-pgh__lede">Our passionate staff brings the flavors of India to life, delivering warm hospitality and unforgettable dining experiences.</p>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- TRD SECTION: team-grid (template: restaurant-01-coastal-mediterranean) -->
+  <!-- Variables: , , , , , , , , , , , , , , , , , , , , , , ,  -->
+  <section class="cm-team-grid" data-section="team-grid">
+    <style>
+      .cm-team-grid{background:#FAF7F2;padding:96px 0}
+      .cm-team-grid__inner{max-width:1280px;margin:0 auto;padding:0 32px}
+      .cm-team-grid__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:48px 32px}
+      .cm-team-grid__person{display:flex;flex-direction:column;text-align:left}
+      .cm-team-grid__portrait{width:100%;aspect-ratio:1;background:#faf6f2;margin-bottom:20px;overflow:hidden;border-radius:50%}
+      .cm-team-grid__portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.15);transition:filter .4s}
+      .cm-team-grid__person:hover .cm-team-grid__portrait img{filter:grayscale(0)}
+      .cm-team-grid__name{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-size:1.4rem;font-weight:400;color:#1B4965;margin:0 0 4px;letter-spacing:-.01em}
+      .cm-team-grid__role{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.7rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#D4663B;margin:0 0 14px}
+      .cm-team-grid__bio{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.95rem;line-height:1.65;color:rgba(27,73,101,0.65);margin:0}
+      @media(max-width:600px){.cm-team-grid{padding:64px 0}.cm-team-grid__inner{padding:0 24px}}
+    </style>
+    <div class="cm-team-grid__inner">
+      <div class="cm-team-grid__grid">
+        <article class="cm-team-grid__person">
+          <div class="cm-team-grid__portrait">
+            <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/magnific_moody-candlelit-dining-ro_3001107077.jpeg" alt="Aisha Khan" loading="lazy">
+          </div>
+          <h3 class="cm-team-grid__name">Aisha Khan</h3>
+          <p class="cm-team-grid__role">Head Chef</p>
+          <p class="cm-team-grid__bio">Aisha blends traditional Indian recipes with modern techniques, curating a menu that celebrates heritage.</p>
+        </article>
+        <article class="cm-team-grid__person">
+          <div class="cm-team-grid__portrait">
+            <img src="https://images.dcsai.ai/phase-v4/Restaurant/chef team/image(10).jpg" alt="Rajesh Patel" loading="lazy">
+          </div>
+          <h3 class="cm-team-grid__name">Rajesh Patel</h3>
+          <p class="cm-team-grid__role">Sous Chef</p>
+          <p class="cm-team-grid__bio">Rajesh ensures every dish is executed with precision and passion.</p>
+        </article>
+        <article class="cm-team-grid__person">
+          <div class="cm-team-grid__portrait">
+            <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/menu/image(17).jpg" alt="Priya Singh" loading="lazy">
+          </div>
+          <h3 class="cm-team-grid__name">Priya Singh</h3>
+          <p class="cm-team-grid__role">Pastry Chef</p>
+          <p class="cm-team-grid__bio">Priya crafts sweet delights inspired by classic Indian desserts.</p>
+        </article>
+        <article class="cm-team-grid__person">
+          <div class="cm-team-grid__portrait">
+            <img src="https://images.dcsai.ai/phase-v4/Restaurant/chef team/image(6).jpg" alt="Sameer Desai" loading="lazy">
+          </div>
+          <h3 class="cm-team-grid__name">Sameer Desai</h3>
+          <p class="cm-team-grid__role">Restaurant Manager</p>
+          <p class="cm-team-grid__bio">Sameer oversees daily operations, ensuring seamless service.</p>
+        </article>
+        <article class="cm-team-grid__person">
+          <div class="cm-team-grid__portrait">
+            <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/menu/image(3).jpg" alt="Leela Sharma" loading="lazy">
+          </div>
+          <h3 class="cm-team-grid__name">Leela Sharma</h3>
+          <p class="cm-team-grid__role">Sommelier</p>
+          <p class="cm-team-grid__bio">Leela pairs wines and beverages to complement our flavorful dishes.</p>
+        </article>
+        <article class="cm-team-grid__person">
+          <div class="cm-team-grid__portrait">
+            <img src="https://images.dcsai.ai/phase-v4/Restaurant/chef team/image(2).jpg" alt="Arjun Mehta" loading="lazy">
+          </div>
+          <h3 class="cm-team-grid__name">Arjun Mehta</h3>
+          <p class="cm-team-grid__role">Lead Server</p>
+          <p class="cm-team-grid__bio">Arjun greets guests with a smile, delivering attentive and personalized service.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 <!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
 <section class="trd-section-filler" data-trd-section-filler="phase-F" style="padding:48px 24px;max-width:880px;margin:0 auto;line-height:1.7;">
   <h2 style="font-size:1.5rem;font-weight:700;margin:0 0 18px;">The people behind it</h2>
@@ -1177,7 +1276,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1187,7 +1286,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>

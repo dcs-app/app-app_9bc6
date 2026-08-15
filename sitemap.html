@@ -360,6 +360,55 @@
   --tpl-btn-radius: 0px;
 }
 </style>
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]);t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'https://app.posthog.com',loaded:function(p){if(window.location.host.includes('localhost'))p.opt_out_capturing();}});
+</script>
+<style id="trd-i18n-css">
+/* ── TRD Language Switcher (Phase A12 / 40.32) ── */
+#trd-lang-switcher {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9995;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  border: 1.5px solid rgba(0,0,0,0.10);
+  background: #fff;
+}
+.trd-lang-btn {
+  display: block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: .72rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  color: #64748b;
+  transition: background .15s, color .15s;
+  letter-spacing: .04em;
+  padding: 0;
+}
+.trd-lang-btn:first-child {
+  border-right: 1px solid rgba(0,0,0,0.08);
+}
+.trd-lang-btn:hover {
+  background: #f8fafc;
+  color: #1a1a18;
+}
+.trd-lang-btn.active {
+  background: #1a1a18;
+  color: #fff;
+}
+</style>
+  <meta name="robots" content="index, follow">
 <style data-trd-motion="phase-39.20">
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
@@ -425,15 +474,7 @@
   <button type="button" class="cm-a11y-toggle" aria-label="Accessibility options" aria-haspopup="true" aria-expanded="false">
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v8M8 11h8M9 22l3-7 3 7"/></svg>
   </button>
-  <div class="cm-a11y-panel" role="menu">
-    <p class="cm-a11y-title">Accessibility</p>
-    <button class="cm-a11y-opt" data-act="text-up"><span class="cm-a11y-opt-icon">A+</span> Increase text size</button>
-    <button class="cm-a11y-opt" data-act="text-down"><span class="cm-a11y-opt-icon">A-</span> Decrease text size</button>
-    <button class="cm-a11y-opt" data-act="contrast"><span class="cm-a11y-opt-icon">&#9681;</span> High contrast</button>
-    <button class="cm-a11y-opt" data-act="motion"><span class="cm-a11y-opt-icon">&#10227;</span> Reduce motion</button>
-    <button class="cm-a11y-opt" data-act="links"><span class="cm-a11y-opt-icon">_</span> Underline links</button>
-    <button class="cm-a11y-opt cm-a11y-reset" data-act="reset">Reset</button>
-  </div>
+  
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
 
@@ -467,12 +508,25 @@
         <li><a href="/history.html">History</a></li>
         <li><a href="/blog.html">Blog</a></li>
         <li><a href="/chefs.html">Team</a></li>
+        <li><a href="/accessibility.html">Accessibility</a></li>
+        <li><a href="/bottom-nav.html">Bottom Nav</a></li>
         <li><a href="/case-studies.html">Case Studies</a></li>
         <li><a href="/chef-specials.html">Chef Specials</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
+        <li><a href="/terms.html">Terms</a></li>
         <li><a href="/wine-list.html">Wine List</a></li>
       </ul>
     </nav>
   </div>
+<!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
+<section class="trd-section-filler" data-trd-section-filler="phase-F" style="padding:48px 24px;max-width:880px;margin:0 auto;line-height:1.7;">
+  <h2 style="font-size:1.5rem;font-weight:700;margin:0 0 18px;">More about us</h2>
+  <p style="margin:0 0 14px;color:inherit;opacity:.92;">Haveli Restaurant Mumbai is a place built around the simple idea that good food brings people together. Whether you're stopping in for a midweek dinner or planning something special, the room is set up to make you feel at home.</p>
+  <p style="margin:0 0 14px;color:inherit;opacity:.92;">The kitchen draws on classic technique and seasonal produce, with a menu that changes as ingredients come into their best moment. Pair that with a thoughtful drinks list and friendly service, and you have the kind of place you'll want to return to.</p>
+  <p style="margin:0 0 14px;color:inherit;opacity:.92;">We welcome solo diners, couples, families, and groups. If you have an allergy, a craving, or a celebration in mind, just tell us — we'll do our best to make it work.</p>
+</section>
+<!-- ─── /Phase F ──────────────────────────────────────────────── -->
 </main>
 <style>
 .trd-sitemap-page{padding:120px 0 80px;background:var(--tpl-bg, #ffffff);min-height:60vh;color:var(--tpl-text, #1a1a1a)}
@@ -627,6 +681,85 @@
 })();</script>
 
 <script>(function(){function syncMore(){document.querySelectorAll('.trd-nav-more-btn').forEach(function(btn){try{var nav=btn.closest('ul,nav,header');if(!nav)return;var siblings=nav.querySelectorAll('a');var sibling=null;for(var i=0;i<siblings.length;i++){var a=siblings[i];if(a.closest('.trd-nav-more-panel'))continue;sibling=a;break;}if(!sibling)return;var s=window.getComputedStyle(sibling);btn.style.fontFamily=s.fontFamily;btn.style.fontSize=s.fontSize;btn.style.fontWeight=s.fontWeight;btn.style.letterSpacing=s.letterSpacing;btn.style.textTransform=s.textTransform;btn.style.fontStyle=s.fontStyle;nav.querySelectorAll('.trd-nav-more-panel a').forEach(function(da){da.style.fontFamily=s.fontFamily;da.style.fontSize=s.fontSize;da.style.fontWeight=s.fontWeight;da.style.letterSpacing=s.letterSpacing;da.style.textTransform=s.textTransform;});}catch(e){}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',syncMore)}else{syncMore()}})();</script>
+<div id="trd-lang-switcher" class="trd-lang-switcher"></div>
+
+<script id="trd-i18n">
+(function() {
+  var LANG_KEY = 'trd-lang';
+  var langs = [
+    { code: 'en', label: 'EN', dir: 'ltr' },
+    { code: 'ar', label: 'AR', dir: 'rtl' },
+  ];
+
+  var saved = localStorage.getItem(LANG_KEY) || 'en';
+  applyLang(saved);
+
+  function applyLang(code) {
+    var lang = langs.find(function(l) { return l.code === code; }) || langs[0];
+    document.documentElement.setAttribute('lang', lang.code);
+    document.documentElement.setAttribute('dir', lang.dir);
+    localStorage.setItem(LANG_KEY, code);
+    document.querySelectorAll('.trd-lang-btn').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.lang === code);
+    });
+  }
+
+  window.trdSetLang = applyLang;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var sw = document.getElementById('trd-lang-switcher');
+    if (!sw) return;
+    sw.innerHTML = langs.map(function(l) {
+      return '<button class="trd-lang-btn' + (l.code === saved ? ' active' : '') +
+        '" data-lang="' + l.code + '" onclick="trdSetLang('' + l.code + '')" aria-label="Switch to ' + l.label + '">' +
+        l.label + '</button>';
+    }).join('');
+  });
+})();
+</script>
+<script data-trd-tpl-i18n="phase-41">
+(function(){
+  // Find any element with class ending in "-lang" or matching "trd-lang"
+  var langEls = document.querySelectorAll('[class*="-lang"], .trd-lang');
+  if (!langEls.length) return;
+  // Read default + alt code from the element's text (e.g. "EN / DA" → ['EN','DA'])
+  var first = langEls[0];
+  var parts = (first.textContent || '').split('/').map(function(s){return s.trim().toUpperCase();}).filter(Boolean);
+  if (parts.length !== 2) return;
+  var primary = parts[0], alt = parts[1];
+  // Get current state from localStorage or default to primary
+  var current = (localStorage.getItem('trd-lang') || primary).toUpperCase();
+  if (current !== primary && current !== alt) current = primary;
+  function render() {
+    document.documentElement.setAttribute('lang', current.toLowerCase());
+    document.documentElement.setAttribute('data-trd-lang', current.toLowerCase());
+    langEls.forEach(function(el){
+      // Show selected language first, alt second, with selected styled distinctly
+      var other = (current === primary) ? alt : primary;
+      el.innerHTML = '<span style="font-weight:600;text-decoration:underline;text-underline-offset:3px">' + current + '</span>'
+                   + '<span style="opacity:.55;margin:0 .3em">/</span>'
+                   + '<span style="opacity:.55">' + other + '</span>';
+      // Make it clickable
+      el.style.cursor = 'pointer';
+      el.setAttribute('role', 'button');
+      el.setAttribute('tabindex', '0');
+      el.setAttribute('aria-label', 'Switch language to ' + other);
+    });
+  }
+  function toggle() {
+    current = (current === primary) ? alt : primary;
+    try { localStorage.setItem('trd-lang', current); } catch(e){}
+    render();
+  }
+  langEls.forEach(function(el){
+    el.addEventListener('click', toggle);
+    el.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+  render();
+})();
+</script>
 <script data-trd-motion="phase-39.20">
 (function(){
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;

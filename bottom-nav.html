@@ -1,203 +1,107 @@
-<!DOCTYPE html>
-<html lang="en" lang="en">
-<head><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" data-trd-phase="42.26"><meta http-equiv="Pragma" content="no-cache" data-trd-phase="42.26"><meta http-equiv="Expires" content="0" data-trd-phase="42.26">
-<style id="trd-tokens">
-/* ── TRD Design Token System (Phase A1) ── */
-:root {
-  /* Spacing scale */
-  --sp-1: 4px;
-  --sp-2: 8px;
-  --sp-3: 16px;
-  --sp-4: 24px;
-  --sp-5: 32px;
-  --sp-6: 48px;
-  --sp-7: 64px;
-  --sp-8: 80px;
-  --sp-9: 96px;
-  --sp-10: 128px;
-
-  /* Type scale */
-  --text-xs:   0.75rem;   /* 12px */
-  --text-sm:   0.875rem;  /* 14px */
-  --text-base: 1rem;      /* 16px */
-  --text-lg:   1.125rem;  /* 18px */
-  --text-xl:   1.25rem;   /* 20px */
-  --text-2xl:  1.5rem;    /* 24px */
-  --text-3xl:  1.875rem;  /* 30px */
-  --text-4xl:  2.25rem;   /* 36px */
-  --text-5xl:  3rem;      /* 48px */
-  --text-6xl:  3.75rem;   /* 60px */
-
-  /* Font weights */
-  --fw-normal:  400;
-  --fw-medium:  500;
-  --fw-semi:    600;
-  --fw-bold:    700;
-  --fw-black:   800;
-
-  /* Line heights */
-  --lh-tight:  1.25;
-  --lh-snug:   1.375;
-  --lh-normal: 1.5;
-  --lh-relaxed:1.625;
-  --lh-loose:  2;
-
-  /* Border radius */
-  --radius-sm:  4px;
-  --radius-md:  8px;
-  --radius-lg:  12px;
-  --radius-xl:  16px;
-  --radius-2xl: 20px;
-  --radius-3xl: 24px;
-  --radius-full: 9999px;
-
-  /* Shadows */
-  --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
-  --shadow-lg: 0 10px 15px rgba(0,0,0,0.08), 0 4px 6px rgba(0,0,0,0.04);
-  --shadow-xl: 0 20px 25px rgba(0,0,0,0.08), 0 10px 10px rgba(0,0,0,0.03);
-
-  /* Transitions */
-  --transition-fast:   all 0.1s cubic-bezier(0.4,0,0.2,1);
-  --transition:        all 0.2s cubic-bezier(0.4,0,0.2,1);
-  --transition-slow:   all 0.3s cubic-bezier(0.4,0,0.2,1);
-  --transition-bounce: all 0.3s cubic-bezier(0.34,1.56,0.64,1);
-
-  /* Layout */
-  --max-width:     1200px;
-  --max-width-sm:  640px;
-  --max-width-md:  768px;
-  --max-width-lg:  1024px;
-  --max-width-xl:  1280px;
-  --max-width-2xl: 1440px;
-
-  /* Z-index scale */
-  --z-base:    0;
-  --z-raised:  10;
-  --z-dropdown:100;
-  --z-sticky:  200;
-  --z-overlay: 300;
-  --z-modal:   400;
-  --z-toast:   500;
-}
-
-/* Global baseline */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
-  -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  line-height: var(--lh-normal);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-button, input, select, textarea {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-/* Section baseline */
-section {
-  width: 100%;
-}
-
-/* Container utility */
-.trd-container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 var(--sp-4);
-}
-
-@media (max-width: 768px) {
-  .trd-container { padding: 0 var(--sp-3); }
+<head><title>bottom nav — Haveli Restaurant Mumbai</title>
+  <meta name="description" content="Bottom nav — Our Business">  <meta name="robots" content="index, follow">
+<style data-trd-motion="phase-39.20">
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  [data-trd-fade] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .6s ease-out, transform .6s ease-out;
+    will-change: opacity, transform;
+  }
+  [data-trd-fade].trd-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  img[loading="lazy"]:not(.trd-img-loaded) {
+    opacity: 0;
+    transition: opacity .4s ease-out;
+  }
+  img[loading="lazy"].trd-img-loaded {
+    opacity: 1;
+  }
 }
 </style>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Story — Haveli Restaurant Mumbai</title>
-  <meta name="description" content="Discover the heritage and legacy of Haveli Restaurant Mumbai, from its founding to today.">
-  <meta property="og:title" content="Our Story — Haveli Restaurant Mumbai">
-  <meta property="og:description" content="Discover the heritage and legacy of Haveli Restaurant Mumbai, from its founding to today.">
-  <meta property="og:type" content="website">
+</head>
+<style data-trd-tpl-fadefix="phase-41">.fade-in,[class*="fade-in"]{opacity:1!important;transform:none!important;visibility:visible!important;}.scroll-reveal,.reveal,[data-aos]:not(.aos-animate){opacity:1!important;transform:none!important;}</style>
+<style data-trd-tpl-body="phase-41">html, body { background: #FAF7F2 !important; color: #1B4965 !important; font-family: Inter, system-ui, sans-serif !important; } body { margin: 0; padding: 0; } body > main:first-of-type, body > section:first-of-type, body > div:first-of-type:not(header) { padding-top: 80px; } header[role="banner"] { background: #FAF7F2 !important; } header[role="banner"] .brand-logo, header[role="banner"] .brand { color: #1B4965 !important; } header[role="banner"] .primary-nav a:not(.cta-link), header[role="banner"] nav a:not(.cta-link) { color: #1B4965 !important; } header[role="banner"] .hamburger span { background: #1B4965 !important; } header[role="banner"] .cta-link, header[role="banner"] [class*="cta"] { background: #D4663B !important; color: #FAF7F2 !important; border-color: #D4663B !important; } footer[role="contentinfo"] { background: #0a0a0a !important; color: #ffffff !important; } footer[role="contentinfo"] h4, footer[role="contentinfo"] h3, footer[role="contentinfo"] .footer-section h4 { color: #D4663B !important; } footer[role="contentinfo"] a { color: rgba(255,255,255,0.85) !important; } footer[role="contentinfo"] a:hover { color: #D4663B !important; } section.testimonials, .testimonials-section { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; } section.testimonials .testimonial, .testimonials-section .testimonial { background: #D4B896 !important; padding: 2rem !important; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center; } section.testimonials .testimonial img, .testimonials-section .testimonial img { width: 80px !important; height: 80px !important; border-radius: 50% !important; margin: 0 auto 1rem !important; display: block !important; } section.testimonials .testimonial blockquote, .testimonials-section .testimonial blockquote { font-style: italic; line-height: 1.6; margin-bottom: 1rem; } section.testimonials .testimonial cite, .testimonials-section .testimonial cite { font-style: normal; opacity: 0.7; font-size: 0.9rem; }</style>
+<body>
+<header class="cm-header" role="banner"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" data-trd-phase="42.26"><meta http-equiv="Pragma" content="no-cache" data-trd-phase="42.26"><meta http-equiv="Expires" content="0" data-trd-phase="42.26">
+<!-- TRD Content Credentials (C2PA-linked) data-trd-content-credentials -->
+<meta name="c2pa-provenance" content="https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6" data-trd-content-credentials="1">
+<meta name="c2pa-verify-key" content="https://api.dcsai.ai/api/storage/public-key.pem">
+<meta property="og:provenance" content="https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6">
+<meta property="og:provenance:type" content="c2pa-linked-manifest">
+<meta property="og:certificate" content="https://api.dcsai.ai/api/storage/cert/02f47f7c-9225-481e-9f65-03ffe9e24bc6">
+<link rel="content-credentials" href="https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6" type="application/c2pa+json">
+<script type="application/ld+json" data-trd-cc="1">{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "@id": "https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6",
+  "name": "Haveli Restaurant Mumbai",
+  "creator": {
+    "@type": "Organization",
+    "name": "DCS AI Technologies",
+    "url": "https://dcsai.ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DCS AI Technologies"
+  },
+  "about": "restaurant",
+  "contentCredentials": {
+    "@type": "PropertyValue",
+    "name": "C2PA Provenance Manifest",
+    "value": "https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6",
+    "url": "https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6"
+  },
+  "verificationKey": "https://api.dcsai.ai/api/storage/public-key.pem",
+  "certificateUrl": "https://api.dcsai.ai/api/storage/cert/02f47f7c-9225-481e-9f65-03ffe9e24bc6"
+}</script>
+<!-- /TRD Content Credentials -->
+  <div class="cm-header-inner">
+    <nav class="cm-nav-left" role="navigation" aria-label="Left navigation">
+      <ul class="cm-nav-list">
+        <li><a href="/menu.html">menu</a></li>
+        <li><a href="/reservation.html">reservations</a></li>
+        <li><a href="/private-dining.html">private dining</a></li>
+      </ul>
+    </nav>
+    <a href="/" class="cm-brand" aria-label="Haveli Restaurant Mumbai — Home">
+      <span class="cm-brand-text">Haveli Restaurant Mumbai</span>
+    </a>
+    <nav class="cm-nav-right" role="navigation" aria-label="Right navigation">
+      <ul class="cm-nav-list">
+        <li><a href="/events.html">events</a></li>
+        <li><a href="/about.html">about</a></li>
+        <li><a href="/contact.html">contact</a></li>
+        <li><div class="cm-nav-more" data-open="false">
+  <button type="button" class="cm-nav-more-trigger" aria-haspopup="true" aria-expanded="false">More <span aria-hidden="true">&#9662;</span></button>
+  <ul class="cm-nav-more-menu">
+      <li><a href="/chefs.html">Chefs</a></li>
+      
+      
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/press.html">Press</a></li>
+      <li><a href="/locations.html">Locations</a></li>
+      
+  </ul>
+</div></li>
+        <li><a href="/reservation.html">Book a Table</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="cm-header-tools"></div>
+</header>
+<script>document.querySelectorAll(".cm-nav-more-trigger").forEach(function(t){t.addEventListener("click",function(e){e.stopPropagation();var p=t.parentElement;var o=p.getAttribute("data-open")==="true";document.querySelectorAll(".cm-nav-more").forEach(function(x){x.setAttribute("data-open","false")});p.setAttribute("data-open",o?"false":"true");t.setAttribute("aria-expanded",o?"false":"true")})});document.addEventListener("click",function(){document.querySelectorAll(".cm-nav-more").forEach(function(x){x.setAttribute("data-open","false");var t=x.querySelector(".cm-nav-more-trigger");if(t)t.setAttribute("aria-expanded","false")})})</script>
+
+<div class="cm-a11y-widget cm-a11y-right" data-open="false">
+  <button type="button" class="cm-a11y-toggle" aria-label="Accessibility options" aria-haspopup="true" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v8M8 11h8M9 22l3-7 3 7"/></svg>
+  </button>
   
-  <style>
-    /* Dark mode (Phase D3) */
-    /* Micro‑animations (Phase D3) */
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    .btn { transition: transform .2s ease, box-shadow .2s ease; }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
-    .card { transition: transform .2s ease, box-shadow .2s ease; }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,.12); }
-    @keyframes countUp { from { opacity:0; } to { opacity:1; } }
-    .stat-number { animation: countUp .6s ease forwards; }
-    /* Light‑section contrast fix (B12) */
-    .section-light, [data-bg="light"] {
-      background: var(--tpl-light-surface, #f7f0e3);
-      color: var(--tpl-text-on-light, #1a1a1a);
-    }
-    .section-light h1,
-    .section-light h2,
-    .section-light h3,
-    .section-light h4,
-    .section-light p,
-    .section-light li,
-    .section-light label,
-    .section-light span {
-      color: var(--tpl-text-on-light, #1a1a1a);
-    }
-    /* Layout */
-    main { max-width: var(--max-width, 1200px); margin: 0 auto; padding: 1rem; }
-    .hero-section { text-align: center; padding: 4rem 1rem; }
-    .hero-section img { max-width: 100%; height: auto; margin-top: 2rem; border-radius: var(--radius-md); }
-    .section { padding: 2rem 0; }
-    .section h2 { margin-bottom: 1rem; font-size: clamp(1.75rem,3vw,2.5rem); }
-    .section p { line-height: 1.6; max-width: 70ch; margin: 0 auto 1rem; }
-    /* Timeline */
-    .timeline { display: flex; overflow-x: auto; gap: 1rem; list-style: none; padding: 0; }
-    .timeline li { min-width: 250px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 1rem; flex-shrink: 0; }
-    .timeline time { display: block; font-weight: 600; margin-bottom: .5rem; }
-    @media (max-width: 600px) {
-      .timeline { flex-direction: column; overflow-x: visible; }
-      .timeline li { min-width: auto; }
-    }
-    /* Gallery */
-    .gallery-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); }
-    .gallery-grid img { width: 100%; height: auto; border-radius: var(--radius-sm); }
-    /* Theme toggle button */
-    
-    #theme-toggle:focus-visible { outline: 2px solid var(--color-accent-hover); }
-    /* Skip link */
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: -999px;
-      background: #000;
-      color: #fff;
-      padding: .5rem 1rem;
-      z-index: 100;
-    }
-    .skip-link:focus {
-      left: 1rem;
-      top: 1rem;
-    }
-  </style>
+  <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
+</div>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -666,514 +570,58 @@ section {
 .hfl-footer-bottom a { color: var(--hfl-footer-muted); text-decoration: none; opacity: 0.8; }
 .hfl-footer-bottom a:hover { opacity: 1; }
 </style>
-<style data-trd-tpl-body="phase-41">html, body { background: #FAF7F2 !important; color: #1B4965 !important; font-family: Inter, system-ui, sans-serif !important; } body { margin: 0; padding: 0; } body > main:first-of-type, body > section:first-of-type, body > div:first-of-type:not(header) { padding-top: 80px; } header[role="banner"] { background: #FAF7F2 !important; } header[role="banner"] .brand-logo, header[role="banner"] .brand { color: #1B4965 !important; } header[role="banner"] .primary-nav a:not(.cta-link), header[role="banner"] nav a:not(.cta-link) { color: #1B4965 !important; } header[role="banner"] .hamburger span { background: #1B4965 !important; } header[role="banner"] .cta-link, header[role="banner"] [class*="cta"] { background: #D4663B !important; color: #FAF7F2 !important; border-color: #D4663B !important; } footer[role="contentinfo"] { background: #0a0a0a !important; color: #ffffff !important; } footer[role="contentinfo"] h4, footer[role="contentinfo"] h3, footer[role="contentinfo"] .footer-section h4 { color: #D4663B !important; } footer[role="contentinfo"] a { color: rgba(255,255,255,0.85) !important; } footer[role="contentinfo"] a:hover { color: #D4663B !important; } section.testimonials, .testimonials-section { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; } section.testimonials .testimonial, .testimonials-section .testimonial { background: #D4B896 !important; padding: 2rem !important; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center; } section.testimonials .testimonial img, .testimonials-section .testimonial img { width: 80px !important; height: 80px !important; border-radius: 50% !important; margin: 0 auto 1rem !important; display: block !important; } section.testimonials .testimonial blockquote, .testimonials-section .testimonial blockquote { font-style: italic; line-height: 1.6; margin-bottom: 1rem; } section.testimonials .testimonial cite, .testimonials-section .testimonial cite { font-style: normal; opacity: 0.7; font-size: 0.9rem; }</style>
-<style data-trd-tpl-fadefix="phase-41">.fade-in,[class*="fade-in"]{opacity:1!important;transform:none!important;visibility:visible!important;}.scroll-reveal,.reveal,[data-aos]:not(.aos-animate){opacity:1!important;transform:none!important;}</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FoodEstablishment",
-  "name": "Haveli Restaurant Mumbai",
-  "description": "Exceptional food, warm hospitality, unforgettable moments.",
-  "servesCuisine": "International",
-  "hasMenu": "/contact.html",
-  "acceptsReservations": "True",
-  "priceRange": "$",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer service"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "47",
-    "bestRating": "5"
-  }
-}
-</script>
-<style id="trd-micro-animations">
-/* ── TRD Micro-animations (Phase 40.11.1) ── */
-
-/*
- * SAFE BY DEFAULT — elements visible. Animation only engages when
- * <html> has class "pre-animate" (added by JS after successful IO setup).
- */
-.trd-animate         { opacity: 1; transform: none; }
-.trd-animate-fade    { opacity: 1; }
-.trd-animate-scale   { opacity: 1; transform: none; }
-
-/* Animation engaged only when JS opted in */
-.pre-animate .trd-animate {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.55s cubic-bezier(0.4,0,0.2,1),
-              transform 0.55s cubic-bezier(0.4,0,0.2,1);
-}
-.pre-animate .trd-animate.trd-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.pre-animate .trd-animate-fade {
-  opacity: 0;
-  transition: opacity 0.6s ease;
-}
-.pre-animate .trd-animate-fade.trd-visible { opacity: 1; }
-
-.pre-animate .trd-animate-scale {
-  opacity: 0;
-  transform: scale(0.94);
-  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34,1.56,0.64,1);
-}
-.pre-animate .trd-animate-scale.trd-visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Staggered children — only meaningful while .pre-animate is on, otherwise no-op */
-.trd-animate-stagger > *:nth-child(1) { transition-delay: 0.05s; }
-.trd-animate-stagger > *:nth-child(2) { transition-delay: 0.12s; }
-.trd-animate-stagger > *:nth-child(3) { transition-delay: 0.19s; }
-.trd-animate-stagger > *:nth-child(4) { transition-delay: 0.26s; }
-.trd-animate-stagger > *:nth-child(5) { transition-delay: 0.33s; }
-.trd-animate-stagger > *:nth-child(6) { transition-delay: 0.40s; }
-
-/* Hover lift on cards (always-on; no opacity dependency) */
-[class*="__item"]:not([class*="nav"]):not([class*="footer"]) {
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-}
-[class*="__item"]:not([class*="nav"]):not([class*="footer"]):hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.12) !important;
-}
-
-/* Smooth CTA transitions */
-a[class*="__cta"], a[class*="-cta"], button[class*="-btn"], button[class*="__btn"] {
-  transition: all 0.2s cubic-bezier(0.4,0,0.2,1) !important;
-}
-a[class*="__cta"]:hover, a[class*="-cta"]:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18) !important;
-}
-
-/* Image zoom on hover */
-[class*="__img"] img, [class*="-img"] img {
-  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1) !important;
-  overflow: hidden;
-}
-[class*="__img"]:hover img, [class*="-img"]:hover img {
-  transform: scale(1.05) !important;
-}
-
-/* Smooth nav links */
-nav a, .trd-nav a, [class*="-nav"] a {
-  transition: color 0.18s ease, opacity 0.18s ease !important;
-}
-
-/*
- * Section entrance — kept as a CSS keyframe animation rather than
- * a JS-gated transition. Animations always run to completion (unlike
- * transitions that need a class-toggle to terminate), so this can't
- * cause persistent invisibility. Worst case is a 0.6s fade-in flash.
- */
-section[data-section] {
-  animation: trdSectionIn 0.6s cubic-bezier(0.4,0,0.2,1) both;
-}
-@keyframes trdSectionIn {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Reduce motion for accessibility — force everything visible, no animation */
-@media (prefers-reduced-motion: reduce) {
-  .trd-animate, .trd-animate-fade, .trd-animate-scale,
-  section[data-section], [class*="__item"] {
-    animation: none !important;
-    transition: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}
-</style>
-<!-- TRD Content Credentials (C2PA-linked) data-trd-content-credentials -->
-<meta name="c2pa-provenance" content="https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6" data-trd-content-credentials="1">
-<meta name="c2pa-verify-key" content="https://api.dcsai.ai/api/storage/public-key.pem">
-<meta property="og:provenance" content="https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6">
-<meta property="og:provenance:type" content="c2pa-linked-manifest">
-<meta property="og:certificate" content="https://api.dcsai.ai/api/storage/cert/02f47f7c-9225-481e-9f65-03ffe9e24bc6">
-<link rel="content-credentials" href="https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6" type="application/c2pa+json">
-<script type="application/ld+json" data-trd-cc="1">{
-  "@context": "https://schema.org",
-  "@type": "CreativeWork",
-  "@id": "https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6",
-  "name": "Haveli Restaurant Mumbai",
-  "creator": {
-    "@type": "Organization",
-    "name": "DCS AI Technologies",
-    "url": "https://dcsai.ai"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "DCS AI Technologies"
-  },
-  "about": "restaurant",
-  "contentCredentials": {
-    "@type": "PropertyValue",
-    "name": "C2PA Provenance Manifest",
-    "value": "https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6",
-    "url": "https://api.dcsai.ai/api/storage/verify/02f47f7c-9225-481e-9f65-03ffe9e24bc6"
-  },
-  "verificationKey": "https://api.dcsai.ai/api/storage/public-key.pem",
-  "certificateUrl": "https://api.dcsai.ai/api/storage/cert/02f47f7c-9225-481e-9f65-03ffe9e24bc6"
-}</script>
-<!-- /TRD Content Credentials -->
-<meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
-<meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
-<style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
-  /* Zone 66 — 1 contrast correction(s) applied at lock time */
-:root {
-  --tpl-primary: #1B4965;
-  --tpl-accent: #D4663B;
-  --tpl-accent-on-light: #1a1a1a;
-  --tpl-bg: #FAF7F2;
-  --tpl-text: #1B4965;
-  --tpl-text-on-light: #1B4965;
-  --tpl-text-on-dark: #ffffff;
-  --tpl-body-font: Inter, system-ui, sans-serif;
-  --tpl-heading-font: Georgia, 'Times New Roman', serif;
-}
-</style>
-<style data-trd-phase="42.19">
-/* Phase 42.19 (May 10 2026) — B12 light-surface contrast guarantee.
-   Forces readable dark text on any element with a light background,
-   regardless of whether the section/component followed Phase E1
-   shared-base-rules guidance. Selector matches:
-   1. Voluntary class .section-light or attribute [data-bg="light"]
-   2. Inline style with bright background colors (white, cream, ivory, etc.)
-   3. Inline style with hex backgrounds in #f0+ luminance range
-   Specificity: 0,2,0 — beats most agent-emitted rules without !important
-   except where contrast would otherwise be impossible. */
-:where(
-  .section-light,
-  [data-bg="light"],
-  [style*="background:#fff"], [style*="background: #fff"],
-  [style*="background:#FFF"], [style*="background: #FFF"],
-  [style*="background:white"], [style*="background: white"],
-  [style*="background:cream"], [style*="background: cream"],
-  [style*="background:ivory"], [style*="background: ivory"],
-  [style*="background:#f5"], [style*="background: #f5"],
-  [style*="background:#f8"], [style*="background: #f8"],
-  [style*="background:#fa"], [style*="background: #fa"],
-  [style*="background:#fc"], [style*="background: #fc"],
-  [style*="background-color:#fff"], [style*="background-color: #fff"],
-  [style*="background-color:#FFF"], [style*="background-color: #FFF"],
-  [style*="background-color:white"], [style*="background-color: white"],
-  [style*="background-color:cream"], [style*="background-color: cream"],
-  [style*="background-color:ivory"], [style*="background-color: ivory"],
-  [style*="background-color:#f5"], [style*="background-color: #f5"],
-  [style*="background-color:#f8"], [style*="background-color: #f8"],
-  [style*="background-color:#fa"], [style*="background-color: #fa"],
-  [style*="background-color:#fc"], [style*="background-color: #fc"]
-){
-  color: var(--tpl-text-on-light, #1a1a1a) !important;
-}
-:where(
-  .section-light,
-  [data-bg="light"],
-  [style*="background:#fff"], [style*="background: #fff"],
-  [style*="background:#FFF"], [style*="background: #FFF"],
-  [style*="background:white"], [style*="background: white"],
-  [style*="background:cream"], [style*="background: cream"],
-  [style*="background:ivory"], [style*="background: ivory"],
-  [style*="background:#f5"], [style*="background: #f5"],
-  [style*="background:#f8"], [style*="background: #f8"],
-  [style*="background:#fa"], [style*="background: #fa"],
-  [style*="background:#fc"], [style*="background: #fc"],
-  [style*="background-color:#fff"], [style*="background-color: #fff"],
-  [style*="background-color:#FFF"], [style*="background-color: #FFF"],
-  [style*="background-color:white"], [style*="background-color: white"],
-  [style*="background-color:cream"], [style*="background-color: cream"],
-  [style*="background-color:ivory"], [style*="background-color: ivory"],
-  [style*="background-color:#f5"], [style*="background-color: #f5"],
-  [style*="background-color:#f8"], [style*="background-color: #f8"],
-  [style*="background-color:#fa"], [style*="background-color: #fa"],
-  [style*="background-color:#fc"], [style*="background-color: #fc"]
-) :where(h1, h2, h3, h4, h5, h6, p, li, a, span, strong, em, td, th, dt, dd, blockquote, cite){
-  color: var(--tpl-text-on-light, #1a1a1a) !important;
-}
-/* Muted text variant for descriptive paragraphs */
-:where(
-  .section-light,
-  [data-bg="light"]
-) :where(p, li, blockquote, cite, .muted, [class*="muted"], [class*="subtitle"], [class*="description"]){
-  color: var(--tpl-text-muted-on-light, #475569) !important;
-}
-</style><style data-trd-phase="42.20">
-/* Phase 42.20 (May 10 2026) — Header text contrast guard.
-   Forces dark header text when no dark hero exists below the header.
-   Selectors target common template header classes plus generic <header>.
-   Specificity managed via !important since template rules win otherwise.
-   Only injected on pages where dark-hero detection failed. */
-header,
-header.cm-header, header.n06-header, header.gg-header, header.gr-header,
-header.sb-header, header.sp-header, header.tpl-header,
-header[role="banner"]{
-  color: var(--tpl-text-on-light, #1a1a1a) !important;
-}
-header :where(a, span, button, h1, h2, h3, p, li, .nav-link, [class*="link"], [class*="logo"]){
-  color: var(--tpl-text-on-light, #1a1a1a) !important;
-}
-/* Logo / brand wordmarks often use accent or dark-on-light, leave them */
-header :where([class*="brand"], [class*="logo-mark"]){
-  color: inherit !important;
-}
-/* Hover/focus states should still be visible */
-header :where(a:hover, a:focus, button:hover, button:focus){
-  color: var(--tpl-accent, #f97316) !important;
-}
-</style><style data-trd-phase="42.31">
-/* Phase 42.31 (May 17 2026) — Accent-as-text contrast guard (Bug G).
-   Templates often use accent both as BG (buttons — vibrant brand) and as
-   TEXT (eyebrows, kickers — needs contrast). When accent is light, the
-   text use becomes invisible on light pages. Override text-color contexts
-   with --tpl-accent-on-light (a contrast-safe variant emitted by
-   palette-lock.ts). Background uses keep the original --tpl-accent. */
-:where(body, main, section, .section-light, [data-bg="light"], [data-section="light"])
-  :where(.eyebrow, .kicker, .accent, .text-accent,
-         [class*="eyebrow"], [class*="kicker"], [class*="-accent"],
-         [class*="accent-"], .accent-text, .lead-accent, .pre-title,
-         .pretitle, .super, .super-title, .label-accent){
-  color: var(--tpl-accent-on-light, var(--tpl-text-on-light, #1a1a1a)) !important;
-}
-/* Accent on body text links — keep visible on light bg */
-:where(body, main, .section-light, [data-bg="light"]) :where(p, li, blockquote) a:not(.btn):not(.button):not([class*="btn-"]):not([class*="button-"]){
-  color: var(--tpl-accent-on-light, var(--tpl-text-on-light, #1a1a1a)) !important;
-}
-/* Decorative accent backgrounds (buttons, badges, pills) keep brand vibrance */
-:where(.btn, .button, [class*="btn-"], [class*="button-"], .badge, .pill, .chip, [class*="badge-"], [class*="pill-"]){
-  /* explicit no-op — these elements should retain --tpl-accent as bg */
-}
-</style><style data-trd-phase="42.29">body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]),body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) *{color:var(--tpl-text-on-light,#1a1a1a)!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a{color:var(--tpl-link-on-light,#1a1a1a)!important;text-decoration:none!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a:hover{text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"],body footer[role="contentinfo"][data-trd-dark-footer="1"] *{color:var(--tpl-text-on-dark,#f4f1ea)!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a{color:var(--tpl-link-on-dark,#f4f1ea)!important;text-decoration:none!important;opacity:0.85!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a:hover{opacity:1!important;text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] h1,body footer[role="contentinfo"][data-trd-dark-footer="1"] h2,body footer[role="contentinfo"][data-trd-dark-footer="1"] h3,body footer[role="contentinfo"][data-trd-dark-footer="1"] h4,body footer[role="contentinfo"][data-trd-dark-footer="1"] h5,body footer[role="contentinfo"][data-trd-dark-footer="1"] h6{color:var(--tpl-heading-on-dark,#ffffff)!important;}body[data-trd-light-page="1"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),body[data-trd-light-page="1"] textarea,body[data-trd-light-page="1"] select{background:#fff!important;color:#1a1a1a!important;border:1px solid rgba(0,0,0,0.2)!important;}body[data-trd-light-page="1"] label{color:var(--tpl-text-on-light,#1a1a1a)!important;}[class*="card"][style*="background"][style*="rgb(2"],[class*="card"][style*="background:#1"],[class*="card"][style*="background:#2"],[class*="card"][style*="background:#3"],[class*="publication"]:not([class*="light"]),[class*="review-card"]:not([class*="light"]){color:#fff!important;}[class*="card"][style*="background"][style*="rgb(2"] *,[class*="publication"]:not([class*="light"]) *,[class*="review-card"]:not([class*="light"]) *{color:inherit!important;}</style><script data-trd-phase="42.31">(function(){function getLum(rgb){if(!rgb)return 1;var open=rgb.indexOf('(');var close=rgb.indexOf(')');if(open<0||close<0)return 1;var parts=rgb.substring(open+1,close).split(',');if(parts.length<3)return 1;var r=parseInt(parts[0],10)/255;var g=parseInt(parts[1],10)/255;var b=parseInt(parts[2],10)/255;if(isNaN(r)||isNaN(g)||isNaN(b))return 1;return 0.2126*r+0.7152*g+0.0722*b;}function stamp(){var f=document.querySelector('footer[role="contentinfo"]');if(!f)return;if(f.hasAttribute('data-trd-dark-footer'))return;var bg=getComputedStyle(f).backgroundColor;if(getLum(bg)<0.5){f.setAttribute('data-trd-dark-footer','1');}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stamp);}else{stamp();}})();</script>  <link rel="manifest" href="/manifest.json">
-<script>
-!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]);t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'https://app.posthog.com',loaded:function(p){if(window.location.host.includes('localhost'))p.opt_out_capturing();}});
-</script>
-<style id="trd-i18n-css">
-/* ── TRD Language Switcher (Phase A12 / 40.32) ── */
-#trd-lang-switcher {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  z-index: 9995;
-  display: flex;
-  flex-direction: row;
-  gap: 0;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
-  border: 1.5px solid rgba(0,0,0,0.10);
-  background: #fff;
-}
-.trd-lang-btn {
-  display: block;
-  width: 44px;
-  height: 44px;
-  line-height: 44px;
-  text-align: center;
-  font-size: .72rem;
-  font-weight: 700;
-  cursor: pointer;
-  background: #fff;
-  border: none;
-  color: #64748b;
-  transition: background .15s, color .15s;
-  letter-spacing: .04em;
-  padding: 0;
-}
-.trd-lang-btn:first-child {
-  border-right: 1px solid rgba(0,0,0,0.08);
-}
-.trd-lang-btn:hover {
-  background: #f8fafc;
-  color: #1a1a18;
-}
-.trd-lang-btn.active {
-  background: #1a1a18;
-  color: #fff;
-}
-</style>
-  <meta name="robots" content="index, follow">
-<style data-trd-motion="phase-39.20">
-@media (prefers-reduced-motion: no-preference) {
-  html { scroll-behavior: smooth; }
-  [data-trd-fade] {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity .6s ease-out, transform .6s ease-out;
-    will-change: opacity, transform;
-  }
-  [data-trd-fade].trd-fade-in {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  img[loading="lazy"]:not(.trd-img-loaded) {
-    opacity: 0;
-    transition: opacity .4s ease-out;
-  }
-  img[loading="lazy"].trd-img-loaded {
-    opacity: 1;
-  }
-}
-</style>
-</head>
-<body data-trd-light-page="1">
-    <header class="cm-header" role="banner">
-  <div class="cm-header-inner">
-    <nav class="cm-nav-left" role="navigation" aria-label="Left navigation">
-      <ul class="cm-nav-list">
-        <li><a href="/menu.html">menu</a></li>
-        <li><a href="/reservation.html">reservations</a></li>
-        <li><a href="/private-dining.html">private dining</a></li>
-      </ul>
-    </nav>
-    <a href="/" class="cm-brand" aria-label="Haveli Restaurant Mumbai — Home">
-      <span class="cm-brand-text">Haveli Restaurant Mumbai</span>
-    </a>
-    <nav class="cm-nav-right" role="navigation" aria-label="Right navigation">
-      <ul class="cm-nav-list">
-        <li><a href="/events.html">events</a></li>
-        <li><a href="/about.html">about</a></li>
-        <li><a href="/contact.html">contact</a></li>
-        <li><div class="cm-nav-more" data-open="false">
-  <button type="button" class="cm-nav-more-trigger" aria-haspopup="true" aria-expanded="false">More <span aria-hidden="true">&#9662;</span></button>
-  <ul class="cm-nav-more-menu">
-      <li><a href="/chefs.html">Chefs</a></li>
-      
-      
-      <li><a href="/faq.html">FAQ</a></li>
-      <li><a href="/press.html">Press</a></li>
-      <li><a href="/locations.html">Locations</a></li>
-      
-  </ul>
-</div></li>
-        <li><a href="/reservation.html">Book a Table</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="cm-header-tools"></div>
-</header>
-<script>document.querySelectorAll(".cm-nav-more-trigger").forEach(function(t){t.addEventListener("click",function(e){e.stopPropagation();var p=t.parentElement;var o=p.getAttribute("data-open")==="true";document.querySelectorAll(".cm-nav-more").forEach(function(x){x.setAttribute("data-open","false")});p.setAttribute("data-open",o?"false":"true");t.setAttribute("aria-expanded",o?"false":"true")})});document.addEventListener("click",function(){document.querySelectorAll(".cm-nav-more").forEach(function(x){x.setAttribute("data-open","false");var t=x.querySelector(".cm-nav-more-trigger");if(t)t.setAttribute("aria-expanded","false")})})</script>
-
-<div class="cm-a11y-widget cm-a11y-right" data-open="false">
-  <button type="button" class="cm-a11y-toggle" aria-label="Accessibility options" aria-haspopup="true" aria-expanded="false">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v8M8 11h8M9 22l3-7 3 7"/></svg>
-  </button>
-  
-  <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
-</div>
-  <!-- Skip to main content -->
-  <!-- Theme toggle -->
-  
-
-  <main class="cm-main cm-section section-light" id="main">
-    <!-- Hero -->
-    <section class="hero-section section-light fade-in">
-      <h1>Our Story</h1>
-      <p>Since <span class="placeholder">[Year]</span> – A legacy of authentic Indian cuisine.</p>
-      <img src="https://images.dcsai.ai/phase-v4/Restaurant/Ingriedent Origin/image(5).jpg" alt="Founders of Haveli Restaurant Mumbai standing in front of the original Haveli building" loading="lazy">
-    </section>
-
-    <!-- Founding Story -->
-    <section class="section section-light fade-in">
-      <h2>Founding Story</h2>
-      <p>Contact us for details about how Haveli Restaurant Mumbai began, the vision of its founders, and the inspiration behind its cuisine.</p>
-    </section>
-
-    <!-- Timeline -->
-    <section class="section fade-in">
-      <h2>Our Journey</h2>
-      <ol class="timeline">
-        <li class="card">
-          <time datetime="1952">1952</time>
-          <p>Founding of Haveli Restaurant – the original location opened its doors.</p>
-        </li>
-        <li class="card">
-          <time datetime="1968">1968</time>
-          <p>First expansion – a larger dining hall was added to accommodate growing guests.</p>
-        </li>
-        <li class="card">
-          <time datetime="1985">1985</time>
-          <p>Second location launched – bringing the Haveli experience to another part of Mumbai.</p>
-        </li>
-        <li class="card">
-          <time datetime="2010">2010</time>
-          <p>Family handover – the next generation took over the kitchen and management.</p>
-        </li>
-        <li class="card">
-          <time datetime="2020">2020</time>
-          <p>Modern renovation – blending heritage architecture with contemporary comforts.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- Family / Legacy -->
-    <section class="section section-light fade-in">
-      <h2>Family Legacy</h2>
-      <p>Contact us for details about the current family members who continue to run Haveli Restaurant Mumbai and uphold its traditions.</p>
-    </section>
-
-    <!-- Original Recipes / Signature Dishes -->
-    <section class="section section-light fade-in">
-      <h2>Signature Dishes</h2>
-      <p>Contact us for details about the dishes that have been on the menu since day one.</p>
-      <ul>
-        <li>Dish 1 – Placeholder description</li>
-        <li>Dish 2 – Placeholder description</li>
-        <li>Dish 3 – Placeholder description</li>
-      </ul>
-    </section>
-
-    <!-- Photo Gallery -->
-    <section class="section fade-in">
-      <h2>Heritage Gallery</h2>
-      <div class="gallery-grid">
-        <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/team/magnific_27yearold-east-asian-woma_3002765189.jpeg" alt="Vintage photo of Haveli Restaurant interior, [Year]" loading="lazy">
-        <img src="https://images.dcsai.ai/phase-v4/Restaurant/Ingriedent Origin/image(1).jpg" alt="Historic kitchen staff preparing dishes, [Year]" loading="lazy">
-        <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/team/magnific_34yearold-white-woman-hos_3002697205.jpeg" alt="Original storefront of Haveli Restaurant, [Year]" loading="lazy">
-        <img src="https://images.dcsai.ai/phase-v4/Restaurant/Feature Detail/image(17).jpg" alt="Family portrait at the restaurant, [Year]" loading="lazy">
+<nav class="bottom-nav" aria-label="Mobile Bottom Navigation">
+      <a href="/">Home</a>
+      <a href="/menu.html">Menu</a>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/reservation.html">Reservation</a>
+      <a href="/private-dining.html">Private Dining</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <div class="trd-nav-more">
+        <button type="button" class="trd-nav-more-btn" aria-haspopup="true" aria-expanded="false" aria-current="true" onclick="var d=this.closest('.trd-nav-more');var o=d.classList.toggle('is-open');this.setAttribute('aria-expanded',o);">More <span aria-hidden="true">▾</span></button>
+        <div class="trd-nav-more-panel trd-mega-panel trd-mega-4col" role="menu">
+          <div class="trd-mega-grid">
+          <div class="trd-mega-col" style="width:23%">
+            <div class="trd-mega-col-heading">MENU & DINING</div>
+            <a href="/bottom-nav.html" aria-current="page">Bottom Nav</a>
+            <a href="/chef-specials.html">Chef Specials</a>
+            <a href="/chefs.html">Chefs</a>
+            <a href="/events.html">Events</a>
+          </div>
+          <div class="trd-mega-col" style="width:23%">
+            <div class="trd-mega-col-heading">RESERVATIONS</div>
+            <a href="/faq.html">FAQ</a>
+            <a href="/gift-cards.html">Gift Cards</a>
+            <a href="/happy-hour.html">Happy Hour</a>
+            <a href="/history.html">History</a>
+          </div>
+          <div class="trd-mega-col" style="width:23%">
+            <div class="trd-mega-col-heading">EXPLORE</div>
+            <a href="/locations.html">Locations</a>
+            <a href="/order.html">Order</a>
+            <a href="/pricing.html">Pricing</a>
+            <a href="/seasonal-menu.html">Seasonal Menu</a>
+          </div>
+          <div class="trd-mega-col" style="width:23%">
+            <div class="trd-mega-col-heading">EXPLORE</div>
+            <a href="/services.html">Services</a>
+            <a href="/sitemap.html">Sitemap</a>
+            <a href="/testimonials.html">Testimonials</a>
+            <a href="/wine-list.html">Wine List</a>
+          </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </nav>
 
-    <!-- Today -->
-    <section class="section section-light fade-in">
-      <h2>Today</h2>
-      <p>Contact us for details on how Haveli Restaurant Mumbai blends its rich heritage with modern dining experiences, current menu highlights, and today’s service philosophy.</p>
-      <a href="/reservation.html" style="text-decoration:none;display:inline-block;color:inherit;"><button class="btn">Reserve a Table</button></a>
-    </section>
-  <!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
-<section class="trd-section-filler" data-trd-section-filler="phase-F" style="padding:48px 24px;max-width:880px;margin:0 auto;line-height:1.7;">
-  <h2 style="font-size:1.5rem;font-weight:700;margin:0 0 18px;">Our story</h2>
-  <p style="margin:0 0 14px;color:inherit;opacity:.92;">Haveli Restaurant Mumbai opened with a small team and a clear idea about what kind of room it wanted to be. Over time the menu has evolved, the team has grown, and a lot of regulars have become friends — but the core hasn't changed.</p>
-</section>
-<!-- ─── /Phase F ──────────────────────────────────────────────── -->
-</main>
-
-  <!-- Scripts -->
-  <script>
-    // Theme toggle
-    const t = document.getElementById('theme-toggle');
-    t.onclick = () => document.documentElement.classList.toggle('dark');
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    }
-
-    // Fade‑in on scroll
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
-    <footer class="cm-footer" role="contentinfo">
+<!-- SVG sprite (you can move this to a separate file) -->
+<svg style="display:none;">
+  <symbol id="icon-home" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V21a1 1 0 01-1 1h-5v-7H10v7H4a1 1 0 01-1-1V9.5z"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></symbol>
+  <symbol id="icon-reserve" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm0 16H5V8h14v11z"/></symbol>
+  <symbol id="icon-contact" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4S14.21 4 12 4 8 5.79 8 8s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></symbol>
+</svg>
+<footer class="cm-footer" role="contentinfo">
   <div class="cm-footer-newsletter">
     <h3 class="cm-footer-newsletter-title">join the herd!</h3>
     <p class="cm-footer-newsletter-sub">Join our mailing list and keep up with all the exciting things.</p>
@@ -1314,67 +762,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 })();</script>
 
 <script>(function(){function syncMore(){document.querySelectorAll('.trd-nav-more-btn').forEach(function(btn){try{var nav=btn.closest('ul,nav,header');if(!nav)return;var siblings=nav.querySelectorAll('a');var sibling=null;for(var i=0;i<siblings.length;i++){var a=siblings[i];if(a.closest('.trd-nav-more-panel'))continue;sibling=a;break;}if(!sibling)return;var s=window.getComputedStyle(sibling);btn.style.fontFamily=s.fontFamily;btn.style.fontSize=s.fontSize;btn.style.fontWeight=s.fontWeight;btn.style.letterSpacing=s.letterSpacing;btn.style.textTransform=s.textTransform;btn.style.fontStyle=s.fontStyle;nav.querySelectorAll('.trd-nav-more-panel a').forEach(function(da){da.style.fontFamily=s.fontFamily;da.style.fontSize=s.fontSize;da.style.fontWeight=s.fontWeight;da.style.letterSpacing=s.letterSpacing;da.style.textTransform=s.textTransform;});}catch(e){}});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',syncMore)}else{syncMore()}})();</script>
-  <script data-trd-tpl-fadefix="phase-41">(function(){try{document.querySelectorAll('.fade-in,.scroll-reveal,.reveal').forEach(function(el){el.classList.add('visible');el.style.opacity='1';el.style.transform='none';el.style.visibility='visible';});}catch(e){}})();</script>
-<script>
-(function() {
-  /*
-   * Phase 40.11.1 — safe IntersectionObserver activation.
-   *
-   * Key invariants:
-   *   - If anything fails before .pre-animate is added → content stays visible.
-   *   - If IO never fires after activation → 1500ms safety timer reveals all.
-   *   - No race between class-add and observer setup that can strand elements.
-   */
-  try {
-    if (!('IntersectionObserver' in window)) return;
-
-    var io = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) {
-          e.target.classList.add('trd-visible');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-    var els = document.querySelectorAll(
-      'section[data-section] h1, section[data-section] h2, section[data-section] h3, ' +
-      'section[data-section] p, section[data-section] img, ' +
-      '[class*="__grid"], [class*="__items"], [class*="__list"]'
-    );
-
-    // Step 1: tag every element AND register the observer.
-    // No visual change yet — .pre-animate is not on <html> so .trd-animate is opacity:1.
-    var observed = [];
-    for (var i = 0; i < els.length; i++) {
-      try {
-        els[i].classList.add('trd-animate');
-        io.observe(els[i]);
-        observed.push(els[i]);
-      } catch (innerErr) {
-        // Skip this element; keep going.
-      }
-    }
-
-    // Step 2: activate animation. Only now do .trd-animate elements become opacity:0.
-    // IO has already started observing — its first callback fires next frame and
-    // immediately reveals any in-viewport elements.
-    document.documentElement.classList.add('pre-animate');
-
-    // Step 3: belt-and-suspenders. If IO somehow fails to fire after 1.5s,
-    // force every observed element visible. User never sees stuck-invisible content.
-    setTimeout(function() {
-      for (var j = 0; j < observed.length; j++) {
-        observed[j].classList.add('trd-visible');
-      }
-    }, 1500);
-  } catch (err) {
-    // Any unexpected failure: ensure no animation is engaged so default-visible CSS wins.
-    try { document.documentElement.classList.remove('pre-animate'); } catch (e2) {}
-  }
-})();
-</script>
-
+<script data-trd-tpl-fadefix="phase-41">(function(){try{document.querySelectorAll('.fade-in,.scroll-reveal,.reveal').forEach(function(el){el.classList.add('visible');el.style.opacity='1';el.style.transform='none';el.style.visibility='visible';});}catch(e){}})();</script>
 <!-- TRD-PERMANENCE-FOOTER -->
 <div id="trd-permanence-footer" class="trd-permanence-footer" style="display:none;text-align:center;padding:14px 16px 18px;color:#888;font-size:11px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:transparent;line-height:1.5;">
   <a href="https://storage.dcsai.ai/api/storage/cert/02f47f7c-9225-481e-9f65-03ffe9e24bc6" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;opacity:0.7;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">
@@ -1396,97 +784,14 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 })();
 </script>
 
-<!-- TRD Carbon Footprint Badge (Zone 131) -->
-<div id="trd-carbon-badge" data-trd-carbon-badge="1" style="position:fixed;bottom:14px;right:14px;z-index:99999;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;display:none;">
-  <a id="trd-cb-link" href="https://api.dcsai.ai/api/storage/receipts/02f47f7c-9225-481e-9f65-03ffe9e24bc6" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;background:#0a0a0f;color:#fff;padding:8px 12px;border-radius:24px;text-decoration:none;font-size:11px;line-height:1;box-shadow:0 4px 14px rgba(0,0,0,0.15);transition:transform 0.15s ease,box-shadow 0.15s ease;border:1px solid rgba(255,255,255,0.08);" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 6px 18px rgba(0,0,0,0.22)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 14px rgba(0,0,0,0.15)'">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#0090FF"/>
-      <path d="M12 6c-3.31 0-6 2.69-6 6 0 .85.18 1.66.5 2.4l7.9-7.9c-.74-.32-1.55-.5-2.4-.5zm5.5 3.6l-7.9 7.9c.74.32 1.55.5 2.4.5 3.31 0 6-2.69 6-6 0-.85-.18-1.66-.5-2.4z" fill="#0090FF"/>
-    </svg>
-    <span style="display:flex;flex-direction:column;gap:1px;">
-      <span style="font-weight:600;letter-spacing:0.2px;"><span id="trd-cb-value">— g</span> CO<sub style="font-size:8px;">2</sub></span>
-      <span style="font-size:8.5px;opacity:0.65;letter-spacing:0.6px;text-transform:uppercase;">Verified · DCS</span>
-    </span>
-  </a>
-</div>
-<script data-trd-carbon-badge="1">
-(function(){
-  try {
-    var verifyUrl = "https://api.dcsai.ai/api/storage/receipts/02f47f7c-9225-481e-9f65-03ffe9e24bc6";
-    var el = document.getElementById('trd-cb-value');
-    var badge = document.getElementById('trd-carbon-badge');
-    if (!el || !badge) return;
-    // Badge stays hidden until a real, stored receipt is found — never show
-    // an empty "— g · Verified" claim when no receipt exists.
-    fetch(verifyUrl, { method: 'GET' })
-      .then(function(r){ return r.ok ? r.json() : null; })
-      .then(function(body){
-        if (!body) return;
-        var receipts = body.receipts || body || [];
-        if (!Array.isArray(receipts) || receipts.length === 0) return;
-        var totalCo2 = 0;
-        for (var i = 0; i < receipts.length; i++) {
-          var c = Number(receipts[i].carbon_co2_g || (receipts[i].carbon && receipts[i].carbon.co2_grams) || 0);
-          if (isFinite(c)) totalCo2 += c;
-        }
-        el.textContent = totalCo2 > 0
-          ? (totalCo2 < 1 ? totalCo2.toFixed(3) + ' g'
-             : totalCo2 < 100 ? totalCo2.toFixed(2) + ' g'
-             : Math.round(totalCo2) + ' g')
-          : '< 0.01 g';
-        badge.style.display = 'block';   // reveal ONLY with a real receipt
-      })
-      .catch(function(){ /* silent — badge stays hidden */ });
-  } catch(e){ /* silent */ }
-})();
-</script>
-<!-- /TRD Carbon Footprint Badge -->
-
-<!-- DCS Verify Badge -->
-<a href="https://verify.dcsai.ai/?id=02f47f7c-9225-481e-9f65-03ffe9e24bc6" target="_blank" rel="noopener" data-dcs-verify-badge="1" title="Verify this site on DCS" style="position:fixed!important;bottom:14px!important;left:14px!important;right:auto!important;top:auto!important;z-index:99999!important;display:inline-flex!important;align-items:center!important;gap:7px!important;width:auto!important;max-width:max-content!important;height:auto!important;margin:0!important;background:#0a0e20!important;color:#fff!important;padding:7px 13px 7px 8px!important;border-radius:24px!important;text-decoration:none!important;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif!important;font-size:11.5px!important;font-weight:600!important;line-height:1!important;white-space:nowrap!important;box-shadow:0 4px 14px rgba(0,0,0,0.20)!important;border:1px solid rgba(255,255,255,0.10)!important;box-sizing:border-box!important;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform=''">
-  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0!important;">
-    <circle cx="12" cy="12" r="10" fill="#2f6fed"/>
-    <path d="M7 12.4l3.3 3.3L17 9" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-  <span style="color:#fff!important;font-weight:600!important;letter-spacing:0.2px!important;">Verify on DCS</span>
-</a>
-<!-- /DCS Verify Badge -->
-<div id="trd-lang-switcher" class="trd-lang-switcher"></div>
-
-<script id="trd-i18n">
-(function() {
-  var LANG_KEY = 'trd-lang';
-  var langs = [
-    { code: 'en', label: 'EN', dir: 'ltr' },
-    { code: 'ar', label: 'AR', dir: 'rtl' },
-  ];
-
-  var saved = localStorage.getItem(LANG_KEY) || 'en';
-  applyLang(saved);
-
-  function applyLang(code) {
-    var lang = langs.find(function(l) { return l.code === code; }) || langs[0];
-    document.documentElement.setAttribute('lang', lang.code);
-    document.documentElement.setAttribute('dir', lang.dir);
-    localStorage.setItem(LANG_KEY, code);
-    document.querySelectorAll('.trd-lang-btn').forEach(function(btn) {
-      btn.classList.toggle('active', btn.dataset.lang === code);
-    });
-  }
-
-  window.trdSetLang = applyLang;
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var sw = document.getElementById('trd-lang-switcher');
-    if (!sw) return;
-    sw.innerHTML = langs.map(function(l) {
-      return '<button class="trd-lang-btn' + (l.code === saved ? ' active' : '') +
-        '" data-lang="' + l.code + '" onclick="trdSetLang('' + l.code + '')" aria-label="Switch to ' + l.label + '">' +
-        l.label + '</button>';
-    }).join('');
-  });
-})();
-</script>
+<!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
+<section class="trd-section-filler" data-trd-section-filler="phase-F" style="padding:48px 24px;max-width:880px;margin:0 auto;line-height:1.7;">
+  <h2 style="font-size:1.5rem;font-weight:700;margin:0 0 18px;">More about us</h2>
+  <p style="margin:0 0 14px;color:inherit;opacity:.92;">Haveli Restaurant Mumbai is a place built around the simple idea that good food brings people together. Whether you're stopping in for a midweek dinner or planning something special, the room is set up to make you feel at home.</p>
+  <p style="margin:0 0 14px;color:inherit;opacity:.92;">The kitchen draws on classic technique and seasonal produce, with a menu that changes as ingredients come into their best moment. Pair that with a thoughtful drinks list and friendly service, and you have the kind of place you'll want to return to.</p>
+  <p style="margin:0 0 14px;color:inherit;opacity:.92;">We welcome solo diners, couples, families, and groups. If you have an allergy, a craving, or a celebration in mind, just tell us — we'll do our best to make it work.</p>
+</section>
+<!-- ─── /Phase F ──────────────────────────────────────────────── -->
 <script data-trd-tpl-i18n="phase-41">
 (function(){
   // Find any element with class ending in "-lang" or matching "trd-lang"
@@ -1557,4 +862,3 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 })();
 </script>
 </body>
-</html>

@@ -131,12 +131,111 @@ section {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reviews — Haveli Restaurant Mumbai</title>
-  <meta name="description" content="Read authentic reviews from our guests at Haveli Restaurant Mumbai. Warm heritage dining, real stories.">
+  <meta name="description" content="Authentic Indian Culinary Heritage & Royal Dining in Mumbai">
   <meta property="og:title" content="Reviews — Haveli Restaurant Mumbai">
-  <meta property="og:description" content="Read authentic reviews from our guests at Haveli Restaurant Mumbai. Warm heritage dining, real stories.">
+  <meta property="og:description" content="Authentic Indian Culinary Heritage & Royal Dining in Mumbai">
   <meta property="og:type" content="website">
-  <style>:root{--font-serif:'Fraunces','Playfair Display','Cormorant Garamond',Georgia,serif;--font-sans:'Inter',system-ui,-apple-system,sans-serif;--color-bg:#FAF7F2;--color-surface:#D4B896;--color-text-primary:#1B4965;--color-text-secondary:color-mix(in oklab, #1B4965 70%, transparent);--color-accent:#D4663B;--color-border:rgba(27,73,101,0.12);--color-header-bg:#FAF7F2;--color-footer-bg:#0a0a0a;--radius-sm:6px;--radius-md:12px;--radius-lg:24px;--shadow-sm:0 2px 8px rgba(31,22,17,0.06);--shadow-md:0 12px 36px rgba(31,22,17,0.1);--max-width:1200px;}*{box-sizing:border-box;margin:0;padding:0;}h1,h2,h3,h4{font-family:var(--font-serif);font-weight:600;line-height:1.2;color:var(--color-text-primary);}h1{font-size:clamp(2.2rem,4.5vw,3.8rem);letter-spacing:-0.02em;}h2{font-size:clamp(1.75rem,3vw,2.5rem);}h3{font-size:1.35rem;}a{color:inherit;text-decoration:none;transition:color 0.2s ease,opacity 0.2s ease;}img{max-width:100%;height:auto;display:block;}</style>
-  <style>/* Page‑specific styles */</style>
+  <style>
+:root {
+  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-bg: #FAF7F2;
+  --color-surface: #D4B896;
+  --color-text-primary: #1B4965;
+  --color-text-secondary: color-mix(in oklab, #1B4965 70%, transparent);
+  --color-accent: #D4663B;
+  --color-accent-hover: #996F08;
+  --color-border: rgba(27,73,101,0.12);
+  --color-header-bg: #FAF7F2;
+  --color-footer-bg: #0a0a0a;
+  --color-footer-text: #E6DFD5;
+  --color-footer-muted: #A39688;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 2px 8px rgba(31, 22, 17, 0.06);
+  --shadow-md: 0 12px 36px rgba(31, 22, 17, 0.1);
+  --max-width: 1200px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+h1 { font-size: clamp(2.25rem, 4.5vw, 3.75rem); }
+h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 1rem; }
+h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
+p { margin-bottom: 1rem; color: var(--color-text-secondary); }
+a { color: inherit; text-decoration: none; transition: all 0.2s ease; }
+a:hover 
+.nav-btn-reserve {
+  background: var(--color-accent);
+  color: #FFFFFF !important;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+.nav-btn-reserve:hover 
+.footer-brand-title {
+  font-size: 1.75rem;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+.footer-brand-tagline {
+  color: var(--color-footer-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+.footer-hours, .footer-location {
+  font-size: 0.9rem;
+  color: var(--color-footer-text);
+  margin-bottom: 0.5rem;
+}
+.footer-nav-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.footer-col-title {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.footer-links-list a {
+  color: var(--color-footer-muted);
+  font-size: 0.9rem;
+}
+.footer-links-list a:hover {
+  color: #FFFFFF;
+.footer-social {
+  display: flex;
+  gap: 1.25rem;
+}
+.social-link {
+  color: var(--color-footer-muted);
+}
+  </style>
+  <style>/* Page-specific styles ONLY — no header/footer overrides */</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -768,7 +867,7 @@ section[data-section] {
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -966,7 +1065,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 </style>
 </head>
 <body data-trd-light-page="1">
-<header class="cm-header" role="banner">
+  <header class="cm-header" role="banner">
   <div class="cm-header-inner">
     <nav class="cm-nav-left" role="navigation" aria-label="Left navigation">
       <ul class="cm-nav-list">
@@ -1010,127 +1109,124 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
-<main class="cm-main cm-section section-light" id="main">
-  <!-- TRD SECTION: page-header (template: restaurant-01-coastal-mediterranean) -->
-  <!-- Variables: , ,  -->
-  <section class="cm-pgh" data-section="page-header">
-    <style>
-      .cm-pgh{background:#FAF7F2;border-bottom:1px solid rgba(27,73,101,0.10);padding:120px 0 64px}
-      .cm-pgh__inner{max-width:1280px;margin:0 auto;padding:0 32px}
-      .cm-pgh__crumb{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.68rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#D4663B;margin:0 0 16px}
-      .cm-pgh__title{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-size:clamp(2.4rem,5vw,4.2rem);font-weight:400;line-height:1.05;letter-spacing:-.02em;color:#1B4965;margin:0 0 16px;max-width:880px}
-      .cm-pgh__lede{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:1.1rem;line-height:1.55;color:rgba(27,73,101,0.65);margin:0;max-width:680px}
-      @media(max-width:768px){.cm-pgh{padding:96px 0 48px}.cm-pgh__inner{padding:0 24px}}
-    </style>
-    <div class="cm-pgh__inner">
-      <p class="cm-pgh__crumb">Testimonials</p>
-      <h1 class="cm-pgh__title">What Our Guests Say</h1>
-      <p class="cm-pgh__lede">Real reviews from real diners</p>
-    </div>
-  </section>
-
-  <!-- TRD SECTION: testimonials-grid (template: restaurant-01-coastal-mediterranean) -->
-  <!-- Variables: , , , , , , , , , , , , , , , , , , , , , , ,  -->
-  <section class="cm-testimonials-grid" data-section="testimonials-grid">
-    <style>
-      .cm-testimonials-grid{background:#FAF7F2;padding:96px 0}
-      .cm-testimonials-grid__inner{max-width:1280px;margin:0 auto;padding:0 32px}
-      .cm-testimonials-grid__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:32px}
-      .cm-testimonials-grid__card{background:#FFFFFF;padding:32px 28px;border:1px solid rgba(27,73,101,0.10);display:flex;flex-direction:column;height:100%}
-      .cm-testimonials-grid__stars{color:#D4663B;margin:0 0 16px;font-size:.95rem;letter-spacing:.1em}
-      .cm-testimonials-grid__quote{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-style:italic;font-size:1rem;line-height:1.65;color:#1B4965;margin:0 0 24px;flex:1}
-      .cm-testimonials-grid__author{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.85rem;font-weight:600;color:#1B4965;margin:0;letter-spacing:.02em}
-      .cm-testimonials-grid__date{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.72rem;color:rgba(27,73,101,0.65);margin:4px 0 0;letter-spacing:.06em}
-      @media(max-width:600px){.cm-testimonials-grid{padding:64px 0}.cm-testimonials-grid__inner{padding:0 24px}}
-    </style>
-    <div class="cm-testimonials-grid__inner">
-      <div class="cm-testimonials-grid__grid">
-        <article class="cm-testimonials-grid__card">
-          <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
-          <p class="cm-testimonials-grid__quote">"The butter chicken was perfectly spiced, and the naan was fluffy. A delightful dinner."</p>
-          <p class="cm-testimonials-grid__author">Aisha Khan, Food Enthusiast</p>
-          <p class="cm-testimonials-grid__date">Jan 12, 2024</p>
-        </article>
-        <article class="cm-testimonials-grid__card">
-          <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
-          <p class="cm-testimonials-grid__quote">"Loved the paneer tikka – smoky, crisp, and full of flavor. Great for vegetarians."</p>
-          <p class="cm-testimonials-grid__author">Rajesh Mehta, Regular Guest</p>
-          <p class="cm-testimonials-grid__date">Feb 5, 2024</p>
-        </article>
-        <article class="cm-testimonials-grid__card">
-          <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
-          <p class="cm-testimonials-grid__quote">"The lamb biryani hit the spot – fragrant rice, tender meat, just the right heat."</p>
-          <p class="cm-testimonials-grid__author">Priya Sharma, Family Visitor</p>
-          <p class="cm-testimonials-grid__date">Mar 2, 2024</p>
-        </article>
-        <article class="cm-testimonials-grid__card">
-          <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
-          <p class="cm-testimonials-grid__quote">"Service was attentive without being intrusive, and the mango kulfi was a perfect finish."</p>
-          <p class="cm-testimonials-grid__author">Sameer Patel, Business Traveler</p>
-          <p class="cm-testimonials-grid__date">Mar 20, 2024</p>
-        </article>
-        <article class="cm-testimonials-grid__card">
-          <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
-          <p class="cm-testimonials-grid__quote">"The tandoori prawns were smoky and juicy, paired beautifully with fresh mint chutney."</p>
-          <p class="cm-testimonials-grid__author">Neha Joshi, First‑time Visitor</p>
-          <p class="cm-testimonials-grid__date">Apr 8, 2024</p>
-        </article>
-        <article class="cm-testimonials-grid__card">
-          <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
-          <p class="cm-testimonials-grid__quote">"A cozy ambience and authentic flavors made our anniversary dinner unforgettable."</p>
-          <p class="cm-testimonials-grid__author">Vikram Patel, Anniversary Guest</p>
-          <p class="cm-testimonials-grid__date">Apr 22, 2024</p>
-        </article>
+  <main class="cm-main cm-section section-light" id="main">
+    <!-- TRD SECTION: page-header (template: restaurant-01-coastal-mediterranean) -->
+    <section class="cm-pgh" data-section="page-header">
+      <style>
+        .cm-pgh{background:#FAF7F2;border-bottom:1px solid rgba(27,73,101,0.10);padding:120px 0 64px}
+        .cm-pgh__inner{max-width:1280px;margin:0 auto;padding:0 32px}
+        .cm-pgh__crumb{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.68rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#D4663B;margin:0 0 16px}
+        .cm-pgh__title{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-size:clamp(2.4rem,5vw,4.2rem);font-weight:400;line-height:1.05;letter-spacing:-.02em;color:#1B4965;margin:0 0 16px;max-width:880px}
+        .cm-pgh__lede{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:1.1rem;line-height:1.55;color:rgba(27,73,101,0.65);margin:0;max-width:680px}
+        @media(max-width:768px){.cm-pgh{padding:96px 0 48px}.cm-pgh__inner{padding:0 24px}}
+      </style>
+      <div class="cm-pgh__inner">
+        <p class="cm-pgh__crumb">Testimonials</p>
+        <h1 class="cm-pgh__title">Reviews</h1>
+        <p class="cm-pgh__lede">Hear from our guests about their experiences at Haveli Restaurant Mumbai.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- TRD SECTION: testimonials-press (template: restaurant-01-coastal-mediterranean) -->
-  <!-- Variables: , , , , , , , , , , ,  -->
-  <section class="cm-testimonials-press" data-section="testimonials-press">
-    <style>
-      .cm-testimonials-press{background:#faf6f2;padding:96px 0}
-      .cm-testimonials-press__inner{max-width:1180px;margin:0 auto;padding:0 32px}
-      .cm-testimonials-press__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px 40px}
-      .cm-testimonials-press__entry{text-align:center;border-top:1px solid #D4663B;padding-top:24px}
-      .cm-testimonials-press__publication{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.7rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#D4663B;margin:0 0 16px}
-      .cm-testimonials-press__quote{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-style:italic;font-size:1.05rem;line-height:1.55;color:#1B4965;margin:0 0 16px}
-      .cm-testimonials-press__author{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.78rem;color:rgba(27,73,101,0.65);margin:0;font-style:italic}
-      @media(max-width:600px){.cm-testimonials-press{padding:64px 0}.cm-testimonials-press__inner{padding:0 24px}}
-    </style>
-    <div class="cm-testimonials-press__inner">
-      <div class="cm-testimonials-press__grid">
-        <article class="cm-testimonials-press__entry">
-          <p class="cm-testimonials-press__publication">Food & Travel Magazine</p>
-          <p class="cm-testimonials-press__quote">"Haveli captures the essence of royal Indian cuisine with elegance and authenticity."</p>
-          <p class="cm-testimonials-press__author">— Anita Verma</p>
-        </article>
-        <article class="cm-testimonials-press__entry">
-          <p class="cm-testimonials-press__publication">Local News</p>
-          <p class="cm-testimonials-press__quote">"A culinary gem in Mumbai that blends heritage flavors with modern comfort."</p>
-          <p class="cm-testimonials-press__author">— Rajiv Singh</p>
-        </article>
-        <article class="cm-testimonials-press__entry">
-          <p class="cm-testimonials-press__publication">Culinary Review</p>
-          <p class="cm-testimonials-press__quote">"From the tandoor to the dessert, each dish tells a story of tradition."</p>
-          <p class="cm-testimonials-press__author">— Michael Lee</p>
-        </article>
-        <article class="cm-testimonials-press__entry">
-          <p class="cm-testimonials-press__publication">The Mumbai Chronicle</p>
-          <p class="cm-testimonials-press__quote">"Warm hospitality and a menu that honors India's diverse culinary heritage."</p>
-          <p class="cm-testimonials-press__author">— Sunita Rao</p>
-        </article>
+    <!-- TRD SECTION: testimonials-grid (template: restaurant-01-coastal-mediterranean) -->
+    <section class="cm-testimonials-grid" data-section="testimonials-grid">
+      <style>
+        .cm-testimonials-grid{background:#FAF7F2;padding:96px 0}
+        .cm-testimonials-grid__inner{max-width:1280px;margin:0 auto;padding:0 32px}
+        .cm-testimonials-grid__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:32px}
+        .cm-testimonials-grid__card{background:#FFFFFF;padding:32px 28px;border:1px solid rgba(27,73,101,0.10);display:flex;flex-direction:column;height:100%}
+        .cm-testimonials-grid__stars{color:#D4663B;margin:0 0 16px;font-size:.95rem;letter-spacing:.1em}
+        .cm-testimonials-grid__quote{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-style:italic;font-size:1rem;line-height:1.65;color:#1B4965;margin:0 0 24px;flex:1}
+        .cm-testimonials-grid__author{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.85rem;font-weight:600;color:#1B4965;margin:0;letter-spacing:.02em}
+        .cm-testimonials-grid__date{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.72rem;color:rgba(27,73,101,0.65);margin:4px 0 0;letter-spacing:.06em}
+        @media(max-width:600px){.cm-testimonials-grid{padding:64px 0}.cm-testimonials-grid__inner{padding:0 24px}}
+      </style>
+      <div class="cm-testimonials-grid__inner">
+        <div class="cm-testimonials-grid__grid">
+          <article class="cm-testimonials-grid__card">
+            <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
+            <p class="cm-testimonials-grid__quote">“The butter chicken was perfectly spiced, and the naan was fluffy. We’ll be back for sure.”</p>
+            <p class="cm-testimonials-grid__author">Riya Sharma, Food Blogger</p>
+            <p class="cm-testimonials-grid__date">June 5, 2024</p>
+          </article>
+          <article class="cm-testimonials-grid__card">
+            <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
+            <p class="cm-testimonials-grid__quote">“Loved the ambience – the heritage décor made us feel like royalty while enjoying the paneer tikka.”</p>
+            <p class="cm-testimonials-grid__author">Arun Patel, Freelance Photographer</p>
+            <p class="cm-testimonials-grid__date">July 12, 2024</p>
+          </article>
+          <article class="cm-testimonials-grid__card">
+            <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
+            <p class="cm-testimonials-grid__quote">“Prompt service and the mango lassi was refreshingly authentic. Great for a family dinner.”</p>
+            <p class="cm-testimonials-grid__author">Leena Joshi, Mother of Two</p>
+            <p class="cm-testimonials-grid__date">August 2, 2024</p>
+          </article>
+          <article class="cm-testimonials-grid__card">
+            <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
+            <p class="cm-testimonials-grid__quote">“The tandoori platter arrived hot, and the flavors reminded me of home‑cooked meals.”</p>
+            <p class="cm-testimonials-grid__author">Vikram Patel, Software Engineer</p>
+            <p class="cm-testimonials-grid__date">September 9, 2024</p>
+          </article>
+          <article class="cm-testimonials-grid__card">
+            <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
+            <p class="cm-testimonials-grid__quote">“Excellent vegetarian options; the dal makhani was creamy and rich.”</p>
+            <p class="cm-testimonials-grid__author">Ananya Singh, Yoga Instructor</p>
+            <p class="cm-testimonials-grid__date">October 14, 2024</p>
+          </article>
+          <article class="cm-testimonials-grid__card">
+            <p class="cm-testimonials-grid__stars" aria-label="5 stars">★★★★★</p>
+            <p class="cm-testimonials-grid__quote">“A delightful dessert experience – the gulab jamun melted in the mouth.”</p>
+            <p class="cm-testimonials-grid__author">Sanjay Mehta, Accountant</p>
+            <p class="cm-testimonials-grid__date">November 3, 2024</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
-<!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
+    </section>
+
+    <!-- TRD SECTION: testimonials-press (template: restaurant-01-coastal-mediterranean) -->
+    <section class="cm-testimonials-press" data-section="testimonials-press">
+      <style>
+        .cm-testimonials-press{background:#faf6f2;padding:96px 0}
+        .cm-testimonials-press__inner{max-width:1180px;margin:0 auto;padding:0 32px}
+        .cm-testimonials-press__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:48px 40px}
+        .cm-testimonials-press__entry{text-align:center;border-top:1px solid #D4663B;padding-top:24px}
+        .cm-testimonials-press__publication{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.7rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#D4663B;margin:0 0 16px}
+        .cm-testimonials-press__quote{font-family:var(--tpl-heading-font,Georgia, 'Times New Roman', serif);font-style:italic;font-size:1.05rem;line-height:1.55;color:#1B4965;margin:0 0 16px}
+        .cm-testimonials-press__author{font-family:var(--tpl-body-font,Inter, system-ui, sans-serif);font-size:.78rem;color:rgba(27,73,101,0.65);margin:0;font-style:italic}
+        @media(max-width:600px){.cm-testimonials-press{padding:64px 0}.cm-testimonials-press__inner{padding:0 24px}}
+      </style>
+      <div class="cm-testimonials-press__inner">
+        <div class="cm-testimonials-press__grid">
+          <article class="cm-testimonials-press__entry">
+            <p class="cm-testimonials-press__publication">Food & Travel Magazine</p>
+            <p class="cm-testimonials-press__quote">“A culinary journey that blends heritage flavors with modern hospitality.”</p>
+            <p class="cm-testimonials-press__author">— Maya Rao</p>
+          </article>
+          <article class="cm-testimonials-press__entry">
+            <p class="cm-testimonials-press__publication">Local News</p>
+            <p class="cm-testimonials-press__quote">“Haveli’s tandoori dishes stand out for their authentic spice balance.”</p>
+            <p class="cm-testimonials-press__author">— Anita Verma</p>
+          </article>
+          <article class="cm-testimonials-press__entry">
+            <p class="cm-testimonials-press__publication">Culinary Review</p>
+            <p class="cm-testimonials-press__quote">“The restaurant’s ambience transports diners to a regal past while serving fresh Indian fare.”</p>
+            <p class="cm-testimonials-press__author">— Michael Lee</p>
+          </article>
+          <article class="cm-testimonials-press__entry">
+            <p class="cm-testimonials-press__publication">The Mumbai Chronicle</p>
+            <p class="cm-testimonials-press__quote">“Consistently high quality and attentive service make it a must‑visit spot.”</p>
+            <p class="cm-testimonials-press__author">— Rajesh Kumar</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  <!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
 <section class="trd-section-filler" data-trd-section-filler="phase-F" style="padding:48px 24px;max-width:880px;margin:0 auto;line-height:1.7;">
   <h2 style="font-size:1.5rem;font-weight:700;margin:0 0 18px;">What guests say</h2>
   <p style="margin:0 0 14px;color:inherit;opacity:.92;">We're grateful for every guest who takes the time to share their experience, online or in person. The kindest reviews are the ones that come back for a second visit.</p>
 </section>
 <!-- ─── /Phase F ──────────────────────────────────────────────── -->
 </main>
-<footer class="cm-footer" role="contentinfo">
+  <footer class="cm-footer" role="contentinfo">
   <div class="cm-footer-newsletter">
     <h3 class="cm-footer-newsletter-title">join the herd!</h3>
     <p class="cm-footer-newsletter-sub">Join our mailing list and keep up with all the exciting things.</p>
@@ -1200,7 +1296,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1210,7 +1306,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>

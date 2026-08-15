@@ -128,79 +128,137 @@ section {
   .trd-container { padding: 0 var(--sp-3); }
 }
 </style>
-<meta charset="UTF-8">
-<title>Events — Haveli Restaurant Mumbai</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-/* ---------- Dark mode ---------- */
-/* ---------- Theme toggle ---------- */
-
-/* ---------- Micro‑animations ---------- */
-.fade‑in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
-.fade‑in.visible { opacity: 1; transform: translateY(0); }
-.btn, .trd‑btn { transition: transform .2s ease, box‑shadow .2s ease; }
-.btn:hover, .trd‑btn:hover { transform: translateY(-2px); box‑shadow: 0 8px 20px rgba(0,0,0,.15); }
-.card { transition: transform .2s ease, box‑shadow .2s ease; }
-.card:hover { transform: translateY(-4px); box‑shadow: 0 16px 32px rgba(0,0,0,.12); }
-@keyframes countUp { from { opacity:0; } to { opacity:1; } }
-.stat-number { animation: countUp .6s ease forwards; }
-/* ---------- Light‑section rule ---------- */
-.section-light, [data-bg="light"] {
-  background: var(--tpl-light-surface, #f7f0e3);
-  color: var(--tpl-text-on-light, #1a1a1a);
-}
-.section-light h1, .section-light h2, .section-light h3, .section-light h4,
-.section-light p, .section-light li, .section-light label, .section-light span {
-  color: var(--tpl-text-on-light, #1a1a1a);
-}
-/* ---------- Layout ---------- */
-main { max-width: var(--max-width, 1200px); margin: 2rem auto; padding: 0 1rem; }
-section { margin-bottom: 3rem; }
-h1, h2 { margin-bottom: .75rem; }
-h1 { font-size: clamp(2rem,5vw,3rem); }
-h2 { font-size: clamp(1.5rem,4vw,2.2rem); }
-p { margin-bottom: .5rem; line-height: 1.5; }
-ul { list-style: disc inside; margin-left: 1rem; }
-a.btn { display: inline-block; padding: .6rem 1.2rem; background: var(--primary); color:#fff; border:none; border-radius:4px; text-align:center; cursor:pointer; }
-/* ---------- Grid for event cards ---------- */
-.events-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-/* ---------- Card content ---------- */
-.card {
-  background: var(--surface);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.card img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
-.card-content { padding: 1rem; flex:1; display:flex; flex-direction:column; }
-.card-content h3 { margin: .5rem 0; font-size:1.2rem; }
-.card-content time { font-weight:500; margin-bottom:.5rem; display:block; }
-.card-content .price { margin-top:auto; font-weight:600; }
-/* ---------- Carousel (simple) ---------- */
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: .75rem;
-  padding-bottom: .5rem;
-}
-.carousel img {
-  flex:0 0 auto;
-  width: 200px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
-}
-/* ---------- Form ---------- */
-form { display:flex; flex-direction:column; gap:.75rem; max-width:400px; }
-label { font-weight:500; }
-input[type="email"] { padding:.5rem; border:1px solid var(--border); border-radius:4px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — Haveli Restaurant Mumbai</title>
+  <meta name="description" content="Discover upcoming special evenings at Haveli Restaurant Mumbai. Reserve your seat for wine dinners, chef collaborations, brunches and more.">
+  <meta property="og:title" content="Events — Haveli Restaurant Mumbai">
+  <meta property="og:description" content="Discover upcoming special evenings at Haveli Restaurant Mumbai. Reserve your seat for wine dinners, chef collaborations, brunches and more.">
+  <meta property="og:type" content="website">
+  
+  <style>
+    /* Dark mode (Phase D3) */
+    /* Micro‑animations (Phase D3) */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .btn {
+      display: inline-block;
+      padding: .5rem 1rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: .95rem;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0,0,0,.12);
+    }
+    /* Light‑section contrast fix (B12) */
+    .section-light, [data-bg="light"] {
+      background: var(--tpl-light-surface, #f7f0e3);
+      color: var(--tpl-text-on-light, #1a1a1a);
+    }
+    .section-light h1,
+    .section-light h2,
+    .section-light h3,
+    .section-light h4,
+    .section-light p,
+    .section-light li,
+    .section-light label,
+    .section-light span {
+      color: var(--tpl-text-on-light, #1a1a1a);
+    }
+    /* Layout */
+    .container { max-width: var(--max-width, 1200px); margin: 0 auto; padding: 1rem; }
+    .hero { text-align: center; padding: 3rem 1rem; }
+    .hero h1 { font-size: clamp(2rem,5vw,3rem); margin-bottom: .5rem; }
+    .hero p { font-size: 1rem; color: var(--color-text-secondary); }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-bottom: 1rem;
+    }
+    .filter-bar button {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: .4rem .8rem;
+      cursor: pointer;
+    }
+    .filter-bar button.active { background: var(--primary); color: #fff; }
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 600px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .event-card img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-sm); }
+    .event-card .event-date { font-weight: 600; color: var(--primary); margin-bottom: .5rem; }
+    .event-card .event-title { font-size: 1.2rem; margin: .5rem 0; }
+    .event-card .event-price { font-weight: 600; margin-top: auto; }
+    .spotlight { background: var(--surface); padding: 2rem 1rem; border-radius: var(--radius-sm); margin-bottom: 2rem; }
+    .spotlight img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 1rem; }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: .5rem;
+      padding-bottom: .5rem;
+    }
+    .carousel img {
+      flex: 0 0 auto;
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+      filter: grayscale(80%);
+      border-radius: var(--radius-sm);
+    }
+    .recurring ul { list-style: disc inside; margin-left: 1rem; }
+    .newsletter { background: var(--surface); padding: 2rem 1rem; border-radius: var(--radius-sm); text-align: center; }
+    .newsletter input[type="email"] {
+      padding: .5rem;
+      width: 80%;
+      max-width: 300px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: .5rem;
+    }
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: -999px;
+      background: #000;
+      color: #fff;
+      padding: .5rem;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+    }
+  </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
@@ -832,7 +890,7 @@ section[data-section] {
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -956,22 +1014,7 @@ header :where(a:hover, a:focus, button:hover, button:focus){
 :where(.btn, .button, [class*="btn-"], [class*="button-"], .badge, .pill, .chip, [class*="badge-"], [class*="pill-"]){
   /* explicit no-op — these elements should retain --tpl-accent as bg */
 }
-</style><style data-trd-phase="42.29">body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]),body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) *{color:var(--tpl-text-on-light,#1a1a1a)!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a{color:var(--tpl-link-on-light,#1a1a1a)!important;text-decoration:none!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a:hover{text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"],body footer[role="contentinfo"][data-trd-dark-footer="1"] *{color:var(--tpl-text-on-dark,#f4f1ea)!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a{color:var(--tpl-link-on-dark,#f4f1ea)!important;text-decoration:none!important;opacity:0.85!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a:hover{opacity:1!important;text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] h1,body footer[role="contentinfo"][data-trd-dark-footer="1"] h2,body footer[role="contentinfo"][data-trd-dark-footer="1"] h3,body footer[role="contentinfo"][data-trd-dark-footer="1"] h4,body footer[role="contentinfo"][data-trd-dark-footer="1"] h5,body footer[role="contentinfo"][data-trd-dark-footer="1"] h6{color:var(--tpl-heading-on-dark,#ffffff)!important;}body[data-trd-light-page="1"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),body[data-trd-light-page="1"] textarea,body[data-trd-light-page="1"] select{background:#fff!important;color:#1a1a1a!important;border:1px solid rgba(0,0,0,0.2)!important;}body[data-trd-light-page="1"] label{color:var(--tpl-text-on-light,#1a1a1a)!important;}[class*="card"][style*="background"][style*="rgb(2"],[class*="card"][style*="background:#1"],[class*="card"][style*="background:#2"],[class*="card"][style*="background:#3"],[class*="publication"]:not([class*="light"]),[class*="review-card"]:not([class*="light"]){color:#fff!important;}[class*="card"][style*="background"][style*="rgb(2"] *,[class*="publication"]:not([class*="light"]) *,[class*="review-card"]:not([class*="light"]) *{color:inherit!important;}</style><script data-trd-phase="42.31">(function(){function getLum(rgb){if(!rgb)return 1;var open=rgb.indexOf('(');var close=rgb.indexOf(')');if(open<0||close<0)return 1;var parts=rgb.substring(open+1,close).split(',');if(parts.length<3)return 1;var r=parseInt(parts[0],10)/255;var g=parseInt(parts[1],10)/255;var b=parseInt(parts[2],10)/255;if(isNaN(r)||isNaN(g)||isNaN(b))return 1;return 0.2126*r+0.7152*g+0.0722*b;}function stamp(){var f=document.querySelector('footer[role="contentinfo"]');if(!f)return;if(f.hasAttribute('data-trd-dark-footer'))return;var bg=getComputedStyle(f).backgroundColor;if(getLum(bg)<0.5){f.setAttribute('data-trd-dark-footer','1');}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stamp);}else{stamp();}})();</script><!-- Open Graph (Phase A5) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Haveli Restaurant Mumbai — Events">
-  <meta property="og:description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  
-  
-  <meta property="og:site_name" content="Haveli Restaurant Mumbai">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Haveli Restaurant Mumbai — Events">
-  <meta name="twitter:description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  
-  <!-- SEO -->
-  <meta name="description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  <meta name="author" content="Haveli Restaurant Mumbai">
-  <link rel="manifest" href="/manifest.json">
+</style><style data-trd-phase="42.29">body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]),body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) *{color:var(--tpl-text-on-light,#1a1a1a)!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a{color:var(--tpl-link-on-light,#1a1a1a)!important;text-decoration:none!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a:hover{text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"],body footer[role="contentinfo"][data-trd-dark-footer="1"] *{color:var(--tpl-text-on-dark,#f4f1ea)!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a{color:var(--tpl-link-on-dark,#f4f1ea)!important;text-decoration:none!important;opacity:0.85!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a:hover{opacity:1!important;text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] h1,body footer[role="contentinfo"][data-trd-dark-footer="1"] h2,body footer[role="contentinfo"][data-trd-dark-footer="1"] h3,body footer[role="contentinfo"][data-trd-dark-footer="1"] h4,body footer[role="contentinfo"][data-trd-dark-footer="1"] h5,body footer[role="contentinfo"][data-trd-dark-footer="1"] h6{color:var(--tpl-heading-on-dark,#ffffff)!important;}body[data-trd-light-page="1"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),body[data-trd-light-page="1"] textarea,body[data-trd-light-page="1"] select{background:#fff!important;color:#1a1a1a!important;border:1px solid rgba(0,0,0,0.2)!important;}body[data-trd-light-page="1"] label{color:var(--tpl-text-on-light,#1a1a1a)!important;}[class*="card"][style*="background"][style*="rgb(2"],[class*="card"][style*="background:#1"],[class*="card"][style*="background:#2"],[class*="card"][style*="background:#3"],[class*="publication"]:not([class*="light"]),[class*="review-card"]:not([class*="light"]){color:#fff!important;}[class*="card"][style*="background"][style*="rgb(2"] *,[class*="publication"]:not([class*="light"]) *,[class*="review-card"]:not([class*="light"]) *{color:inherit!important;}</style><script data-trd-phase="42.31">(function(){function getLum(rgb){if(!rgb)return 1;var open=rgb.indexOf('(');var close=rgb.indexOf(')');if(open<0||close<0)return 1;var parts=rgb.substring(open+1,close).split(',');if(parts.length<3)return 1;var r=parseInt(parts[0],10)/255;var g=parseInt(parts[1],10)/255;var b=parseInt(parts[2],10)/255;if(isNaN(r)||isNaN(g)||isNaN(b))return 1;return 0.2126*r+0.7152*g+0.0722*b;}function stamp(){var f=document.querySelector('footer[role="contentinfo"]');if(!f)return;if(f.hasAttribute('data-trd-dark-footer'))return;var bg=getComputedStyle(f).backgroundColor;if(getLum(bg)<0.5){f.setAttribute('data-trd-dark-footer','1');}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stamp);}else{stamp();}})();</script>  <link rel="manifest" href="/manifest.json">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]);t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'https://app.posthog.com',loaded:function(p){if(window.location.host.includes('localhost'))p.opt_out_capturing();}});
@@ -1091,98 +1134,94 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 </div>
 
 
-<main class="cm-main cm-section section-light" id="main-content">
-  <!-- Hero -->
+
+
+<main id="main" class="container cm-main cm-section section-light">
+  <!-- Hero Section -->
   <section class="hero section-light fade-in">
     <h1>Upcoming Events</h1>
-    <p>Explore our special evenings and reserve your place.</p>
+    <p>Explore our special evenings – from wine dinners to live music nights. Reserve your seat early to enjoy the finest experiences.</p>
   </section>
 
-  <!-- Filter Controls -->
+  <!-- Filter Bar -->
   
 
   <!-- Upcoming Events Grid -->
-  <section class="upcoming-events section-light fade-in">
-    <h2>Upcoming Events</h2>
-    <div class="events-grid">
-      <!-- Event Card 1 -->
-      <article class="card event-card" data-type="wine">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Private Events/image(6).jpg" alt="Candlelit wine dinner setting">
-        <div class="card-content">
-          <h3>Wine Dinner</h3>
-          <time datetime="2024-12-05T19:00">December 5, 2024 – 7:00 PM</time>
-          <p>A curated tasting menu paired with premium wines.</p>
-          <p class="price">Price: ₹2,500 per person</p>
-          <a href="#!" class="btn">Reserve Now</a>
-        </div>
-      </article>
-      <!-- Event Card 2 -->
-      <article class="card event-card" data-type="live">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/services/magnific_closeup-of-a-black-female_3002470883.jpeg" alt="Live music stage with audience">
-        <div class="card-content">
-          <h3>Live Music Night</h3>
-          <time datetime="2024-12-12T20:00">December 12, 2024 – 8:00 PM</time>
-          <p>Enjoy acoustic performances while dining.</p>
-          <p class="price">Price: ₹1,800 per person</p>
-          <a href="#!" class="btn">Reserve Now</a>
-        </div>
-      </article>
-      <!-- Event Card 3 -->
-      <article class="card event-card" data-type="brunch">
-        <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Private Events/image(2).jpg" alt="Sunny brunch setting with dishes">
-        <div class="card-content">
-          <h3>Sunday Brunch</h3>
-          <time datetime="2024-12-08T11:00">December 8, 2024 – 11:00 AM</time>
-          <p>Delicious brunch buffet with live cooking stations.</p>
-          <p class="price">Price: ₹1,200 per person</p>
-          <a href="#!" class="btn">Reserve Now</a>
-        </div>
-      </article>
-    </div>
-  </section>
+  <section class="grid fade-in" id="upcoming-events">
+    <!-- Event Card 1 -->
+    <article class="card event-card" data-type="wine">
+      <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Private Events/image(6).jpg" alt="Elegant wine dinner setting">
+      <time class="event-date" datetime="2026-09-10T19:30">Sep 10, 2026 – 7:30 PM</time>
+      <h2 class="event-title">Royal Wine Dinner</h2>
+      <p>Indulge in a curated selection of Indian and international wines paired with a seasonal tasting menu.</p>
+      <p class="event-price">₹ 2,500 per person</p>
+      <a href="#!" class="btn">Reserve Now</a>
+    </article>
 
-  <!-- Featured Event Spotlight -->
-  <section class="featured-event section-light fade-in">
-    <h2>Featured Event</h2>
-    <article class="card">
-      <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/team/magnific_a-52yearold-latino-man-ba_3002665844.jpeg" alt="Chef collaboration special event">
-      <div class="card-content">
-        <h3>Chef Collaboration Night</h3>
-        <time datetime="2024-12-20T20:00">December 20, 2024 – 8:00 PM</time>
-        <p>Join our head chef and a guest chef for an exclusive menu.</p>
-        <p>Menu highlights include signature dishes with a modern twist.</p>
-        <p class="price">Price: ₹3,500 per person</p>
-        <a href="#!" class="btn">Buy Tickets</a>
-      </div>
+    <!-- Event Card 2 -->
+    <article class="card event-card" data-type="brunch">
+      <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/services/magnific_closeup-of-a-black-female_3002470883.jpeg" alt="Sunny Sunday brunch spread">
+      <time class="event-date" datetime="2026-09-12T11:00">Sep 12, 2026 – 11:00 AM</time>
+      <h2 class="event-title">Sunday Brunch</h2>
+      <p>Enjoy a lavish brunch featuring classic Indian breakfast favorites and fresh juices.</p>
+      <p class="event-price">₹ 1,200 per person</p>
+      <a href="#!" class="btn">Reserve Now</a>
+    </article>
+
+    <!-- Event Card 3 -->
+    <article class="card event-card" data-type="live-music">
+      <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Private Events/image(2).jpg" alt="Live music stage with audience">
+      <time class="event-date" datetime="2026-09-15T20:00">Sep 15, 2026 – 8:00 PM</time>
+      <h2 class="event-title">Live Music Night</h2>
+      <p>Experience soulful performances by local artists while savoring our signature dishes.</p>
+      <p class="event-price">₹ 1,800 per person</p>
+      <a href="#!" class="btn">Reserve Now</a>
     </article>
   </section>
 
+  <!-- Featured Event Spotlight -->
+  <section class="spotlight fade-in">
+    <h2>Featured Event: Chef’s Tasting Menu</h2>
+    <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/team/magnific_a-52yearold-latino-man-ba_3002665844.jpeg" alt="Chef presenting a tasting menu">
+    <p>Join our head chef for an exclusive multi‑course tasting menu showcasing regional Indian flavors, paired with a selection of premium wines.</p>
+    <h3>Menu Highlights</h3>
+    <ul>
+      <li>Amuse‑bouche: Spiced Mango Chutney</li>
+      <li>Starter: Smoked Paneer with Charred Tomato Relish</li>
+      <li>Main: Slow‑cooked Lamb Rogan Josh with Saffron Rice</li>
+      <li>Dessert: Cardamom‑infused Gulab Jamun</li>
+    </ul>
+    <p><strong>Sommelier:</strong> Arjun Patel – curated wine pairings.</p>
+    <a href="#!" class="btn">Buy Tickets</a>
+  </section>
+
   <!-- Past Events Archive -->
-  <section class="past-events section-light fade-in">
-    <h2>Past Events</h2>
-    <div class="carousel">
-      <img src="https://images.dcsai.ai/phase-v4/Restaurant/Feature Detail/image(12).jpg" alt="Photo from a past wine dinner" loading="lazy">
-      <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/team/magnific_52yearold-latino-bartende_3002706635.jpeg" alt="Photo from a past live music night" loading="lazy">
-      <img src="https://images.dcsai.ai/phase-v4/Restaurant/Feature Detail/image(16).jpg" alt="Photo from a past brunch" loading="lazy">
+  <section class="past-events fade-in">
+    <h2>Past Events Gallery</h2>
+    <div class="carousel" aria-label="Past events photo carousel">
+      <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Feature Detail/image(12).jpg" alt="Wine dinner ambience">
+      <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/team/magnific_52yearold-latino-bartende_3002706635.jpeg" alt="Brunch buffet spread">
+      <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Feature Detail/image(16).jpg" alt="Live music performance">
     </div>
   </section>
 
-  <!-- Recurring Events -->
-  <section class="recurring-events section-light fade-in">
+  <!-- Recurring Events Section -->
+  <section class="recurring section-light fade-in">
     <h2>Recurring Events</h2>
     <ul>
-      <li>Every Sunday Brunch – 11:00 AM to 2:00 PM</li>
-      <li>Every Tuesday Wine Night – 7:00 PM to 10:00 PM</li>
+      <li>Every Sunday – Brunch from 11 AM to 3 PM</li>
+      <li>Every Wednesday – Chef’s Table Tasting Menu at 7 PM</li>
+      <li>Every Friday – Live Music Night starting at 8 PM</li>
     </ul>
   </section>
 
   <!-- Mailing List Signup -->
-  <section class="mailing-list section-light fade-in">
+  <section class="newsletter fade-in">
     <h2>Stay Updated</h2>
-    <p>Be the first to hear about new events.</p>
-    <form action="mailto:contact@dcsai.ai?subject=Event%20inquiry%20%E2%80%94%20Haveli%20Restaurant%20Mumbai" method="post" novalidate>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" autocomplete="email" inputmode="email">
+    <p>Be the first to hear about new events and exclusive offers.</p>
+    <form action="mailto:contact@dcsai.ai?subject=Event%20inquiry%20%E2%80%94%20Haveli%20Restaurant%20Mumbai" method="POST" novalidate>
+      <label for="newsletter-email" class="visually-hidden">Email address</label>
+      <input type="email" id="newsletter-email" name="email" placeholder="Your email address" required aria-required="true" autocomplete="email" inputmode="email">
       <button type="submit" class="btn">Subscribe</button>
     </form>
   </section>
@@ -1194,36 +1233,42 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 <!-- ─── /Phase F ──────────────────────────────────────────────── -->
 </main>
 
+
+
 <script>
-// Theme toggle persistence
-const themeBtn = document.getElementById('theme-toggle');
-themeBtn.onclick = () => document.documentElement.classList.toggle('dark');
-if (localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  document.documentElement.classList.add('dark');
-}
+  // Theme toggle
+  const themeBtn = document.getElementById('theme-toggle');
+  themeBtn.onclick = () => document.documentElement.classList.toggle('dark');
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  }
 
-// Fade‑in on scroll
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  // Fade‑in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Simple filter functionality
-const filterButtons = document.querySelectorAll('[data-filter]');
-const cards = document.querySelectorAll('.event-card');
-filterButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const filter = btn.getAttribute('data-filter');
-    cards.forEach(card => {
-      if (filter === 'all' || card.dataset.type === filter) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
+  // Simple filter functionality
+  const filterButtons = document.querySelectorAll('.filter-bar button');
+  const eventCards = document.querySelectorAll('#upcoming-events .event-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update active button style
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      eventCards.forEach(card => {
+        if (filter === 'all' || card.dataset.type === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
   });
-});
 </script>
     <footer class="cm-footer" role="contentinfo">
   <div class="cm-footer-newsletter">
@@ -1295,7 +1340,7 @@ filterButtons.forEach(btn => {
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1305,7 +1350,7 @@ filterButtons.forEach(btn => {
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>

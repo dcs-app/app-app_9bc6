@@ -131,78 +131,106 @@ section {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Hour – Haveli Restaurant Mumbai</title>
-  <meta name="description" content="Weekday wind‑down happy hour at Haveli Restaurant Mumbai – bar‑only specials Mon‑Fri 4 PM‑7 PM in New Delhi.">
-  
+  <meta name="description" content="Mon‑Fri 4 PM – 7 PM happy hour at Haveli Restaurant Mumbai – bar‑only specials on drinks and small bites.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Happy Hour – Haveli Restaurant Mumbai">
+  <meta property="og:description" content="Mon‑Fri 4 PM – 7 PM happy hour at Haveli Restaurant Mumbai – bar‑only specials on drinks and small bites.">
+  <meta property="og:type" content="website">
+  <!-- Shared design tokens are injected by the orchestrator -->
   <style>
-    /* Dark mode (Phase D3) */
-    /* Theme toggle button (positioned above WhatsApp widget) */
-    
-    /* Micro‑animations (Phase D3) */
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+    /* -------------------------------------------------
+       Dark‑mode (Phase D3)
+       ------------------------------------------------- */
+    /* -------------------------------------------------
+       Micro‑animations (Phase D3)
+       ------------------------------------------------- */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
-    .btn, .trd-btn {
+    .btn {
+      display: inline-block;
+      padding: .6rem 1.2rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: .95rem;
+      text-align: center;
       transition: transform .2s ease, box-shadow .2s ease;
     }
-    .btn:hover, .trd-btn:hover {
+    .btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(0,0,0,.15);
     }
     .card {
       background: var(--surface);
-      border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      border-radius: 6px;
       padding: 1rem;
-      margin: 0.5rem 0;
       transition: transform .2s ease, box-shadow .2s ease;
     }
     .card:hover {
       transform: translateY(-4px);
       box-shadow: 0 16px 32px rgba(0,0,0,.12);
     }
-    .stat-number { animation: countUp .6s ease forwards; }
-    @keyframes countUp { from { opacity:0; } to { opacity:1; } }
-    /* Section Light (B12 fix) – not used but kept for compliance */
-    .section-light, [data-bg="light"] {
-      background: var(--tpl-light-surface, #f7f0e3);
-      color: var(--tpl-text-on-light, #1a1a1a);
-    }
-    .section-light h1,
-    .section-light h2,
-    .section-light h3,
-    .section-light h4,
-    .section-light p,
-    .section-light li,
-    .section-light label,
-    .section-light span {
-      color: var(--tpl-text-on-light, #1a1a1a);
-    }
-    /* Layout – mobile first */
-    main { max-width: var(--max-width, 1200px); margin: 2rem auto; padding: 0 1rem; }
-    section { margin-bottom: 2.5rem; }
-    h1 { margin-bottom: 1rem; }
-    h2 { margin-top: 1.5rem; margin-bottom: .75rem; }
-    .grid { display: grid; gap: 1rem; }
-    @media (min-width: 600px) {
-      .grid-2 { grid-template-columns: repeat(2, 1fr); }
-    }
-    .time-display {
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--primary);
-    }
-    .cta-btn {
-      display: inline-block;
-      background: var(--primary);
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: var(--radius-sm);
-      cursor: pointer;
-      font-weight: 600;
+    /* -------------------------------------------------
+       Page layout
+       ------------------------------------------------- */
+    .hero {
       text-align: center;
-      margin-top: 1rem;
+      padding: 3rem 1rem;
+      background: var(--bg);
+      color: var(--text);
     }
-    .cta-btn:hover { transform: translateY(-2px); }
+    .hero h1 { font-size: clamp(2rem,6vw,3rem); margin-bottom: .5rem; }
+    .hero .time-display {
+      font-size: clamp(2.5rem,8vw,4rem);
+      font-weight: 700;
+      margin: .5rem 0;
+    }
+    .hero p { font-size: 1rem; margin-top: .5rem; }
+    .section {
+      max-width: var(--max-width, 1200px);
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .section h2 {
+      font-size: clamp(1.75rem,4vw,2.5rem);
+      margin-bottom: 1rem;
+    }
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    @media (min-width: 600px) {
+      .grid { flex-direction: row; flex-wrap: wrap; }
+    }
+    .grid .card { flex: 1 1 calc(50% - 1rem); }
+    .hours-grid {
+      display: grid;
+      gap: .5rem;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .hours-grid div {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: .5rem;
+      text-align: center;
+    }
+    /* -------------------------------------------------
+       Theme toggle button (positioned above WhatsApp widget)
+       ------------------------------------------------- */
+    
+    #theme-toggle:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
   </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -835,7 +863,7 @@ section[data-section] {
 <meta name="dcs-build-id" content="72fe5f86" data-trd-zone="68">
 <meta name="trd-template-id" content="72fe5f86" data-trd-zone="68">
 <style id="trd-locked-palette" data-trd-zone="66">
-/* DCS locked palette · resolvedAt=2026-08-15T19:45:49.034Z */
+/* DCS locked palette · resolvedAt=2026-08-15T19:46:37.455Z */
   /* Zone 66 — 1 contrast correction(s) applied at lock time */
 :root {
   --tpl-primary: #1B4965;
@@ -959,22 +987,7 @@ header :where(a:hover, a:focus, button:hover, button:focus){
 :where(.btn, .button, [class*="btn-"], [class*="button-"], .badge, .pill, .chip, [class*="badge-"], [class*="pill-"]){
   /* explicit no-op — these elements should retain --tpl-accent as bg */
 }
-</style><style data-trd-phase="42.29">body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]),body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) *{color:var(--tpl-text-on-light,#1a1a1a)!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a{color:var(--tpl-link-on-light,#1a1a1a)!important;text-decoration:none!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a:hover{text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"],body footer[role="contentinfo"][data-trd-dark-footer="1"] *{color:var(--tpl-text-on-dark,#f4f1ea)!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a{color:var(--tpl-link-on-dark,#f4f1ea)!important;text-decoration:none!important;opacity:0.85!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a:hover{opacity:1!important;text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] h1,body footer[role="contentinfo"][data-trd-dark-footer="1"] h2,body footer[role="contentinfo"][data-trd-dark-footer="1"] h3,body footer[role="contentinfo"][data-trd-dark-footer="1"] h4,body footer[role="contentinfo"][data-trd-dark-footer="1"] h5,body footer[role="contentinfo"][data-trd-dark-footer="1"] h6{color:var(--tpl-heading-on-dark,#ffffff)!important;}body[data-trd-light-page="1"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),body[data-trd-light-page="1"] textarea,body[data-trd-light-page="1"] select{background:#fff!important;color:#1a1a1a!important;border:1px solid rgba(0,0,0,0.2)!important;}body[data-trd-light-page="1"] label{color:var(--tpl-text-on-light,#1a1a1a)!important;}[class*="card"][style*="background"][style*="rgb(2"],[class*="card"][style*="background:#1"],[class*="card"][style*="background:#2"],[class*="card"][style*="background:#3"],[class*="publication"]:not([class*="light"]),[class*="review-card"]:not([class*="light"]){color:#fff!important;}[class*="card"][style*="background"][style*="rgb(2"] *,[class*="publication"]:not([class*="light"]) *,[class*="review-card"]:not([class*="light"]) *{color:inherit!important;}</style><script data-trd-phase="42.31">(function(){function getLum(rgb){if(!rgb)return 1;var open=rgb.indexOf('(');var close=rgb.indexOf(')');if(open<0||close<0)return 1;var parts=rgb.substring(open+1,close).split(',');if(parts.length<3)return 1;var r=parseInt(parts[0],10)/255;var g=parseInt(parts[1],10)/255;var b=parseInt(parts[2],10)/255;if(isNaN(r)||isNaN(g)||isNaN(b))return 1;return 0.2126*r+0.7152*g+0.0722*b;}function stamp(){var f=document.querySelector('footer[role="contentinfo"]');if(!f)return;if(f.hasAttribute('data-trd-dark-footer'))return;var bg=getComputedStyle(f).backgroundColor;if(getLum(bg)<0.5){f.setAttribute('data-trd-dark-footer','1');}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stamp);}else{stamp();}})();</script><!-- Open Graph (Phase A5) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Haveli Restaurant Mumbai — Happy Hour">
-  <meta property="og:description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  
-  
-  <meta property="og:site_name" content="Haveli Restaurant Mumbai">
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Haveli Restaurant Mumbai — Happy Hour">
-  <meta name="twitter:description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  
-  <!-- SEO -->
-  <meta name="description" content="Exceptional food, warm hospitality, unforgettable moments.">
-  <meta name="author" content="Haveli Restaurant Mumbai">
-  <link rel="manifest" href="/manifest.json">
+</style><style data-trd-phase="42.29">body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]),body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) *{color:var(--tpl-text-on-light,#1a1a1a)!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a{color:var(--tpl-link-on-light,#1a1a1a)!important;text-decoration:none!important;}body[data-trd-light-page="1"] footer[role="contentinfo"]:not([data-trd-dark-footer="1"]) a:hover{text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"],body footer[role="contentinfo"][data-trd-dark-footer="1"] *{color:var(--tpl-text-on-dark,#f4f1ea)!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a{color:var(--tpl-link-on-dark,#f4f1ea)!important;text-decoration:none!important;opacity:0.85!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] a:hover{opacity:1!important;text-decoration:underline!important;}body footer[role="contentinfo"][data-trd-dark-footer="1"] h1,body footer[role="contentinfo"][data-trd-dark-footer="1"] h2,body footer[role="contentinfo"][data-trd-dark-footer="1"] h3,body footer[role="contentinfo"][data-trd-dark-footer="1"] h4,body footer[role="contentinfo"][data-trd-dark-footer="1"] h5,body footer[role="contentinfo"][data-trd-dark-footer="1"] h6{color:var(--tpl-heading-on-dark,#ffffff)!important;}body[data-trd-light-page="1"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),body[data-trd-light-page="1"] textarea,body[data-trd-light-page="1"] select{background:#fff!important;color:#1a1a1a!important;border:1px solid rgba(0,0,0,0.2)!important;}body[data-trd-light-page="1"] label{color:var(--tpl-text-on-light,#1a1a1a)!important;}[class*="card"][style*="background"][style*="rgb(2"],[class*="card"][style*="background:#1"],[class*="card"][style*="background:#2"],[class*="card"][style*="background:#3"],[class*="publication"]:not([class*="light"]),[class*="review-card"]:not([class*="light"]){color:#fff!important;}[class*="card"][style*="background"][style*="rgb(2"] *,[class*="publication"]:not([class*="light"]) *,[class*="review-card"]:not([class*="light"]) *{color:inherit!important;}</style><script data-trd-phase="42.31">(function(){function getLum(rgb){if(!rgb)return 1;var open=rgb.indexOf('(');var close=rgb.indexOf(')');if(open<0||close<0)return 1;var parts=rgb.substring(open+1,close).split(',');if(parts.length<3)return 1;var r=parseInt(parts[0],10)/255;var g=parseInt(parts[1],10)/255;var b=parseInt(parts[2],10)/255;if(isNaN(r)||isNaN(g)||isNaN(b))return 1;return 0.2126*r+0.7152*g+0.0722*b;}function stamp(){var f=document.querySelector('footer[role="contentinfo"]');if(!f)return;if(f.hasAttribute('data-trd-dark-footer'))return;var bg=getComputedStyle(f).backgroundColor;if(getLum(bg)<0.5){f.setAttribute('data-trd-dark-footer','1');}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',stamp);}else{stamp();}})();</script>  <link rel="manifest" href="/manifest.json">
 <script>
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]);t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+" (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'https://app.posthog.com',loaded:function(p){if(window.location.host.includes('localhost'))p.opt_out_capturing();}});
@@ -1092,114 +1105,109 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   
   <script>(function(){var w=document.querySelector('.cm-a11y-widget');if(!w)return;var t=w.querySelector('.cm-a11y-toggle');var html=document.documentElement;var STEP=2;function close(){w.setAttribute('data-open','false');t.setAttribute('aria-expanded','false')}function open(){w.setAttribute('data-open','true');t.setAttribute('aria-expanded','true')}t.addEventListener('click',function(e){e.stopPropagation();var o=w.getAttribute('data-open')==='true';if(o)close();else open()});document.addEventListener('click',function(e){if(!w.contains(e.target))close()});document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});w.querySelectorAll('.cm-a11y-opt').forEach(function(b){b.addEventListener('click',function(){var a=b.getAttribute('data-act');var s=parseFloat(getComputedStyle(html).fontSize)||16;if(a==='text-up')html.style.fontSize=Math.min(s+STEP,22)+'px';else if(a==='text-down')html.style.fontSize=Math.max(s-STEP,12)+'px';else if(a==='contrast')html.classList.toggle('cm-a11y-contrast');else if(a==='motion')html.classList.toggle('cm-a11y-motion');else if(a==='links')html.classList.toggle('cm-a11y-links');else if(a==='reset'){html.style.fontSize='';html.classList.remove('cm-a11y-contrast','cm-a11y-motion','cm-a11y-links')}})});})();</script>
 </div>
-  <!-- Skip to content -->
-  <main class="cm-main cm-section section-light" id="main-content">
-    <!-- Hero Section -->
-    <section class="fade-in">
+  <!-- Skip‑to‑content link -->
+  <main class="cm-main cm-section section-light" id="main">
+    <!-- Hero -->
+    <section class="hero fade-in">
+      <img src="https://images.dcsai.ai/phase-v4/Restaurant/Loyalty Program/image(10).jpg" alt="Lively bar atmosphere with cocktails and small plates" loading="lazy" style="max-width:100%;height:auto;margin-bottom:1rem;">
       <h1>Happy Hour</h1>
-      <p class="time-display"><time datetime="Mo-Fr 16:00">Mon‑Fri</time>, <time datetime="16:00">4 PM</time> – <time datetime="19:00">7 PM</time></p>
-      <p>Weekday Wind‑Down at our bar – unwind with special prices.</p>
-      <img loading="lazy" decoding="async" src="https://images.dcsai.ai/phase-v4/Restaurant/Loyalty Program/image(10).jpg" alt="Lively bar atmosphere with cocktails and smiling guests">
+      <div class="time-display">
+        <time datetime="2026-08-15T16:00">Mon‑Fri</time> – <time datetime="2026-08-15T19:00">4 PM – 7 PM</time>
+      </div>
+      <p>Enjoy discounted drinks and bites at our bar. Bar‑only. Located in New Delhi.</p>
     </section>
 
-    <!-- Discounted Items Overview -->
-    <section class="fade-in">
+    <!-- What’s Discounted -->
+    <section class="section fade-in">
       <h2>What’s Discounted</h2>
-      <p>Enjoy a curated selection of drinks and small bites at reduced prices during happy hour.</p>
-      <div class="grid grid-2">
-        <!-- Drink Card -->
-        <article class="card fade-in">
+      <p>Our happy‑hour menu features a rotating selection of drinks and small bites. Prices are shown as “Regular → Happy‑Hour”. For the latest list, please contact us.</p>
+      <div class="grid">
+        <div class="card">
           <h3>Drink Specials</h3>
-          <ul>
-            <li>Classic Cocktail – Regular: $12 → Happy Hour: $8</li>
-            <li>House Wine (glass) – Regular: $9 → Happy Hour: $5</li>
-            <li>Craft Beer – Regular: $7 → Happy Hour: $4</li>
-            <li>Mocktail – Regular: $8 → Happy Hour: $5</li>
-          </ul>
-          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/services/magnific_closeup-of-latino-male-pa_3002397161.jpeg" alt="Refreshing cocktail served in a glass">
-        </article>
-        <!-- Food Card -->
-        <article class="card fade-in">
+          <p>Contact us for details.</p>
+        </div>
+        <div class="card">
           <h3>Food Specials</h3>
-          <ul>
-            <li>Spicy Paneer Tikka – Regular: $10 → Happy Hour: $6</li>
-            <li>Mini Samosa (2 pcs) – Regular: $5 → Happy Hour: $3</li>
-            <li>Chicken Seekh Kebab – Regular: $12 → Happy Hour: $7</li>
-            <li>Cheese Sliders – Regular: $9 → Happy Hour: $5</li>
-          </ul>
-          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/magnific_dark-evening-dining-room-_3001037938.jpeg" alt="Assorted appetizers on a platter">
-        </article>
+          <p>Contact us for details.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Drink Specials Detail -->
-    <section class="fade-in">
+    <!-- Drink Specials -->
+    <section class="section fade-in">
       <h2>Drink Specials</h2>
-      <div class="grid grid-2">
-        <article class="card">
-          <h3>Cocktails</h3>
-          <p>Classic & signature cocktails at happy‑hour rates.</p>
-          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(17).jpg" alt="Bartender mixing a cocktail">
-        </article>
-        <article class="card">
-          <h3>Wines & Beers</h3>
-          <p>Selection of wines by the glass and craft beers.</p>
-          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/image(7).jpg" alt="Glass of red wine and a pint of beer">
-        </article>
-        <article class="card">
-          <h3>Mocktails</h3>
-          <p>Non‑alcoholic creations for all guests.</p>
-          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(3).jpg" alt="Fruity mocktail in a tall glass">
-        </article>
+      <div class="grid">
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/services/magnific_closeup-of-latino-male-pa_3002397161.jpeg" alt="Refreshing cocktail" loading="lazy" style="width:100%;height:auto;margin-bottom:.5rem;">
+          <h3>Cocktail A</h3>
+          <p>Regular: ₹ — Happy‑Hour: ₹ —</p>
+        </div>
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/magnific_dark-evening-dining-room-_3001037938.jpeg" alt="Glass of wine" loading="lazy" style="width:100%;height:auto;margin-bottom:.5rem;">
+          <h3>Wine by Glass</h3>
+          <p>Regular: ₹ — Happy‑Hour: ₹ —</p>
+        </div>
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(17).jpg" alt="Cold beer" loading="lazy" style="width:100%;height:auto;margin-bottom:.5rem;">
+          <h3>Beer</h3>
+          <p>Regular: ₹ — Happy‑Hour: ₹ —</p>
+        </div>
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/image(7).jpg" alt="Mocktail" loading="lazy" style="width:100%;height:auto;margin-bottom:.5rem;">
+          <h3>Mocktail</h3>
+          <p>Regular: ₹ — Happy‑Hour: ₹ —</p>
+        </div>
       </div>
     </section>
 
-    <!-- Food Specials Detail -->
-    <section class="fade-in">
+    <!-- Food Specials -->
+    <section class="section fade-in">
       <h2>Food Specials</h2>
-      <div class="grid grid-2">
-        <article class="card">
-          <h3>Appetizers</h3>
-          <p>Small plates perfect for sharing.</p>
-          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/image(18).jpg" alt="Plate of assorted appetizers">
-        </article>
-        <article class="card">
-          <h3>Small Bites</h3>
-          <p>Flavorful bites to complement your drinks.</p>
-          <img loading="lazy" decoding="async" src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(7).jpg" alt="Mini sliders on a tray">
-        </article>
+      <div class="grid">
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(3).jpg" alt="Appetizer plate" loading="lazy" style="width:100%;height:auto;margin-bottom:.5rem;">
+          <h3>Appetizer A</h3>
+          <p>Regular: ₹ — Happy‑Hour: ₹ —</p>
+        </div>
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/image(18).jpg" alt="Mini slider" loading="lazy" style="width:100%;height:auto;margin-bottom:.5rem;">
+          <h3>Slider B</h3>
+          <p>Regular: ₹ — Happy‑Hour: ₹ —</p>
+        </div>
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/cta/image(7).jpg" alt="Small plate" loading="lazy" style="width:100%;height:auto;margin-bottom:.5rem;">
+          <h3>Small Plate C</h3>
+          <p>Regular: ₹ — Happy‑Hour: ₹ —</p>
+        </div>
+        <div class="card">
+          <img src="https://images.dcsai.ai/images-phase-v1/restaurant-images/hero/image(13).jpg" alt="Spicy bite" loading="lazy" style="width:100%;height:auto;margin-bottom:.5rem;">
+          <h3>Spicy Bite D</h3>
+          <p>Regular: ₹ — Happy‑Hour: ₹ —</p>
+        </div>
       </div>
     </section>
 
-    <!-- Where & When -->
-    <section class="fade-in">
-      <h2>Where & When</h2>
-      <p><strong>Location:</strong> New Delhi</p>
-      <table>
-        <thead>
-          <tr><th>Day</th><th>Happy Hour</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Monday</td><td>4 PM – 7 PM</td></tr>
-          <tr><td>Tuesday</td><td>4 PM – 7 PM</td></tr>
-          <tr><td>Wednesday</td><td>4 PM – 7 PM</td></tr>
-          <tr><td>Thursday</td><td>4 PM – 7 PM</td></tr>
-          <tr><td>Friday</td><td>4 PM – 7 PM</td></tr>
-        </tbody>
-      </table>
+    <!-- Where + When -->
+    <section class="section fade-in">
+      <h2>Where &amp; When</h2>
+      <p><strong>Location:</strong> New Delhi</p>
+      <div class="hours-grid">
+        <div><strong>Mon‑Fri</strong><br><time datetime="2026-08-15T16:00">4 PM – 7 PM</time></div>
+        <div><strong>Sat‑Sun</strong><br>Closed</div>
+      </div>
     </section>
 
     <!-- Bar vs Dining‑Room -->
-    <section class="fade-in">
-      <h2>Bar‑Only Happy Hour</h2>
-      <p>Happy hour is available **only at the bar**. The dining‑room serves the regular menu at standard prices.</p>
+    <section class="section fade-in">
+      <h2>Bar‑Only</h2>
+      <p>Happy hour is available **only at the bar**. The dining‑room serves the regular menu.</p>
     </section>
 
     <!-- Group / Private Happy Hour -->
-    <section class="fade-in">
-      <h2>Group & Private Happy Hour Bookings</h2>
-      <p>Looking to host a corporate gathering or private party? Reserve a dedicated space and enjoy customized happy‑hour menus.</p>
-      <a href="/reservation.html" class="cta-btn" role="button" aria-label="Book a private happy hour">Book Now</a>
+    <section class="section fade-in">
+      <h2>Group &amp; Private Happy Hour</h2>
+      <p>Planning a corporate gathering or a private celebration? Book a dedicated happy‑hour slot for your group.</p>
+      <a href="/reservation.html" class="btn" role="button" aria-label="Reserve a private happy hour">Reserve Now</a>
     </section>
   <!-- ─── Phase F (section filler) — industry/page-aware fallback ─── -->
 <section class="trd-section-filler" data-trd-section-filler="phase-F" style="padding:48px 24px;max-width:880px;margin:0 auto;line-height:1.7;">
@@ -1209,14 +1217,27 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
 <!-- ─── /Phase F ──────────────────────────────────────────────── -->
 </main>
 
-  <!-- Theme Toggle Button -->
+  <!-- Theme toggle button -->
   
 
   <!-- Scripts -->
   <script>
-    // Theme toggle logic
-    
+    // Theme toggle logic (persisted)
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.onclick = () => document.documentElement.classList.toggle('dark');
+
+    if (localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+
+    // IntersectionObserver for fade‑in animations
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
     }, { threshold: 0.1 });
+
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
     <footer class="cm-footer" role="contentinfo">
@@ -1289,7 +1310,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
     <div class="cm-footer-bottom-row">
       <p class="cm-footer-copy">&copy; 2026 Haveli Restaurant Mumbai. All Rights Reserved.</p>
       <div class="cm-footer-legal">
-        <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/" onclick="return false;" data-trd-deadlink="accessibility.html">accessibility</a>
+        <a href="/privacy.html">privacy policy</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/terms.html">terms of service</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/sitemap.html">sitemap</a> <span class="cm-legal-sep" aria-hidden="true">&middot;</span> <a href="/accessibility.html">accessibility</a>
       </div>
     </div>
   </div>
@@ -1299,7 +1320,7 @@ posthog.init('phc_t94UQ8ksdEr7vFedexH3TkqVyNgdZWHSGjK8e2VYPdqd', {api_host:'http
   <div class="cm-cookie-inner">
     <div class="cm-cookie-text">
       <p id="cm-cookie-title" class="cm-cookie-title">We use cookies</p>
-      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/" onclick="return false;" data-trd-deadlink="privacy.html">Privacy Policy</a></p>
+      <p class="cm-cookie-desc">We use cookies to enhance your browsing experience and analyze site traffic. <a href="/privacy.html">Privacy Policy</a></p>
     </div>
     <div class="cm-cookie-actions">
       <button type="button" class="cm-cookie-reject">Reject</button>
