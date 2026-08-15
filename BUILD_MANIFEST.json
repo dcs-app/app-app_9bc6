@@ -1,0 +1,121 @@
+{
+  "brand": {
+    "name": "Haveli Restaurant Mumbai",
+    "tagline": "Authentic Indian heritage dining and royal culinary traditions in Mumbai",
+    "industry": "restaurant",
+    "tone": "warm"
+  },
+  "archetype": "HOSPITALITY",
+  "design_tokens": {
+    "font_serif": "'Fraunces', 'Playfair Display', 'Cormorant Garamond', Georgia, serif",
+    "font_sans": "'Inter', system-ui, -apple-system, sans-serif",
+    "color_bg": "#FAF7F2",
+    "color_surface": "#FFFFFF",
+    "color_text_primary": "#1F1611",
+    "color_text_secondary": "#6B5D52",
+    "color_accent": "#B8860B",
+    "color_border": "rgba(31,22,17,0.12)",
+    "color_header_bg": "rgba(250,247,242,0.95)",
+    "color_footer_bg": "#1F1611",
+    "radius_sm": "6px",
+    "radius_md": "12px",
+    "radius_lg": "24px",
+    "shadow_sm": "0 2px 8px rgba(31,22,17,0.06)",
+    "shadow_md": "0 12px 36px rgba(31,22,17,0.1)",
+    "max_content_width": "1200px"
+  },
+  "pages_built": [
+    "index",
+    "menu",
+    "reservation",
+    "about",
+    "gallery",
+    "private-dining",
+    "contact"
+  ],
+  "header_nav": [
+    { "label": "Home", "href": "/index.html" },
+    { "label": "Menu", "href": "/menu.html" },
+    { "label": "Reservations", "href": "/reservation.html" },
+    { "label": "About", "href": "/about.html" },
+    { "label": "Private Dining", "href": "/private-dining.html" },
+    { "label": "Gallery", "href": "/gallery.html" },
+    { "label": "Contact", "href": "/contact.html" }
+  ],
+  "footer_links": {
+    "section_1_title": "Explore",
+    "section_1_links": [
+      { "label": "Our Story", "href": "/about.html" },
+      { "label": "Dining Menu", "href": "/menu.html" },
+      { "label": "Photo Gallery", "href": "/gallery.html" }
+    ],
+    "section_2_title": "Experiences",
+    "section_2_links": [
+      { "label": "Table Reservations", "href": "/reservation.html" },
+      { "label": "Private Banquets", "href": "/private-dining.html" },
+      { "label": "Find Us in Mumbai", "href": "/contact.html" }
+    ],
+    "section_3_title": "Hours & Dining",
+    "section_3_links": [
+      { "label": "Lunch: 12:00 PM – 3:30 PM", "href": "/reservation.html" },
+      { "label": "Dinner: 7:00 PM – 11:30 PM", "href": "/reservation.html" }
+    ],
+    "section_4_title": null,
+    "section_4_links": null
+  },
+  "canonical_header_html": "<header class=\"site-header\"><div class=\"header-inner\"><a href=\"/index.html\" class=\"brand\">Haveli Restaurant Mumbai</a><nav class=\"primary-nav\" aria-label=\"Primary\"><a href=\"/index.html\">Home</a><a href=\"/menu.html\">Menu</a><a href=\"/about.html\">About</a><a href=\"/gallery.html\">Gallery</a><a href=\"/private-dining.html\">Private Dining</a><a href=\"/contact.html\">Contact</a><a href=\"/reservation.html\" class=\"nav-cta\">Reserve a Table</a></nav></div></header>",
+  "canonical_footer_html": "<footer class=\"site-footer\"><div class=\"footer-inner\"><div class=\"footer-brand-block\"><h3 class=\"footer-brand\">Haveli Restaurant Mumbai</h3><p class=\"footer-tagline\">Authentic Indian heritage dining and royal culinary traditions in Mumbai</p><p class=\"footer-address\">Bandra West, Mumbai, Maharashtra, India</p></div><div class=\"footer-grid\"><div class=\"footer-col\"><h4 class=\"footer-col-title\">Explore</h4><ul class=\"footer-links\"><li><a href=\"/about.html\">Our Story</a></li><li><a href=\"/menu.html\">Dining Menu</a></li><li><a href=\"/gallery.html\">Photo Gallery</a></li></ul></div><div class=\"footer-col\"><h4 class=\"footer-col-title\">Experiences</h4><ul class=\"footer-links\"><li><a href=\"/reservation.html\">Table Reservations</a></li><li><a href=\"/private-dining.html\">Private Banquets</a></li><li><a href=\"/contact.html\">Find Us</a></li></ul></div><div class=\"footer-col\"><h4 class=\"footer-col-title\">Hours</h4><p class=\"footer-text\">Mon – Sun: 12:00 PM – 3:30 PM</p><p class=\"footer-text\">Dinner: 7:00 PM – 11:30 PM</p><p class=\"footer-text\">Valet Parking Available</p></div></div><div class=\"footer-bottom\"><p class=\"footer-copy\">© 2026 Haveli Restaurant Mumbai. All rights reserved.</p></div></div></footer>",
+  "shared_styles": "<style>:root{--font-serif:'Fraunces','Playfair Display','Cormorant Garamond',Georgia,serif;--font-sans:'Inter',system-ui,-apple-system,sans-serif;--color-bg:#FAF7F2;--color-surface:#FFFFFF;--color-text-primary:#1F1611;--color-text-secondary:#6B5D52;--color-accent:#B8860B;--color-border:rgba(31,22,17,0.12);--color-header-bg:rgba(250,247,242,0.95);--color-footer-bg:#1F1611;--radius-sm:6px;--radius-md:12px;--radius-lg:24px;--shadow-sm:0 2px 8px rgba(31,22,17,0.06);--shadow-md:0 12px 36px rgba(31,22,17,0.1);--max-width:1200px;}*{box-sizing:border-box;margin:0;padding:0;}body{font-family:var(--font-sans);font-size:16px;line-height:1.6;color:var(--color-text-primary);background:var(--color-bg);-webkit-font-smoothing:antialiased;}h1,h2,h3,h4{font-family:var(--font-serif);font-weight:600;line-height:1.2;color:var(--color-text-primary);}h1{font-size:clamp(2.2rem,4.5vw,3.8rem);letter-spacing:-0.02em;}h2{font-size:clamp(1.75rem,3vw,2.5rem);}h3{font-size:1.35rem;}a{color:inherit;text-decoration:none;transition:color 0.2s ease,opacity 0.2s ease;}img{max-width:100%;height:auto;display:block;}.site-header{position:sticky;top:0;z-index:100;background:var(--color-header-bg);backdrop-filter:blur(10px);border-bottom:1px solid var(--color-border);padding:1rem 1.5rem;}.header-inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;}.brand{font-family:var(--font-serif);font-size:1.4rem;font-weight:700;color:var(--color-text-primary);letter-spacing:-0.01em;}.primary-nav{display:flex;align-items:center;gap:1.5rem;font-size:0.95rem;font-weight:500;}.primary-nav a:hover{color:var(--color-accent);}.nav-cta{background:var(--color-accent);color:#FFFFFF !important;padding:0.55rem 1.1rem;border-radius:var(--radius-sm);font-weight:600;transition:opacity 0.2s ease;}.nav-cta:hover{opacity:0.9;}.site-footer{background:var(--color-footer-bg);color:#E6DCD2;padding:4rem 1.5rem 2rem;margin-top:4rem;border-top:1px solid rgba(255,255,255,0.08);}.footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;flex-direction:column;gap:3rem;}.footer-brand-block{max-width:520px;}.footer-brand{font-size:1.6rem;color:#FAF7F2;margin-bottom:0.5rem;}.footer-tagline{color:#C8B9A6;font-size:0.95rem;margin-bottom:0.75rem;}.footer-address{color:#A89885;font-size:0.9rem;}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}.footer-col-title{color:#FAF7F2;font-size:1.1rem;margin-bottom:1rem;}.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.6rem;font-size:0.92rem;}.footer-links a{color:#C8B9A6;}.footer-links a:hover{color:#FAF7F2;}.footer-text{color:#C8B9A6;font-size:0.92rem;margin-bottom:0.4rem;}.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:1.5rem;font-size:0.85rem;color:#8E7E6E;text-align:center;}@media(max-width:860px){.primary-nav{display:none;}}</style>",
+  "image_strategy": {
+    "source": "unsplash",
+    "keywords": [
+      "indian-food",
+      "curry-tandoor",
+      "traditional-dining",
+      "palace-restaurant",
+      "mumbai-dining"
+    ],
+    "fallback_color": "#FAF7F2"
+  },
+  "page_constraints": {
+    "max_sections_default": 3,
+    "max_words_default": 450,
+    "specific_overrides": {
+      "about": {
+        "max_sections": 3,
+        "max_words": 500,
+        "required_sections": ["heritage-hero", "culinary-traditions", "chef-values"]
+      },
+      "contact": {
+        "max_sections": 2,
+        "max_words": 250,
+        "required_sections": ["contact-details", "map-hours"]
+      },
+      "menu": {
+        "max_sections": 4,
+        "max_words": 650,
+        "required_sections": ["appetizers", "mains", "tandoor", "desserts"]
+      },
+      "reservation": {
+        "max_sections": 2,
+        "max_words": 300,
+        "required_sections": ["booking-form", "policies-hours"]
+      }
+    }
+  },
+  "user_provided": {
+    "name": null,
+    "email": null,
+    "phone": null,
+    "location": "Mumbai",
+    "social_handles": null
+  },
+  "social_urls": {
+    "facebook": null,
+    "instagram": null,
+    "twitter": null,
+    "linkedin": null,
+    "youtube": null,
+    "pinterest": null
+  }
+}

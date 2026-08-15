@@ -1,0 +1,27 @@
+{
+  "name": "Haveli Restaurant Mumbai",
+  "short_name": "Haveli Resta",
+  "description": "Exceptional food, warm hospitality, unforgettable moments.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": [
+    "business"
+  ],
+  "lang": "en"
+}
